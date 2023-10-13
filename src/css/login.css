@@ -1,22 +1,23 @@
-*{
-    padding: 0;
-    margin: 0;
-    box-sizing: border-box;
-}
-
-body{
-    background-color: #fff;
-}
 
 form{
     display: flex;
     flex-direction: column;
     align-items: center;
+    padding: 100px;
+    height: 500px;
+    background: red
+}
+form input {
+    padding: 5px 25px;
+}
+.container{ 
+    display: flex;
+    justify-content: space-evenly;
 }
 .fill-up-form{
     display: flex;
     flex-direction: column;
-    width: 50%;
+    width: 100%;
     align-items: center;
     text-align: center;
     justify-content: center;
@@ -25,4 +26,8 @@ form{
 }
 .checkbox{
     display: flex;
+}
+.checkbox p{
+    justify-content: space-between;
+    gap: 10px;
 }

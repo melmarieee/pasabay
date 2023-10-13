@@ -19,12 +19,18 @@ function App() {
       element: <Home/>,
     },
     {
+      path: "/navbar",
+      element: <Navbar/>,
+    },
+    {
       path: "/login",
       element: <Login/>,
     },
     {
       path: "/signup",
       element: <Signup/>
+    },
+    {
       path: "/account",
       element: <Account/>
     },

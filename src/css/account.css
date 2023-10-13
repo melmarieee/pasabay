@@ -1,0 +1,55 @@
+.about-setting {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    margin: 0 15rem;
+    /* width: 40rem; */
+}
+.detailsContainer img {
+    width: 35%;
+    border-radius: 50%;
+    background-color: grey;
+    margin: 0 7rem;
+}
+.detailsContainer {
+    display: grid;
+    grid-template-columns: 6fr 6fr;
+    margin: 0 16rem;
+}
+.validInfo ul li {
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 30rem;
+}
+.aboutYou ul li{
+    list-style: none;
+    display: flex;
+    align-items: center;
+    margin: 0 30rem;
+}
+hr {
+    width: 60%;
+}
+i {
+    padding-right: 5rem;
+}
+.about:hover {
+    background-color: grey;
+}
+.account:hover {
+    background-color: grey;
+}
+.about {
+    width: 15rem;
+    margin: auto 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}
+.account {
+    width: 15rem;
+    margin: auto 3rem;
+    padding: 1rem;
+    border-radius: 10px;
+    cursor: pointer;
+}

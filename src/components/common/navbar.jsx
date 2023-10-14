@@ -40,7 +40,6 @@ const Header = (props) => {
                     <NavLink href="/carpool" id='prods'>Carpool</NavLink>
                     <NavLink href="/products" id='prods'>Profile</NavLink>
                    
-
                     {user ? 
                     <NavLink id='my-account'>
                         {user.name}

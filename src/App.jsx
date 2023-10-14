@@ -1,14 +1,13 @@
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './App.css'
 import Home from './components/home';
-import Navbar from "./components/common/navbar";
 import Login from "./components/login";
 import Signup from "./components/signup";
 import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
-
+import CarPool from './components/carpool';
 
 
 function App() {
@@ -19,8 +18,8 @@ function App() {
       element: <Home/>,
     },
     {
-      path: "/navbar",
-      element: <Navbar/>,
+      path: "/carpool",
+      element: <CarPool/>,
     },
     {
       path: "/login",
@@ -51,7 +50,6 @@ function App() {
   return (
     <>
       <div>
-        <Navbar/>
         <RouterProvider router={router} />
       </div>
     </>

@@ -38,7 +38,7 @@ const Header = (props) => {
                     <div className="header-navbar-links">
                     <NavLink href="/" id='subs'>Home</NavLink>
                     <NavLink href="/carpool" id='prods'>Carpool</NavLink>
-                    <NavLink href="/products" id='prods'>Profile</NavLink>
+                    <NavLink href="/account" id='prods'>Profile</NavLink>
                    
                     {user ? 
                     <NavLink id='my-account'>

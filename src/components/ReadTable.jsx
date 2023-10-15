@@ -1,4 +1,5 @@
 import React from "react";
+import '../css/readtable.css'
 
 const ReadTable = ({ contact, handleEditClick }) => {
   return (

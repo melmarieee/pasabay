@@ -51,6 +51,7 @@ function App() {
       path:"/footer",
       element: <Footer/>
     },
+    {
       path:"/accountSetting",
       element: <AccountSetting/>
     }

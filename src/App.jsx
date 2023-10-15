@@ -8,6 +8,7 @@ import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
+import AccountSetting from "./components/AccountSetting";
 
 
 
@@ -25,6 +26,8 @@ function App() {
     {
       path: "/signup",
       element: <Signup/>
+    },
+    {
       path: "/account",
       element: <Account/>
     },
@@ -39,6 +42,10 @@ function App() {
     {
       path:"/rideHistory",
       element: <RideHistory/>
+    },
+    {
+      path:"/accountSetting",
+      element: <AccountSetting/>
     }
   ]);
 

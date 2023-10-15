@@ -4,6 +4,10 @@ import '../css/login.css'
 const Login = () => {
   return (
     <>
+    <div className="container">
+      <img src="#" />
+      <h1>Hello Welcome to our page</h1>
+
     <form>
       <h1>Login</h1>
       <div className="fill-up-form">
@@ -14,6 +18,7 @@ const Login = () => {
       <div className="checkbox">
       <input type="checkbox" />
       <p>Remember me?</p>
+      <p>Not a Member yet?</p>
       </div>
       <a href="components/signup.jsx"><p>Sign up</p></a>
       <button>Sign in</button>
@@ -26,6 +31,7 @@ const Login = () => {
       <a href="#"><img src="#" />link3</a>
       —————————</p>
     </form>
+    </div>
     </>
   )
 }

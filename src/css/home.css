@@ -1,0 +1,61 @@
+.h1-home {
+  font-size: 58px;
+}
+
+.text-home {
+  font-size: 24px;
+}
+
+.button-find-ride {
+  background-color: #FF8811;
+  border-color: #5EB1BF;
+  width: 100%;
+}
+
+.button-create-ride {
+  width: 100%;
+  color: #FF8811;
+  background-color: #fae8d6;
+}
+
+.button-find-ride:hover {
+  background-color: #FF8811;
+}
+.button-create-ride:hover {
+  background-color: #fae8d6;
+  border-color: #FF8811;
+  color: #FF8811;
+}
+
+.card-color-1 {
+  background-color: #FF8811;
+}
+
+.card-color-2 {
+  background-color: #FF8811;
+}
+
+.card-color-3 {
+  background-color: #FF8811;
+}
+.testimonial-card .card-up {
+  height: 120px;
+  overflow: hidden;
+  border-top-left-radius: 0.25rem;
+  border-top-right-radius: 0.25rem;
+}
+.testimonial-card .avatar {
+  width: 110px;
+  margin-top: -60px;
+  overflow: hidden;
+  border: 3px solid #fff;
+  border-radius: 50%;
+}
+
+.image-home {
+  width: 100%;
+}
+
+.width-100 {
+  width: 100%;
+}

@@ -1,56 +1,88 @@
-import React, { useState } from 'react';
+import PasabbayLogo from '../../assets/pasabay-orange-logo.png'
+import '../../css/navbar.css'
+import React, {useState} from 'react';
+import {  MDBIcon } from "mdb-react-ui-kit";
 import {
-  Collapse,
-  Navbar,
-  NavbarToggler,
-  NavbarBrand,
-  Nav,
-  NavItem,
-  NavLink,
-  UncontrolledDropdown,
-  DropdownToggle,
-  DropdownMenu,
-  DropdownItem,
-  NavbarText,
-} from 'reactstrap';
+    Collapse,
+    Navbar,
+    NavbarToggler,
+    NavbarBrand,
+    Nav,
+    NavItem,
+    NavLink,
+    Dropdown,
+    DropdownToggle,
+    DropdownItem,
+    DropdownMenu,
+    UncontrolledDropdown
+  } from 'reactstrap';
 
-function Example(args) {
-  const [isOpen, setIsOpen] = useState(false);
 
-  const toggle = () => setIsOpen(!isOpen);
+  
+const Header = (props) => {
+    const cart_user = window.localStorage.getItem("user");
 
-  return (
-    <div>
-      <Navbar {...args}>
-        <NavbarBrand href="/">reactstrap</NavbarBrand>
-        <NavbarToggler onClick={toggle} />
-        <Collapse isOpen={isOpen} navbar>
-          <Nav className="me-auto" navbar>
-            <NavItem>
-              <NavLink href="/components/">Components</NavLink>
-            </NavItem>
-            <NavItem>
-              <NavLink href="https://github.com/reactstrap/reactstrap">
-                GitHub
-              </NavLink>
-            </NavItem>
-            <UncontrolledDropdown nav inNavbar>
-              <DropdownToggle nav caret>
-                Options
-              </DropdownToggle>
-              <DropdownMenu right>
-                <DropdownItem>Option 1</DropdownItem>
-                <DropdownItem>Option 2</DropdownItem>
-                <DropdownItem divider />
-                <DropdownItem>Reset</DropdownItem>
-              </DropdownMenu>
-            </UncontrolledDropdown>
-          </Nav>
-          <NavbarText>Simple Text</NavbarText>
-        </Collapse>
-      </Navbar>
-    </div>
-  );
+    const [isOpen, setIsOpen] = useState(false);
+    const [user, setUser] = useState(JSON.parse(cart_user));
+    const [deviceWidth, _] = useState(0)
+
+    const toggle = () => setIsOpen(!isOpen)
+
+    
+    return(
+        <>
+            <Navbar expand={deviceWidth} className='header py-3' >
+                    <a href="/" class="navbar-logo">
+                        <img src={PasabbayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
+                    </a>
+                    <div className="header-navbar-links">
+                    <NavLink href="/" id='subs'>Home</NavLink>
+                    <NavLink href="/carpool" id='prods'>Carpool</NavLink>
+                    <NavLink href="/products" id='prods'>Profile</NavLink>
+                   
+                    {user ? 
+                    <NavLink id='my-account'>
+                        {user.name}
+                        <UncontrolledDropdown group direction="down">
+                            <DropdownToggle
+                                caret
+                                color="#952322"
+                                className='buttoncaret'
+                            />
+                            <DropdownMenu>
+                                <DropdownItem header>
+                                Profile
+                                </DropdownItem>
+                                <DropdownItem >
+                                    Account
+                                </DropdownItem>
+                            </DropdownMenu>
+                        </UncontrolledDropdown>
+                    </NavLink>
+                    :
+                    <NavLink href="/login">Login</NavLink>
+                    }
+                    </div>
+                    
+                <NavbarToggler onClick={toggle}/>
+                <Collapse isOpen={isOpen} navbar>
+                
+                    <Nav className="ms-auto burger-menu" navbar>
+                        <div className="burger-menu-container">
+                            <NavItem>
+                                <NavLink href="/home" id='home'>Home</NavLink>
+                            </NavItem>
+                            <NavItem>
+                                <NavLink  href="/rides" id='rides'>Rides</NavLink>
+                            </NavItem>
+                            <NavLink href="/login">Login</NavLink>
+                        </div>
+                    </Nav>
+                
+                </Collapse>
+            </Navbar>
+      </>
+    )
 }
 
-export default Navbar;
+export default Header;

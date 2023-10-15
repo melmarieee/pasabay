@@ -10,11 +10,20 @@
     "preview": "vite preview"
   },
   "dependencies": {
+    "@emotion/react": "^11.11.1",
+    "@emotion/styled": "^11.11.0",
+    "@mui/material": "^5.14.13",
+    "@mui/styled-engine-sc": "^6.0.0-alpha.1",
+    "@mui/x-date-pickers": "^6.16.1",
     "boxicons": "^2.1.4",
+    "dayjs": "^1.11.10",
     "mdb-react-ui-kit": "^6.3.0",
     "react": "^18.2.0",
     "react-dom": "^18.2.0",
-    "reactstrap": "^9.2.0"
+    "react-google-places-autocomplete": "^4.0.1",
+    "react-places-autocomplete": "^7.3.0",
+    "reactstrap": "^9.2.0",
+    "styled-components": "^6.0.8"
   },
   "devDependencies": {
     "@types/react": "^18.2.15",

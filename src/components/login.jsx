@@ -1,39 +1,51 @@
-import React from 'react'
-import '../css/login.css'
+import React from 'react';
+import {
+  MDBBtn,
+  MDBContainer,
+  MDBRow,
+  MDBCol,
+  MDBIcon,
+  MDBInput
+}
+from 'mdb-react-ui-kit';
 
 const Login = () => {
   return (
-    <>
-    <div className="container">
-      <img src="#" />
-      <h1>Hello Welcome to our page</h1>
+    <MDBContainer fluid>
+      <MDBRow>
 
-    <form>
-      <h1>Login</h1>
-      <div className="fill-up-form">
-      <input type="text" Placeholder="Username..."/>
-      <input type="passowrd" Placeholder="Password..." />
-      </div>
+      <MDBCol sm='6' className='d-none d-sm-block px-0'>
+          <img src="https://mdbcdn.b-cdn.net/img/Photos/new-templates/bootstrap-login-form/img3.webp"
+            alt="Login image" className="w-50 h-150" style={{objectFit: 'cover', objectPosition: 'left'}} />
+        </MDBCol>
 
-      <div className="checkbox">
-      <input type="checkbox" />
-      <p>Remember me?</p>
-      <p>Not a Member yet?</p>
-      </div>
-      <a href="components/signup.jsx"><p>Sign up</p></a>
-      <button>Sign in</button>
+        <MDBCol sm='6'>
 
-      <p>OR</p>
+          <div className='d-flex flex-row ps-5 pt-5 '>
+            <MDBIcon fas icon="crow fa-3x me-3" style={{ color: '#709085' }}/>
+            <span className="h1 fw-bold mb-0">PASABAY</span>
+          </div>
 
-      <p>—————————
-      <a href="#"><img src="#" />link1</a>
-      <a href="#"><img src="#" />link2</a>
-      <a href="#"><img src="#" />link3</a>
-      —————————</p>
-    </form>
-    </div>
-    </>
-  )
+          <div className='d-flex flex-column justify-content-center h-custom-1 w-75 pt-4'>
+
+            <h3 className="fw-normal mb-3 ps-5 pb-3" style={{letterSpacing: '1px'}}>Log in</h3>
+
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Email address' id='formControlLg' type='email' size="lg"/>
+            <MDBInput wrapperClass='mb-4 mx-5 w-100' label='Password' id='formControlLg' type='password' size="lg"/>
+
+            <MDBBtn className="mb-4 px-5 mx-5 w-100" color='info' size='lg'>Login</MDBBtn>
+            <p className="small mb-5 pb-lg-3 ms-5"><a class="text-muted" href="#!">Forgot password?</a></p>
+            <p className='ms-5'>Don't have an account? <a href="#!" class="link-info">Register here</a></p>
+
+          </div>
+
+        </MDBCol>
+
+
+      </MDBRow>
+
+    </MDBContainer>
+  );
 }
 
-export default Login
+export default Login;

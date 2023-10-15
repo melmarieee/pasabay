@@ -8,6 +8,7 @@ import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
+import Footer from "./components/common/footer";
 
 
 
@@ -45,6 +46,10 @@ function App() {
     {
       path:"/rideHistory",
       element: <RideHistory/>
+    },
+    {
+      path:"/footer",
+      element: <Footer/>
     }
   ]);
 

@@ -1,5 +1,5 @@
-import React from 'react'
-import '../../css/navbar.css'
+import React from 'react';
+import '../../css/navbar.css';
 
 const Navbar = () => {
   return (
@@ -10,23 +10,23 @@ const Navbar = () => {
             <span className="navbar-toggler-icon"></span>
           </button>
           <div className="collapse navbar-collapse" id="navbarScroll">
-            <a className="navbar-brand" href="#"><img src=""  />Logo</a>
-            <ul className="navbar-nav ms-auto my-2 my-lg-0 navbar-nav-scroll">
+            <a className="navbar-brand p-3 px-5" href="#"><img src="" />Logo</a>
+            <ul className="navbar-nav ms-auto my-2 my-lg-0 px-5  navbar-nav-scroll">
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Home</a>
+                <a className="nav-link active" aria-current="page" href="#" style={{ padding: '10px' }}>Home</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Carpool</a>
+                <a className="nav-link active" aria-current="page" href="#" style={{ padding: '10px' }}>Carpool</a>
               </li>
               <li className="nav-item">
-                <a className="nav-link active" aria-current="page" href="#">Profile</a>
+                <a className="nav-link active" aria-current="page" href="#" style={{ padding: '10px' }}>Profile</a>
               </li>
             </ul>
           </div>
         </div>
       </nav>
     </>
-  )
+  );
 }
 
-export default Navbar
+export default Navbar;

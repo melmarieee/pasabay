@@ -1,55 +1,67 @@
-.about-setting {
-    display: grid;
-    grid-template-columns: 6fr 6fr;
-    margin: 0 15rem;
-    /* width: 40rem; */
+.body {
+    margin: 8rem;
 }
-.detailsContainer img {
-    width: 35%;
-    border-radius: 50%;
-    background-color: grey;
-    margin: 0 7rem;
+.about-setting {
+    display: flex;
+    justify-content: center;
+}
+.accountLink, .aboutLink {
+    text-decoration: none;
+}
+.about {
+    margin: 0 10rem;
+    padding: 10px;
+    background-color: #FF8811;
+    border-color: #5EB1BF;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 16rem;
+    text-align: center;
+}
+.account {
+    margin: 0 10rem;
+    padding: 10px;
+    color: #FF8811;
+    background-color: #fae8d6;
+    border-radius: 5px;
 }
 .detailsContainer {
     display: grid;
     grid-template-columns: 6fr 6fr;
-    margin: 0 16rem;
 }
-.validInfo ul li {
+.detailsContainer img {
+    width: 30%;
+    border-radius: 50%;
+    margin: 0 20rem;
+}
+.validInfoContainer, .aboutYou {
+    text-align: center;
+}
+.validInfo li {
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0 30rem;
+    margin: 0 20rem;
 }
-.aboutYou ul li{
+.validInfo i {
+    padding: 10px;
+    color: #5EB1BF;
+}
+.validInfo p {
+    margin: 10px;
+}
+.aboutYou li {
     list-style: none;
     display: flex;
     align-items: center;
-    margin: 0 30rem;
+    margin: 0 20rem;
 }
-hr {
-    width: 60%;
+.aboutYou i {
+    padding: 10px;
+    color: #5EB1BF;
 }
-i {
-    padding-right: 5rem;
-}
-.about:hover {
-    background-color: grey;
-}
-.account:hover {
-    background-color: grey;
-}
-.about {
-    width: 15rem;
-    margin: auto 3rem;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
-}
-.account {
-    width: 15rem;
-    margin: auto 3rem;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
+.aboutYou p {
+    margin: 10px;
 }

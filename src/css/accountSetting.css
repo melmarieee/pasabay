@@ -1,0 +1,15 @@
+.body {
+    margin: 8rem;
+}
+.settings li {
+    display: flex;
+    align-items: center;
+}
+.settings i {
+    padding: 10px;
+    position: absolute;
+    right: 10rem;
+}
+.settings p {
+    margin: 10px;
+}

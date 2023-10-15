@@ -1,26 +1,65 @@
-import React from 'react'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { Link } from "react-router-dom";
+import NavBar from "./common/navbar";
+import '../css/accountSetting.css'
 
 const AccountSetting = () => {
   return (
     <>
-    <section className="about-setting">
-        <Link to='/account'>
-        <h2 className='about'>About you</h2>
-        </Link>
-        <h2 className='account'>Account Setting</h2>
-    </section>
-    <section className="settings">
-        <p>Notifications, emails & SMS</p>
-        <p>Password</p>
-        <p>Payment Method</p>
-        <p>Payment & Refunds</p>
-        <p>Privacy Policy</p>
+      <NavBar />
+      <body className="body">
+        <section className="about-setting">
+          <Link to="/account" className="aboutLink">
+            <h2 className="about">About you</h2>
+          </Link>
+          <h2 className="account">Account Setting</h2>
+        </section>
         <hr />
-        <p>Log out</p>
-    </section>
+        <section className="settings">
+          <ul className="listFLex">
+            <li className="list">
+              <p>Notifications, emails & SMS</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Saved Places</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Password</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Payment Method</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Payment & Refunds</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Privacy Policy</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Language</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Help Centre</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+            <li className="list">
+              <p>Emergency Contact</p>
+              <i class="fa-solid fa-angles-right"></i>
+            </li>
+          </ul>
+        </section>
+        <hr />
+          <button type="button">Logout</button>
+      </body>
     </>
-  )
-}
+  );
+};
 
-export default AccountSetting
+export default AccountSetting;

@@ -7,8 +7,10 @@ import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
+import Footer from "./components/common/footer";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
+
 
 function App() {
   
@@ -46,6 +48,9 @@ function App() {
       element: <RideHistory/>
     },
     {
+      path:"/footer",
+      element: <Footer/>
+    },
       path:"/accountSetting",
       element: <AccountSetting/>
     }

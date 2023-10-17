@@ -3,6 +3,7 @@ import './App.css'
 import Home from './components/home';
 import Login from "./components/login";
 import Signup from "./components/signup";
+import Forgotpassword from "./components/forgotpassword";
 import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
@@ -31,6 +32,10 @@ function App() {
     {
       path: "/signup",
       element: <Signup/>
+    },
+    {
+      path: "/forgotpassword",
+      element:<Forgotpassword/>,
     },
     {
       path: "/account",

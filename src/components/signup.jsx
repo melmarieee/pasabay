@@ -1,97 +1,72 @@
 import React from 'react';
-import {
-  MDBBtn,
-  MDBContainer,
-  MDBRow,
-  MDBCol,
-  MDBCard,
-  MDBCardBody,
-  MDBInput,
-  MDBCheckbox,
-  MDBIcon
-}
-from 'mdb-react-ui-kit';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-const Signup =() => {
+const Signup = () => {
+  const formStyle = {
+    border: '1px solid #ccc',
+    padding: '20px',
+    borderRadius: '10px',
+  };
+
+  const formGroupStyle = {
+    marginBottom: '15px', // Add margin to separate form groups
+  };
+
   return (
-    <MDBContainer fluid className='p-4 background-radial-gradient overflow-hidden'>
-
-      <MDBRow>
-
-        <MDBCol md='6' className='text-center text-md-start d-flex flex-column justify-content-center'>
-
-          <h1 className="my-5 display-3 fw-bold ls-tight px-3" style={{color: 'hsl(218, 81%, 95%)'}}>
-            The best offer <br />
-            <span style={{color: 'hsl(218, 81%, 75%)'}}>for your business</span>
-          </h1>
-
-          <p className='px-3' style={{color: 'hsl(218, 81%, 85%)'}}>
-            Lorem ipsum dolor sit amet consectetur adipisicing elit.
-            Eveniet, itaque accusantium odio, soluta, corrupti aliquam
-            quibusdam tempora at cupiditate quis eum maiores libero
-            veritatis? Dicta facilis sint aliquid ipsum atque?
-          </p>
-
-        </MDBCol>
-
-        <MDBCol md='6' className='position-relative'>
-
-          <div id="radius-shape-1" className="position-absolute rounded-circle shadow-5-strong"></div>
-          <div id="radius-shape-2" className="position-absolute shadow-5-strong"></div>
-
-          <MDBCard className='my-5 bg-glass'>
-            <MDBCardBody className='p-5'>
-
-              <MDBRow>
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='First name' id='form1' type='text'/>
-                </MDBCol>
-
-                <MDBCol col='6'>
-                  <MDBInput wrapperClass='mb-4' label='Last name' id='form2' type='text'/>
-                </MDBCol>
-              </MDBRow>
-
-              <MDBInput wrapperClass='mb-4' label='Email' id='form3' type='email'/>
-              <MDBInput wrapperClass='mb-4' label='Password' id='form4' type='password'/>
-
-              <div className='d-flex justify-content-center mb-4'>
-                <MDBCheckbox name='flexCheck' value='' id='flexCheckDefault' label='Subscribe to our newsletter' />
-              </div>
-
-              <MDBBtn className='w-100 mb-4' size='md'>sign up</MDBBtn>
-
-              <div className="text-center">
-
-                <p>or sign up with:</p>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='facebook-f' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='twitter' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='google' size="sm"/>
-                </MDBBtn>
-
-                <MDBBtn tag='a' color='none' className='mx-3' style={{ color: '#1266f1' }}>
-                  <MDBIcon fab icon='github' size="sm"/>
-                </MDBBtn>
-
-              </div>
-
-            </MDBCardBody>
-          </MDBCard>
-
-        </MDBCol>
-
-      </MDBRow>
-
-    </MDBContainer>
+    <Container style={{ paddingTop: '100px'}}>
+      <Row className="align-items-center pt-5" >
+        <Col className="text-center">
+            <img src="your-logo.png" alt="Your Picture" width="100" height="100" />
+        </Col>
+        <Col>
+          <Form style={formStyle}>
+          <Col className="text-center" style={{ padding: '20px' }}>
+            <a href="/">
+          <img src="your-logo.png" alt="Your Logo" width="100" height="100" />
+          </a>
+        </Col>
+            <FormGroup style={formGroupStyle}>
+              <Input type="text" id="name" placeholder="Your Name" />
+            </FormGroup>
+            <FormGroup check style={formGroupStyle}>
+              <Label>Gender</Label>
+              <FormGroup check>
+                <Label check>
+                  <Input type="radio" name="gender" /> Male
+                </Label>
+              </FormGroup>
+              <FormGroup check>
+                <Label check>
+                  <Input type="radio" name="gender" /> Female
+                </Label>
+              </FormGroup>
+            </FormGroup>
+            <FormGroup style={formGroupStyle}>
+              <Input type="text" id="email" placeholder="Your Email" />
+            </FormGroup>
+            <FormGroup style={formGroupStyle}>
+              <Input type="text" id="address" placeholder="Your Address" />
+            </FormGroup>
+            <FormGroup style={formGroupStyle}>
+              <Input type="password" id="password" placeholder="Password" />
+            </FormGroup>
+            <FormGroup style={formGroupStyle}>
+              <Input type="password" id="repeatpassword" placeholder="Repeat your password" />
+            </FormGroup>
+            <FormGroup style={formGroupStyle}>
+              <Label check>
+                <Input type="checkbox" id="termsCheck" />{' '}
+                I agree all statements in <a href="#" style={{textDecoration:'none'}}>Terms of Service</a>
+              </Label>
+            </FormGroup>
+            <div className="text-center">
+              <Button style={{ backgroundColor: '#ff8811' }}>Sign Up</Button>
+            </div>
+          </Form>
+        </Col>
+      </Row>
+    </Container>
   );
-}
+};
 
 export default Signup;

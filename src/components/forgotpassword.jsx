@@ -1,7 +1,7 @@
 import React from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
-const Login = () => {
+const Forgotpassword = () => {
   const formStyle = {
     border: '1px solid #ccc',
     padding: '20px',
@@ -26,25 +26,17 @@ const Login = () => {
           </a>
         </Col>
         <div className='text-center'>
-        <Label>Please login to your account</Label>
+        <Label>Forgot Password</Label>
         </div>
             <FormGroup style={formGroupStyle}>
-              <Input type="text" id="name" placeholder="Username" />
+                <Label>Username<span style={{color: 'red'}}>*</span></Label>
+              <Input type="text" id="name" />
             </FormGroup>
-            <FormGroup style={formGroupStyle}>
-              <Input type="password" id="password" placeholder="Password" />
-            </FormGroup>
-            <div className="text-center" style={{padding: '50px'}}>
-              <Button style={{ backgroundColor: '#ff8811'}}>Log in</Button>
-              <br></br>
-              <a href="/forgotpassword">
-                <Label style={{ color:'darkgray', cursor: 'pointer'}}>Forgot password?</Label>
-              </a>
-              <br></br>
-              </div>
+            <form action="forgot_password" method='post'>
               <div className='text-center'>
-              <Label>Don't have an account? <Button style={{backgroundColor: '#ff8811'}} href="signup">Create New</Button></Label>
+              <Button style={{backgroundColor: '#ff8811', color:'#000'}} href="signup">Forgot password</Button>
               </div>
+              </form>
           </Form>
         </Col>
       </Row>
@@ -52,4 +44,4 @@ const Login = () => {
   );
 };
 
-export default Login;
+export default Forgotpassword;

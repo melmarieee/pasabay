@@ -18,31 +18,11 @@ const AccountSetting = () => {
         <section className="settings">
           <ul className="listFLex">
             <li className="list">
-              <p>Notifications, emails & SMS</p>
-              <i class="fa-solid fa-angles-right"></i>
-            </li>
-            <li className="list">
-              <p>Saved Places</p>
-              <i class="fa-solid fa-angles-right"></i>
-            </li>
-            <li className="list">
               <p>Password</p>
               <i class="fa-solid fa-angles-right"></i>
             </li>
             <li className="list">
-              <p>Payment Method</p>
-              <i class="fa-solid fa-angles-right"></i>
-            </li>
-            <li className="list">
-              <p>Payment & Refunds</p>
-              <i class="fa-solid fa-angles-right"></i>
-            </li>
-            <li className="list">
               <p>Privacy Policy</p>
-              <i class="fa-solid fa-angles-right"></i>
-            </li>
-            <li className="list">
-              <p>Language</p>
               <i class="fa-solid fa-angles-right"></i>
             </li>
             <li className="list">

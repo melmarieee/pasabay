@@ -2,10 +2,13 @@ import React from 'react'
 import { MyTrips } from './MyTripsArray'
 import { Link } from 'react-router-dom'
 import '../css/rides.css'
+import Navbar from '../components/common/navbar'
 
 const Rides = () => {
   return (
     <>
+    <Navbar/>
+    <body className='body'>
     <section className="tripHeading-button">
         <h2 className='trips'>My Trips</h2>
         <Link to='/rideHistory' className='historyLink'>
@@ -20,6 +23,7 @@ const Rides = () => {
             return <Trips {...myTrip}/>
         })}
     </section>
+    </body>
     </>
   )
 }

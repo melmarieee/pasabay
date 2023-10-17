@@ -102,10 +102,6 @@ const Account = () => {
             <ul>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
-                <p> Valid ID</p>
-              </li>
-              <li>
-                <i class="fa-solid fa-circle-plus"></i>
                 <p> E-mail Address</p>
               </li>
               <li>

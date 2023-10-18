@@ -1,28 +1,13 @@
-
-.container{ 
-    display: flex;
-    justify-content: space-evenly;
-}
-.fill-up-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-    gap: 5px;
-}
-.checkbox{
-    display: flex;
-}
-.checkbox p{
-    justify-content: space-between;
-    gap: 10px;
+.image-left-pic-container {
+    background-color: #fae8d6;
+    height:100vh;
 }
 
 @media screen and (max-width: 769px) {
 #picture-login {
+    display: none;
+}
+.image-left-pic-container {
     display: none;
 }
 }

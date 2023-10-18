@@ -52,26 +52,26 @@ const Login = () => {
   };
 
   return (
-    <div className='container-fluid'>
-      <Row className="align-items-center" >
-        <Col lg={6} className="text-center p-5">
+    <div>
+      <Row>
+        <Col lg={6} className="text-center p-5 image-left-pic-container">
             <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid"/>
         </Col>
         <Col lg={6} className='px-5'>
         <Form style={formStyle} onSubmit={handleFormSubmit}>
           <Col className="text-center" style={{ padding: '20px' }}>
             <a href="/">
-          <img src={companylogo} alt="Your Logo" width="200" />
-          </a>
+              <img className="py-5" src={companylogo} alt="Your Logo" width="250" />
+            </a>
           </Col>
           <div className='text-center'>
             <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Please login to your account</Label>
           </div>
             <FormGroup style={formGroupStyle}>
-              <Input type="text" id="name" placeholder="Username" />
+              <Input type="text" id="name" placeholder="Username" required/>
             </FormGroup>
             <FormGroup style={formGroupStyle}>
-              <Input type="password" id="password" placeholder="Password" />
+              <Input type="password" id="password" placeholder="Password" required/>
             </FormGroup>
             <div className="text-center" style={{padding: '50px'}}>
               <Button style={{ backgroundColor: '#ff8811'}}>Log in</Button>

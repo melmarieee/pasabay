@@ -62,6 +62,14 @@ function App() {
       path: "/form",
       element: <Form/>,
     },
+    {
+      path:"/accountSetting",
+      element: <AccountSetting/>
+    },
+    {
+      path:"/dragdrop",
+      element: <DragDrop/>
+    }
   ]);
 
   return (

@@ -1,33 +1,72 @@
+import { useState } from 'react';
 import React from 'react';
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import picture from '../assets/login-picture.png'
+import companylogo from '../assets/pasabay-orange-logo.png'
+import "../css/login.css"
 
 const Login = () => {
   const formStyle = {
-    border: '1px solid #ccc',
     padding: '20px',
-    borderRadius: '10px',
   };
 
   const formGroupStyle = {
     marginBottom: '15px', // Add margin to separate form groups
   };
 
+  // State for form fields and validation
+  const [formData, setFormData] = useState({
+    username: '',
+    password: '',
+  });
+
+  const [errors, setErrors] = useState({});
+
+  const handleInputChange = (e) => {
+    const { name, value } = e.target;
+    setFormData({
+      ...formData,
+      [name]: value,
+    });
+  };
+
+  const handleFormSubmit = (e) => {
+    e.preventDefault();
+    const validationErrors = {};
+
+    if (formData.username.trim() === '') {
+      validationErrors.username = 'Username is required';
+    }
+
+    if (formData.password.trim() === '') {
+      validationErrors.password = 'Password is required';
+    }
+
+    if (Object.keys(validationErrors).length === 0) {
+      // Form is valid, you can proceed with your login logic
+      alert('Form is valid. Implement your login logic here.');
+    } else {
+      // Update the state with validation errors
+      setErrors(validationErrors);
+    }
+  };
+
   return (
-    <Container style={{ paddingTop: '100px'}}>
-      <Row className="align-items-center pt-5" >
-        <Col className="text-center">
-            <img src="your-logo.png" alt="Your Picture" width="100" height="100" />
+    <div className='container-fluid'>
+      <Row className="align-items-center" >
+        <Col lg={6} className="text-center p-5">
+            <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid"/>
         </Col>
-        <Col>
-          <Form style={formStyle}>
+        <Col lg={6} className='px-5'>
+        <Form style={formStyle} onSubmit={handleFormSubmit}>
           <Col className="text-center" style={{ padding: '20px' }}>
             <a href="/">
-          <img src="your-logo.png" alt="Your Logo" width="100" height="100" />
+          <img src={companylogo} alt="Your Logo" width="200" />
           </a>
-        </Col>
-        <div className='text-center'>
-        <Label>Please login to your account</Label>
-        </div>
+          </Col>
+          <div className='text-center'>
+            <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Please login to your account</Label>
+          </div>
             <FormGroup style={formGroupStyle}>
               <Input type="text" id="name" placeholder="Username" />
             </FormGroup>
@@ -38,17 +77,17 @@ const Login = () => {
               <Button style={{ backgroundColor: '#ff8811'}}>Log in</Button>
               <br></br>
               <a href="/forgotpassword">
-                <Label style={{ color:'darkgray', cursor: 'pointer'}}>Forgot password?</Label>
+                <Label style={{ color:'darkgray', cursor: 'pointer', fontFamily:'Manrope', fontWeight:'400'}}>Forgot password?</Label>
               </a>
               <br></br>
               </div>
               <div className='text-center'>
-              <Label>Don't have an account? <Button style={{backgroundColor: '#ff8811'}} href="signup">Create New</Button></Label>
+              <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Don't have an account? <Button style={{backgroundColor: '#ff8811'}} href="signup">Create New</Button></Label>
               </div>
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

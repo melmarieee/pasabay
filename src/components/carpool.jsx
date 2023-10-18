@@ -9,10 +9,17 @@ import './../css/carpool.css'
 import GooglePlacesAutocomplete from 'react-google-places-autocomplete';
 import { geocodeByPlaceId, getLatLng } from 'react-google-places-autocomplete';
 import { MDBIcon } from 'mdb-react-ui-kit';
+import { Button, Modal, ModalHeader, ModalFooter, ModalBody, Alert } from 'reactstrap';
+
 
 const Search = () => {                            
   const [fromLocation, setFromLocation] = useState(null);
   const [toLocation, setToLocation] = useState(null);
+  const [modal, setModal] = useState(false);
+
+  const toggleModalClose = () => {
+    setModal(!modal)
+  }
 
   const getLatLong = (event) => {
     geocodeByPlaceId("ChIJ2y8V0h7HlzMRHwpMKE3Kbx4")
@@ -26,6 +33,20 @@ const Search = () => {
   return (
     <>
         <NavBar/>
+        <Modal isOpen={modal} toggle={toggleModalClose}>
+            <ModalHeader toggle={toggleModalClose}>Book this ride?</ModalHeader>
+            <ModalBody>
+              <div >
+
+              </div>
+            </ModalBody>
+            <ModalFooter>
+                <Button className="mx-3" color="none" onClick={toggleModalClose}>
+                    Cancel
+                </Button>x
+                  <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+            </ModalFooter>
+        </Modal>
         <div class="container-fluid pt-5 mt-5">
             <h1 className="text-center pb-4">Where do you want to go?</h1>
             <div className="px-4 pt-2 pb-4 background-search">
@@ -97,7 +118,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023 4:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={getLatLong} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
             </div>
           </div>
           <div className="row bg-light p-3 mt-4 mx-2">
@@ -120,7 +141,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023 3:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={getLatLong} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
             </div>
           </div>
           <div className="row bg-light p-3 mt-4 mx-2">
@@ -143,7 +164,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023, 5:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={getLatLong} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
             </div>
           </div>
         </div>

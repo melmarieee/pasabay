@@ -35,11 +35,10 @@ const Header = (props) => {
                     <a href="/" class="navbar-logo">
                         <img src={PasabbayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
                     </a>
-                    <div className="header-navbar-links">
-                    <NavLink href="/" id='subs'>Home</NavLink>
-                    <NavLink href="/carpool" id='prods'>Carpool</NavLink>
-                    <NavLink href="/account" id='prods'>Profile</NavLink>
-                   
+                    <div className="header-navbar-links">  
+                    <NavLink href="/" id='home'>Home</NavLink>
+                    <NavLink href="/carpool" id='carpool'>Carpool</NavLink>
+                    <NavLink href="/products" id='profile'>Profile</NavLink>
                     {user ? 
                     <NavLink id='my-account'>
                         {user.name}

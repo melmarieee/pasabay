@@ -1,14 +1,4 @@
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px;
-    height: 500px;
-    background: red
-}
-form input {
-    padding: 5px 25px;
-}
+
 .container{ 
     display: flex;
     justify-content: space-evenly;

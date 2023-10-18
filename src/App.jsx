@@ -54,10 +54,6 @@ function App() {
       element: <RideHistory/>
     },
     {
-      path:"/footer",
-      element: <Footer/>
-    },
-    {
       path:"/accountSetting",
       element: <AccountSetting/>
     },

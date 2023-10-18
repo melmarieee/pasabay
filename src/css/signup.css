@@ -1,0 +1,12 @@
+@media screen and (max-width: 769px){
+    #picture{
+        display: none;
+    }
+    .form-check{
+        display: block;
+        min-height: 1.5rem;
+        padding-left: 1px;
+        margin-bottom: .125rem;
+    }
+    
+}

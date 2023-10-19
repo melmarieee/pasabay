@@ -1,32 +1,13 @@
-form{
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    padding: 100px;
-    height: 500px;
-    background: red
+.image-left-pic-container {
+    background-color: #fae8d6;
+    height:100vh;
 }
-form input {
-    padding: 5px 25px;
+
+@media screen and (max-width: 769px) {
+#picture-login {
+    display: none;
 }
-.container{ 
-    display: flex;
-    justify-content: space-evenly;
+.image-left-pic-container {
+    display: none;
 }
-.fill-up-form{
-    display: flex;
-    flex-direction: column;
-    width: 100%;
-    align-items: center;
-    text-align: center;
-    justify-content: center;
-    padding: 10px;
-    gap: 5px;
-}
-.checkbox{
-    display: flex;
-}
-.checkbox p{
-    justify-content: space-between;
-    gap: 10px;
 }

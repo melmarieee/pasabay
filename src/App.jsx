@@ -1,17 +1,22 @@
+import React from "react";
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './App.css'
 import Home from './components/home';
 import Login from "./components/login";
 import Signup from "./components/signup";
+import Forgotpassword from "./components/forgotpassword";
 import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
-import Footer from "./components/common/footer";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
 import ContactNum from "./components/ContactNum";
 import Email from "./components/email";
+import DragDrop from "./components/DragDrop";
+import ConfirmationComponent from "./components/ConfirmationComponent";
+import ShowRide from './components/show_ride';
+import Form from './components/form';
 
 
 function App() {
@@ -26,12 +31,20 @@ function App() {
       element: <CarPool/>,
     },
     {
+      path: "/show_ride",
+      element: <ShowRide/>,
+    },
+    {
       path: "/login",
       element: <Login/>,
     },
     {
       path: "/signup",
       element: <Signup/>
+    },
+    {
+      path: "/forgotpassword",
+      element:<Forgotpassword/>,
     },
     {
       path: "/account",
@@ -50,8 +63,8 @@ function App() {
       element: <RideHistory/>
     },
     {
-      path:"/footer",
-      element: <Footer/>
+      path: "/form",
+      element: <Form/>,
     },
     {
       path:"/accountSetting",
@@ -64,6 +77,14 @@ function App() {
     {
       path:"/email",
       element: <Email/>
+    },
+    {
+      path:"/dragdrop",
+      element: <DragDrop/>
+    },
+    {
+      path: "/confirmation",
+      element: <ConfirmationComponent />,
     }
   ]);
 

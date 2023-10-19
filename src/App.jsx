@@ -10,7 +10,8 @@ import RideHistory from "./components/RideHistory";
 import Footer from "./components/common/footer";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
-import DragDrop from "./components/DragDrop";
+import ContactNum from "./components/ContactNum";
+import Email from "./components/email";
 
 
 function App() {
@@ -57,8 +58,12 @@ function App() {
       element: <AccountSetting/>
     },
     {
-      path:"/dragdrop",
-      element: <DragDrop/>
+      path:"/contactNumber",
+      element: <ContactNum/>
+    },
+    {
+      path:"/email",
+      element: <Email/>
     }
   ]);
 

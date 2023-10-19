@@ -1,0 +1,34 @@
+.body {
+    margin: 8rem;
+}
+.verify-contact h1 {
+    text-align: center;
+}
+.container-phone {
+    margin: 10rem;
+}
+.image-container img {
+    width: 30%;
+    margin: 0 36rem;
+}
+.labelInput {
+    margin-bottom: 10px;
+    padding: 20px;
+}
+.form-control {
+    background-color: #fae8d6 !important;
+    /* height: 5rem !important; */
+    /* font-size: 2rem !important; */
+}
+.selected-flag {
+    background-color: #fae8d6 !important;
+    /* width: 5rem !important; */
+}
+.error-message {
+    color: red;
+    margin-top: 10px;
+    font-size: 14px;
+}
+/* .flag {
+    width: 100% !important;
+} */

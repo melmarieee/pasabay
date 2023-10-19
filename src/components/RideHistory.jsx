@@ -1,42 +1,62 @@
-import React from 'react'
-import { History } from './HistoryArray'
-import { Link } from 'react-router-dom'
+import React from "react";
+import { History } from "./HistoryArray";
+import { Link } from "react-router-dom";
+import Navbar from "../components/common/navbar";
+import { MDBAccordion, MDBAccordionItem } from "mdb-react-ui-kit";
 
 const RideHistory = () => {
   return (
     <>
-    <section className="tripHeading-button">
-        <Link to='/rides' className='tripLink'>
-        <h2 className='trips'>My Trips</h2>
-        </Link>
-        <h2 className='history'>Ride  History</h2>
-    </section>
-    <section className="tripContainer">
-        {History.map((rideHistory) =>{
-            return <HistoryRide {...rideHistory}/>
-        })}
-    </section>
-    </>
-  )
-}
-
-const HistoryRide = ({Address, Date, Time, Amount}) =>{
-    return(
-        <>
-        <section className="tripContainerGrid">
-            <section className="TripContent">
-                <i class="fa-solid fa-van-shuttle"></i>
-                <p>{Address}</p>
-                <p>{Date}</p>
-                <p>{Time}</p>
-                <p>{Amount}</p>
-            </section>
-            <section className="button">
-                <button className='bookAgain'>Book Again</button>
-            </section>  
+      <Navbar />
+      <body className="body">
+        <section className="tripHeading-button">
+          <div className="container text center">
+            <div className="row">
+              <div className="col">
+                <Link to="/rides" className="tripLink">
+                  <h2 className="trips">My Trips</h2>
+                </Link>
+              </div>
+              <div className="col">
+                <h2 className="history">Ride History</h2>
+              </div>
+            </div>
+          </div>
         </section>
-        </>
-    )
-}
+        <section>
+          <h3 className="tripHeader">History Details:</h3>
+        </section>
+        <section className="tripContainer">
+          {History.map((history) => {
+            return (
+              <MDBAccordion
+                flush
+                initialActive={1}
+                className="accordionContainer"
+              >
+                <MDBAccordionItem
+                  collapseId={1}
+                  headerTitle={history.Date}
+                  className="accordionItem"
+                >
+                  <div className="accordionContent">
+                    <div className="container text center">
+                      <div className="row">
+                        <div className="col-7"><p>{history.Address}</p></div>
+                        <div className="col"><p>{history.Time}</p></div>
+                        <div className="col"><p>{history.Amount}</p></div>
+                        <div className="col-3"><button type="submit">Book Again</button></div>
+                      </div>
+                    </div>
+                  </div>
+                </MDBAccordionItem>
+              </MDBAccordion>
+            );
+          })}
+        </section>
+      </body>
+    </>
+  );
+};
 
-export default RideHistory
+export default RideHistory;

@@ -15,7 +15,7 @@ export const MyTrips = [{
 {
   id: 3, 
   Address: "51 L. Aguinaldo St., Bolinao, Pangasinan",
-  Date: "Oct 20, 2023",
+  Date: "Nov 18 , 2023",
   Time: "12:00 PM",
   Amount: "PHP 900"
 }];

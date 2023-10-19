@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png';
 import companylogo from '../assets/pasabay-orange-logo.png';
@@ -46,6 +46,14 @@ function Login() {
       console.log(error);
     });
   };
+
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (window.localStorage.getItem("userLogin")) {
+        window.location.href = '/';
+      }
+   }
+  }, [])
 
 
   return (

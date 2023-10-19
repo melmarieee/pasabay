@@ -1,3 +1,4 @@
+import React from "react";
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './App.css'
 import Home from './components/home';
@@ -11,6 +12,7 @@ import RideHistory from "./components/RideHistory";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
 import DragDrop from "./components/DragDrop";
+import ConfirmationComponent from "./components/ConfirmationComponent";
 import ShowRide from './components/show_ride';
 import Form from './components/form';
 
@@ -69,6 +71,10 @@ function App() {
     {
       path:"/dragdrop",
       element: <DragDrop/>
+    },
+    {
+      path: "/confirmation",
+      element: <ConfirmationComponent />,
     }
   ]);
 

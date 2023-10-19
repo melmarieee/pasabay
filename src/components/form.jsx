@@ -43,7 +43,7 @@ const form = () => {
         <div>
         <form className='pt-5 px-5'> 
             <div class="row mb-4">
-                <div class="col-md-8">
+                <div class="col-md-5">
                         <label class="form-label" for="form6Example1">Origin</label>
                         <GooglePlacesAutocomplete 
                             selectProps={{
@@ -54,7 +54,7 @@ const form = () => {
                             }}
                         />
                 </div>
-                <div class="col-md-4">
+                <div class="col-md-5">
                         <label class="form-label" for="form6Example2">Destination</label>
                         <GooglePlacesAutocomplete 
                             selectProps={{
@@ -65,6 +65,18 @@ const form = () => {
                             }}
                         />
                 </div>
+                <div class="col-md-2">
+                <label class="form-label " for="form6Example4">Time of transportation</label>
+                    <LocalizationProvider dateAdapter={AdapterDayjs}>
+                        <DemoContainer components={['TimePicker', 'TimePicker']}>
+                            <TimePicker
+                            className='time-info'
+                            label="Select Time"
+                            defaultValue={dayjs('2022-04-17T15:30')}
+                            />
+                        </DemoContainer>
+                    </LocalizationProvider>
+                </div>
             </div>
                 <div class="form-outline mb-4">
                 <label class="form-label" for="form6Example3">Date of transportation</label>
@@ -74,17 +86,6 @@ const form = () => {
                               label="Select Date"
                               className="bg-white date"
                               slotProps={{ textField: { size: 'small' } }}
-                            />
-                        </DemoContainer>
-                    </LocalizationProvider>
-                </div>
-                <div class="form-outline mb-4">
-                <label class="form-label" for="form6Example4">Time of transportation</label>
-                    <LocalizationProvider dateAdapter={AdapterDayjs}>
-                        <DemoContainer components={['TimePicker', 'TimePicker']}>
-                            <TimePicker
-                            label="Select Time"
-                            defaultValue={dayjs('2022-04-17T15:30')}
                             />
                         </DemoContainer>
                     </LocalizationProvider>
@@ -125,7 +126,7 @@ const form = () => {
                     </FormControl>
                 </Box>
             </div>
-            <button type="submit" class="btn btn-primary btn-block mb-4">Place order</button>
+            <button type="submit" class="button-info11">Publish Ride</button>
         </form>
         </div>
     </div>

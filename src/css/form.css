@@ -1,3 +1,16 @@
 .create-info{
     background-color: #fae8d6;
 }
+.time-info{
+    width: 50%;
+    
+}
+.button-info11{
+    background-color: #0077b6;
+    color: #fff;
+    border-color: black;
+    justify-content: right;
+    width: 10%;
+    height: 40px;
+    border-radius: 10px;  
+}

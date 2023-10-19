@@ -11,3 +11,11 @@
     display: none;
 }
 }
+.input-container{
+    width: 90%;
+}
+.button-info{
+    border-color: #fae8d6 !important;
+    background-color: #ff8811;
+    border-radius: 8px;
+}

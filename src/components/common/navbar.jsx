@@ -20,13 +20,25 @@ import {
 
   
 const Header = (props) => {
-    const cart_user = window.localStorage.getItem("user");
+    const user_session = window.localStorage.getItem("userLogin");
 
     const [isOpen, setIsOpen] = useState(false);
-    const [user, setUser] = useState(JSON.parse(cart_user));
+    const [user, setUser] = useState(JSON.parse(user_session));
+    const [dropdownOpen, setDropdownOpen] = useState(false);
+
+    const toggleDropDown = () => setDropdownOpen((prevState) => !prevState);
+    
+    
+    console.log(user)
     const [deviceWidth, _] = useState(0)
 
     const toggle = () => setIsOpen(!isOpen)
+
+    const toggleLogout = () => {
+        localStorage.removeItem("userLogin");
+
+        window.location.href = "/login";
+    }
 
     
     return(
@@ -41,22 +53,14 @@ const Header = (props) => {
                     <NavLink href="/products" id='profile'>Profile</NavLink>
                     {user ? 
                     <NavLink id='my-account'>
-                        {user.name}
-                        <UncontrolledDropdown group direction="down">
-                            <DropdownToggle
-                                caret
-                                color="#952322"
-                                className='buttoncaret'
-                            />
+                        <Dropdown isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
+                            <DropdownToggle caret>{user.name}</DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem header>
-                                Profile
-                                </DropdownItem>
-                                <DropdownItem >
-                                    Account
-                                </DropdownItem>
+                            <DropdownItem>Account</DropdownItem>
+                            <DropdownItem>Rides</DropdownItem>
+                            <DropdownItem onClick={toggleLogout.bind(this)}>Logout</DropdownItem>
                             </DropdownMenu>
-                        </UncontrolledDropdown>
+                        </Dropdown>
                     </NavLink>
                     :
                     <NavLink href="/login">Login</NavLink>

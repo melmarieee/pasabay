@@ -18,60 +18,35 @@ function Login() {
     marginBottom: '15px',
   };
 
-  // Validation Forms
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-
   const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [errorLogin, setErrorLogin] = useState('');
 
 
-  // Sample User
-  const predefinedUserData = [
-    { email: 'user1@example.com', password: 'password1' },
-    { email: 'user2@example.com', password: 'password2' },
-    // Add more user objects as needed
-  ];
-
-  // Validation Checks and Local Storage
   const handleLogin = (e) => {
     e.preventDefault();
   
-    let emailIsValid = true;
-    let passwordIsValid = true;
-  
-    if (email.trim() === '') {
-      setEmailError('Email is required');
-      emailIsValid = false;
-    } else {
-      setEmailError('');
-    }
-  
-    if (password.trim() === '') {
-      setPasswordError('Password is required');
-      passwordIsValid = false;
-    } else {
-      setPasswordError('');
-    }
-  
-    if (emailIsValid && passwordIsValid) {
-      const user = predefinedUserData.find((userData) => userData.email === email);
-  
-      if (user) {
-        if (user.password === password) {
-          // Successful login
-          // You can redirect the user to a dashboard or another page
-          window.location.href = '/carpool';
-        } else {
-          // Password is incorrect
-          setPasswordError('Incorrect password');
-        }
-      } else {
-        // Email is incorrect
-        setEmailError('Incorrect email');
+    axios.post(loginURL, {
+      email: email,
+      password: password,
+    })
+    .then(function (response) {
+      console.log(response.data.data)
+      if (response.data.data.length == 1) {
+        window.localStorage.setItem("userLogin", JSON.stringify(response.data.data[0]));
+        window.location.href = '/';
       }
-    }
+
+      if (response.data.data == 0) {
+        setErrorLogin(<p class="mx-5 text-danger">Incorrect email or password</p>)
+      }
+    })
+    .catch(function (error) {
+      alert(error)
+      console.log(error);
+    });
   };
+
 
   return (
     <div>
@@ -86,24 +61,20 @@ function Login() {
                 <img src={companylogo} alt="Your Logo" width="250" />
               </a>
             </Col>
-
             <div className='px-5 text-center'>
               <h1><b>Welcome Back!</b></h1>
             </div>
             <div className='px-5 mb-5'>
               <Label className='text-secondary'>Please enter your details</Label>
             </div>
-
             <FormGroup style={formGroupStyle}>
-              <Input className="input-container mx-5" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-              {emailError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{emailError}</div>}
+              <Input required className="input-container mx-5" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
             </FormGroup>
 
             <FormGroup style={formGroupStyle}>
-              <Input className="input-container mx-5 my-4" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
-              {passwordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{passwordError}</div>}
+              <Input required className="input-container mx-5 my-4" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
             </FormGroup>
-
+            {errorLogin}
             <div className="text-center" style={{ padding: '50px' }}>
               <Button style={{ backgroundColor: '#ff8811' }} >Log in</Button>
               <br />
@@ -116,7 +87,6 @@ function Login() {
             <div className='text-center'>
               <Label>Don't have an account? <a href="/signup" style={{ textDecoration: 'none', color: '#ff8811' }}>Sign up</a></Label>
             </div>
-
           </Form>
         </Col>
       </Row>

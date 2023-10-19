@@ -26,7 +26,7 @@ import {
 const ShowRide = () => {       
 
   const [map, setMap] = useState(null)
-  const [directionsResponse, setDairectionsResponse] = useState(null)
+  const [directionsResponse, setDirectionsResponse] = useState(null)
   const [distance, setDistance] = useState('')
   const [duration, setDuration] = useState('')
   const center = { lat: 14.5837893, lng: 121.1170287 }

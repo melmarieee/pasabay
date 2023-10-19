@@ -15,15 +15,6 @@
     margin-bottom: 10px;
     padding: 20px;
 }
-.form-control {
-    background-color: #fae8d6 !important;
-    /* height: 5rem !important; */
-    /* font-size: 2rem !important; */
-}
-.selected-flag {
-    background-color: #fae8d6 !important;
-    /* width: 5rem !important; */
-}
 .error-message {
     color: red;
     margin-top: 10px;

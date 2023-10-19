@@ -1,4 +1,4 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png';
 import companylogo from '../assets/pasabay-orange-logo.png';
@@ -21,23 +21,59 @@ function Login() {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
+  const [isButtonDisabled, setButtonDisabled] = useState(true);
+
+  // Sample User
+  const predefinedUserData = [
+    { email: 'user1@example.com', password: 'password1' },
+    { email: 'user2@example.com', password: 'password2' },
+    // Add more user objects as needed
+  ];
+
   // Validation Checks and Local Storage
   const handleLogin = (e) => {
     e.preventDefault();
-
+  
+    let emailIsValid = true;
+    let passwordIsValid = true;
+  
     if (email.trim() === '') {
-      setEmailError('Email is Required');
+      setEmailError('Email is required');
+      emailIsValid = false;
     } else {
       setEmailError('');
-      localStorage.setItem('userEmail', email);
     }
-
+  
     if (password.trim() === '') {
-      setPasswordError('Password is Required');
+      setPasswordError('Password is required');
+      passwordIsValid = false;
     } else {
       setPasswordError('');
     }
+  
+    if (emailIsValid && passwordIsValid) {
+      const user = predefinedUserData.find((userData) => userData.email === email);
+  
+      if (user) {
+        if (user.password === password) {
+          // Successful login
+          // You can redirect the user to a dashboard or another page
+          window.location.href = '/carpool';
+        } else {
+          // Password is incorrect
+          setPasswordError('Incorrect password');
+        }
+      } else {
+        // Email is incorrect
+        setEmailError('Incorrect email');
+      }
+    }
   };
+
+    // Enable the login button only when both email and password are provided
+    useEffect(() => {
+      setButtonDisabled(!(email.trim() && password.trim()));
+    }, [email, password]);
 
   return (
     <Container style={{ paddingTop: '100px' }}>
@@ -69,7 +105,7 @@ function Login() {
             </FormGroup>
 
             <div className="text-center" style={{ padding: '50px' }}>
-              <Button style={{ backgroundColor: '#ff8811' }}>Log in</Button>
+              <Button style={{ backgroundColor: '#ff8811' }}  disabled={isButtonDisabled} >Log in</Button>
               <br />
               <a href="/forgotpassword">
                 <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>

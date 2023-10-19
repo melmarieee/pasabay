@@ -1,4 +1,5 @@
 import React, { useState } from 'react';
+import { Link } from 'react-router-dom'; // Import the Link component
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import logo from '../assets/pasabay-orange-logo.png';
 import picture from '../assets/signup-picture.png';
@@ -139,7 +140,7 @@ const Signup = () => {
       localStorage.setItem('userData', JSON.stringify(userData));
 
       // Redirect to another page, e.g., a confirmation page
-      window.location.href = '/confirmation/';
+      window.location.href = '/login';
     }
   };
 
@@ -219,6 +220,10 @@ const Signup = () => {
               <br />
               {checkboxError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{checkboxError}</div>}
             </FormGroup>
+
+            <div className='text-center'>
+              <p>Already have an account?<Link to="/login" style={{textDecoration:'none'}}>Log in</Link></p>
+            </div>
 
             <div className="text-center">
               <Button style={{ backgroundColor: '#ff8811' }} type="submit">Sign Up</Button>

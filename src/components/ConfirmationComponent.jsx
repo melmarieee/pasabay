@@ -19,6 +19,12 @@ const ConfirmationComponent = () => {
           <button style={{ backgroundColor: '#ff8811', color: '#fff', padding: '10px' }}>
             Account
           </button>
+
+          <Link to="/login">
+          <button style={{ backgroundColor: '#007bff', color: '#fff', padding: '10px' }}>
+            Log In
+           </button>
+          </Link>
         </div>
       </Container>
 

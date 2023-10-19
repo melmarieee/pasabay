@@ -5,6 +5,7 @@ import picture from '../assets/forgotpassword-picture.png'
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 const Forgotpassword = () => {
+  
   // Styles
   const formStyle = {
     padding: '20px',

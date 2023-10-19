@@ -1,4 +1,4 @@
-import PasabbayLogo from '../../assets/pasabay-orange-logo.png'
+import PasabayLogo from '../../assets/pasabay-orange-logo.png'
 import '../../css/navbar.css'
 import React, {useState} from 'react';
 import {  MDBIcon } from "mdb-react-ui-kit";
@@ -33,7 +33,7 @@ const Header = (props) => {
         <>
             <Navbar expand={deviceWidth} className='header py-3' >
                     <a href="/" class="navbar-logo">
-                        <img src={PasabbayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
+                        <img src={PasabayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
                     </a>
                     <div className="header-navbar-links">  
                     <NavLink href="/" id='home'>Home</NavLink>

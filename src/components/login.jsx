@@ -50,7 +50,7 @@ function Login() {
           <Form style={formStyle} onSubmit={handleLogin}>
             <Col className="text-center" style={{ padding: '20px' }}>
               <a href="/">
-                <img src={companylogo} alt="Your Logo" width="200" />
+                <img src={companylogo} alt="Your Logo" width="350" />
               </a>
             </Col>
 

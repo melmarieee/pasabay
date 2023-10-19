@@ -103,15 +103,18 @@ const Search = () => {
               <MDBIcon fas icon="car-side" size="4x" className="pt-4" />
             </div>
             <div className="col-md-2">
+              <p><h3>Price</h3><span>₱ 300</span></p>
+            </div>
+            <div className="col-md-2">
               <p><b>Driver:</b> Ryan Velasquez</p>
               <p><b>Type:</b> Sedan</p>
               <p><b>Vehicle:</b> NG0 1354 Toyota Raze</p>
               <p><b>Available Seat:</b> 3</p>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-2">
               <p><h3>Going from</h3> Capitol Commons Estancia Estancia Mall, Camino Drive, Pasig</p>
             </div>
-            <div className="col-md-3">
+            <div className="col-md-2">
               <p><h3>Going to</h3>SM City Batangas Brgy, M.Pastor Ave, Village, Batangas</p>
             </div>
             <div className="col-md-2">

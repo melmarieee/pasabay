@@ -7,6 +7,23 @@
 .logo {
     width: 200px;
 } */
+
+.margin-negative-nav {
+  margin-top: -14px
+}
+
+.navbutton-dropdown button {
+  background-color: white;
+  border: none;
+  color: black;
+}
+
+.navbutton-dropdown button:hover {
+  background-color: white;
+  border: none;
+  color: black;
+}
+
 .header{
   position: fixed;
   top: 0;

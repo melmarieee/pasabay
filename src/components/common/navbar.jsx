@@ -51,9 +51,9 @@ const Header = (props) => {
                     <NavLink href="/" id='home'>Home</NavLink>
                     <NavLink href="/carpool" id='carpool'>Carpool</NavLink>
                     {user ? 
-                    <NavLink id='my-account'>
-                        <Dropdown isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
-                            <DropdownToggle caret>{user.name}</DropdownToggle>
+                    <NavLink className='margin-negative-nav'>
+                        <Dropdown className="navbutton-dropdown" isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
+                            <DropdownToggle caret><b>{user.name}</b></DropdownToggle>
                             <DropdownMenu>
                             <DropdownItem>Account</DropdownItem>
                             <DropdownItem>Rides</DropdownItem>

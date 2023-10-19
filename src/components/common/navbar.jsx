@@ -50,7 +50,6 @@ const Header = (props) => {
                     <div className="header-navbar-links">  
                     <NavLink href="/" id='home'>Home</NavLink>
                     <NavLink href="/carpool" id='carpool'>Carpool</NavLink>
-                    <NavLink href="/products" id='profile'>Profile</NavLink>
                     {user ? 
                     <NavLink id='my-account'>
                         <Dropdown isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>

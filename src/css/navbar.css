@@ -30,12 +30,12 @@
   margin-top: -20px;
 }
 #navbar-logo1{
-  width: 200px;
+  width: 250px;
   justify-self: unset;
   align-items: start;
+  padding: 0;
 }
 #navbar-logo1:hover{
-  width: 190px;
   opacity: 0.8;
 }
 

@@ -3,10 +3,47 @@
     flex-direction: column;
     align-items: center;
     justify-content: center;
-    height: 50vh; /* Adjust this as needed for your layout */
+    text-align: center;
+    height: 50vh; 
+  }
+
+  .LogoC-image {
+    margin: 20px;
   }
   
   .centered-content {
     text-align: center;
   }
+  img, svg {
+    vertical-align: middle;
+}
   
+  /* Media Query */
+  @media (max-width: 768px) {
+    .LogoC-image {
+      margin: 10px;
+    }
+    .centered-content {
+      margin: 10px;
+    }
+    img, svg {
+      vertical-align: middle;
+      width: 300px;
+      padding-left: 50px;
+  }
+  }
+  
+  /* Media query for medium screens (e.g., tablets) */
+  @media (min-width: 768px) and (max-width: 1024px) {
+    .LogoC-image {
+      margin: 15px;
+    }
+    .centered-content {
+      margin: 15px;
+    }
+    img, svg {
+      vertical-align: middle;
+      width: 300px;
+      padding-left: 50px;
+  }
+  }

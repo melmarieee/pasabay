@@ -68,32 +68,48 @@ const Account = () => {
       <NavBar />
       <body className="body">
         <section className="about-setting">
-          <h2 className="about">About you</h2>
-          <Link to="/accountSetting" className="accountLink">
-            <h2 className="account">Account Setting</h2>
-          </Link>
+          <div className="container text center">
+            <div className="row">
+              <div className="col">
+                <h2 className="about">About you</h2>
+              </div>
+              <div className="col">
+                <Link to="/accountSetting" className="accountLink">
+                  <h2 className="account">Account Setting</h2>
+                </Link>
+              </div>
+            </div>
+          </div>
         </section>
         <hr />
         <section className="detailsContainer">
-          <img src="../src/assets/carpoollogo.png" alt="" />
-          <form action="#" onSubmit={handleEditFormSubmit}>
-            {contacts.map((contact) => (
-              <>
-                {editContactId === contact.id ? (
-                  <EditTable
-                    editFormData={editFormData}
-                    handleEditFormChange={handleEditFormChange}
-                    handleCancelClick={handleCancelClick}
-                  />
-                ) : (
-                  <ReadTable
-                    contact={contact}
-                    handleEditClick={handleEditClick}
-                  />
-                )}
-              </>
-            ))}
-          </form>
+          <div className="container text center">
+            <div className="row">
+              <div className="col">
+                <img src="../src/assets/carpoollogo.png" alt="" />
+              </div>
+              <div className="col">
+                <form action="#" onSubmit={handleEditFormSubmit}>
+                  {contacts.map((contact) => (
+                    <>
+                      {editContactId === contact.id ? (
+                        <EditTable
+                          editFormData={editFormData}
+                          handleEditFormChange={handleEditFormChange}
+                          handleCancelClick={handleCancelClick}
+                        />
+                      ) : (
+                        <ReadTable
+                          contact={contact}
+                          handleEditClick={handleEditClick}
+                        />
+                      )}
+                    </>
+                  ))}
+                </form>
+              </div>
+            </div>
+          </div>
         </section>
         <hr />
         <section className="validInfoContainer">
@@ -102,11 +118,15 @@ const Account = () => {
             <ul>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
-                <p> E-mail Address</p>
+                <Link to="/email" className="emailLink">
+                  <p> E-mail Address</p>
+                </Link>
               </li>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
-                <p> Contact Number</p>
+                <Link to="/contactNumber" className="contactLink">
+                  <p> Contact Number</p>
+                </Link>
               </li>
             </ul>
           </div>

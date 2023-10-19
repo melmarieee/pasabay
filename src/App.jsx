@@ -9,12 +9,12 @@ import Account from "./components/account";
 import Inbox from "./components/inbox";
 import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
-import Footer from "./components/common/footer";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
 import DragDrop from "./components/DragDrop";
 import ConfirmationComponent from "./components/ConfirmationComponent";
-
+import ShowRide from './components/show_ride';
+import Form from './components/form';
 
 
 function App() {
@@ -27,6 +27,10 @@ function App() {
     {
       path: "/carpool",
       element: <CarPool/>,
+    },
+    {
+      path: "/show_ride",
+      element: <ShowRide/>,
     },
     {
       path: "/login",
@@ -55,6 +59,10 @@ function App() {
     {
       path:"/rideHistory",
       element: <RideHistory/>
+    },
+    {
+      path: "/form",
+      element: <Form/>,
     },
     {
       path:"/accountSetting",

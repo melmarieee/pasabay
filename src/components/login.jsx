@@ -1,5 +1,8 @@
 import React, { useRef, useState } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { useState } from 'react';
+import React from 'react';
+import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png'
 import companylogo from '../assets/pasabay-orange-logo.png'
 import "../css/login.css"
@@ -40,6 +43,7 @@ function Login () {
   }
 
   return (
+
     <Container style={{ paddingTop: '100px'}}>
       <Row className="align-items-center" >
 
@@ -62,11 +66,34 @@ function Login () {
             <FormGroup style={formGroupStyle}>
               <Input type="text" id="name" placeholder="Email"  onChange={(e) =>   setEmail(e.target.value)} value={email} />
               {emailError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{emailError}</div>}
+
+    <div>
+      <Row>
+        <Col lg={6} className="text-center p-5 image-left-pic-container">
+            <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid"/>
+        </Col>
+        <Col lg={6} className='px-5'>
+        <Form style={formStyle} onSubmit={handleFormSubmit}>
+          <Col className="text-center" style={{ padding: '20px' }}>
+            <a href="/">
+              <img className="py-5" src={companylogo} alt="Your Logo" width="250" />
+            </a>
+          </Col>
+          <div className='text-center'>
+            <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Please login to your account</Label>
+          </div>
+            <FormGroup style={formGroupStyle}>
+              <Input type="text" id="name" placeholder="Username" required/>
+
             </FormGroup>
 
             <FormGroup style={formGroupStyle}>
+
               <Input type="password" id="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
               {passwordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{passwordError}</div>}
+
+              <Input type="password" id="password" placeholder="Password" required/>
+
             </FormGroup>
 
             <div className="text-center" style={{padding: '50px'}}>
@@ -86,7 +113,7 @@ function Login () {
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

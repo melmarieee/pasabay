@@ -1,5 +1,13 @@
+.image-left-pic-container {
+    background-color: #fae8d6;
+    height:100vh;
+}
+
 @media screen and (max-width: 769px) {
 #picture-login {
+    display: none;
+}
+.image-left-pic-container {
     display: none;
 }
 }

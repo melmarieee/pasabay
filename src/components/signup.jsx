@@ -3,6 +3,12 @@ import '../css/signup.css';
 import logo from '../assets/pasabay-orange-logo.png';
 import picture from '../assets/signup-picture.png';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { useState } from 'react';
+import React from 'react';
+import '../css/signup.css'
+import logo from '../assets/pasabay-orange-logo.png'
+import picture from '../assets/signup-picture.png'
+import { Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 
 // Validation Forms
 const Signup = () => {
@@ -142,6 +148,7 @@ const Signup = () => {
   };
 
   return (
+
     <Container style={{ paddingTop: '100px' }}>
       <Row className="align-items-center">
         <Col className="text-center">
@@ -154,6 +161,31 @@ const Signup = () => {
               <a href="/">
                 <img src={logo} alt="Your Logo" width="200" />
               </a>
+
+    <div className='container-fluid p-5'>
+      <Row className="align-items-center" >
+        <Col lg={6} className="text-center">
+            <img id='picture' src={picture} alt="Your Picture" className="img-fluid" />
+        </Col>
+        <Col lg={6} className='px-5'>
+          <form onSubmit={handleSubmit} style={formStyle}>
+          <div className="text-center py-3">
+            <a href="/">
+              <img src={logo} alt="Your Logo" width="200" />
+            </a>
+          </div>
+        <div className='text-center'>
+          <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Sign up</Label>
+        </div>
+            <FormGroup style={formGroupStyle}>
+              <Input type="text" id="name" placeholder="Your Name" />
+            </FormGroup> 
+            <FormGroup style={formGroupStyle}>
+            <Row>
+            <Col>
+            <Label style={{paddingLeft:'10px'}}>Date of Birth</Label>
+            <Input type="date" id="birthday" className="birthday-input"/>
+
             </Col>
 
             <div className='text-center'>
@@ -225,7 +257,7 @@ const Signup = () => {
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 };
 

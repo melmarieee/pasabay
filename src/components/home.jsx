@@ -1,14 +1,8 @@
 import React from 'react'
-import {
-    Carousel,
-    CarouselItem,
-    CarouselControl,
-    CarouselIndicators,
-    CarouselCaption,
-  } from 'reactstrap';
 import './../css/home.css'
 import HomeCar from '../assets/carpoollogo.png'
 import NavBar from './common/navbar'
+import Footer from './common/footer'
 import { MDBIcon } from 'mdb-react-ui-kit';
 
 
@@ -175,6 +169,7 @@ const Home = () => {
           </div>
         </div>
       </section>
+      <Footer/>
     </>
   )
 }

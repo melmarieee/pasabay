@@ -1,89 +1,88 @@
-import { useState } from 'react';
-import React from 'react';
+import React, { useRef, useState } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png'
 import companylogo from '../assets/pasabay-orange-logo.png'
 import "../css/login.css"
 
-const Login = () => {
+function Login () {
+  // Styles
   const formStyle = {
     padding: '20px',
   };
 
   const formGroupStyle = {
-    marginBottom: '15px', // Add margin to separate form groups
+    marginBottom: '15px', 
   };
 
-  // State for form fields and validation
-  const [formData, setFormData] = useState({
-    username: '',
-    password: '',
-  });
+  // Validation Forms
+  const [email, setEmail] = useState ('');
+  const [emailError, setEmailError] = useState ('');
 
-  const [errors, setErrors] = useState({});
+  const [password, setPassword] = useState ('');
+  const [passwordError, setPasswordError] = useState ('');
 
-  const handleInputChange = (e) => {
-    const { name, value } = e.target;
-    setFormData({
-      ...formData,
-      [name]: value,
-    });
-  };
+  // Validation Checks
+  const handleLogin = () => {
+  if (email.trim() === '') {
+    setEmailError('Email is Required')
+  } else {
+    setEmailError('');
 
-  const handleFormSubmit = (e) => {
-    e.preventDefault();
-    const validationErrors = {};
+    // Store the email in local Storage
+    localStorage.setItem('userEmail', email);
+  }
 
-    if (formData.username.trim() === '') {
-      validationErrors.username = 'Username is required';
-    }
-
-    if (formData.password.trim() === '') {
-      validationErrors.password = 'Password is required';
-    }
-
-    if (Object.keys(validationErrors).length === 0) {
-      // Form is valid, you can proceed with your login logic
-      alert('Form is valid. Implement your login logic here.');
-    } else {
-      // Update the state with validation errors
-      setErrors(validationErrors);
-    }
-  };
+  if (password.trim() === '') {
+    setPasswordError('Password is Required')
+  } else {
+    setPasswordError('')
+  }
+  }
 
   return (
     <Container style={{ paddingTop: '100px'}}>
       <Row className="align-items-center" >
+
         <Col className="text-center">
             <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid"/>
         </Col>
+
         <Col>
-          <Form style={formStyle} onSubmit={handleFormSubmit}>
+          <Form style={formStyle}>
           <Col className="text-center" style={{ padding: '20px' }}>
             <a href="/">
           <img src={companylogo} alt="Your Logo" width="200" />
           </a>
         </Col>
+
         <div className='text-center'>
         <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Please login to your account</Label>
         </div>
+
             <FormGroup style={formGroupStyle}>
-              <Input type="text" id="name" placeholder="Username" />
+              <Input type="text" id="name" placeholder="Email"  onChange={(e) =>   setEmail(e.target.value)} value={email} />
+              {emailError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{emailError}</div>}
             </FormGroup>
+
             <FormGroup style={formGroupStyle}>
-              <Input type="password" id="password" placeholder="Password" />
+              <Input type="password" id="password" name="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
+              {passwordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{passwordError}</div>}
             </FormGroup>
+
             <div className="text-center" style={{padding: '50px'}}>
-              <Button style={{ backgroundColor: '#ff8811'}}>Log in</Button>
+              <Button onClick={handleLogin} style={{ backgroundColor: '#ff8811'}}>Log in</Button>
               <br></br>
               <a href="/forgotpassword">
                 <Label style={{ color:'darkgray', cursor: 'pointer', fontFamily:'Manrope', fontWeight:'400'}}>Forgot password?</Label>
               </a>
               <br></br>
-              </div>
-              <div className='text-center'>
-              <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Don't have an account? <Button style={{backgroundColor: '#ff8811'}} href="signup">Create New</Button></Label>
-              </div>
+            </div>
+
+            <div className='text-center'>
+              <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Don't have an account? 
+              <a href="/signup" style={{textDecoration:'none', color: '#ff8811'}}>Create New</a>
+              </Label>
+            </div>
           </Form>
         </Col>
       </Row>

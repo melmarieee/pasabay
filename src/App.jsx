@@ -1,3 +1,4 @@
+import React from "react";
 import { createBrowserRouter, RouterProvider,} from "react-router-dom";
 import './App.css'
 import Home from './components/home';
@@ -12,6 +13,8 @@ import Footer from "./components/common/footer";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
 import DragDrop from "./components/DragDrop";
+import ConfirmationComponent from "./components/ConfirmationComponent";
+
 
 
 function App() {
@@ -60,6 +63,10 @@ function App() {
     {
       path:"/dragdrop",
       element: <DragDrop/>
+    },
+    {
+      path: "/confirmation",
+      element: <ConfirmationComponent />,
     }
   ]);
 

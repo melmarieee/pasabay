@@ -1,64 +1,54 @@
+.body {
+    margin: 3rem;
+}
 .tripHeading-button {
-    display: grid;
-    grid-template-columns: 5fr 5fr;
+    /* display: flex; */
+    justify-content: center;
     cursor: pointer;
-    margin-bottom: 20px;
-}
-.TripContent {
-    border: solid;
-    border-width: 1px;
-    border-radius: 10px;
-    box-shadow: 5px 5px 10px;
-}
-.TripContent {
-    display: grid;
-    grid-template-columns: 1fr 4fr 1fr 1fr 1fr 1fr;
-    margin-bottom: 20px;
-    text-align: center;
-    align-items: center;
-}
-.TripContent i {
-    padding-left: 80px;
+    margin-bottom: 50px;
 }
 .trips:hover {
-    background-color: grey;
+    background-color: #5EB1BF;
 }
 .trips {
-    width: 15rem;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
+    margin: 0 10rem;
+    padding: 5px;
+    background-color: #FF8811;
+    border-color: #5EB1BF;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 16rem;
+    text-align: center;
+    font-size: 20px;
 }
 .history:hover {
-    background-color: grey;
+    background-color: #5EB1BF;
 }
 .history {
-    width: 15rem;
-    margin: auto;
-    padding: 1rem;
-    border-radius: 10px;
-    cursor: pointer;
+    margin: 0 10rem;
+    padding: 5px;
+    color: #FF8811;
+    background-color: #fae8d6;
+    border-radius: 5px;
+    font-size: 20px;
+    width: 16rem;
+    text-align: center;
+}
+.accordionContent button{
+    width: 50%;
+}
+.accordion-button{
+    background-color: #fae8d6 !important;
+    color: #FF8811 !important;
+    border-radius: 15px !important;
 }
 .historyLink {
     text-decoration: none;
-    color: black;
 }
 .tripLink {
     text-decoration: none;
-    color: black;
-}
-.tripContainerGrid {
-    display: grid;
-    grid-template-columns: 10fr 1fr;
-}
-.bookAgain {
-    border-radius: 8px;
-    border-width: 1px;
-    box-shadow: 5px 5px 10px;
-    height: 50%;
-    margin: 15px;
-    cursor: pointer;
 }
 .tripHeader {
     text-align: start;

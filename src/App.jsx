@@ -11,6 +11,8 @@ import Rides from "./components/rides";
 import RideHistory from "./components/RideHistory";
 import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
+import ContactNum from "./components/ContactNum";
+import Email from "./components/email";
 import DragDrop from "./components/DragDrop";
 import ConfirmationComponent from "./components/ConfirmationComponent";
 import ShowRide from './components/show_ride';
@@ -67,6 +69,14 @@ function App() {
     {
       path:"/accountSetting",
       element: <AccountSetting/>
+    },
+    {
+      path:"/contactNumber",
+      element: <ContactNum/>
+    },
+    {
+      path:"/email",
+      element: <Email/>
     },
     {
       path:"/dragdrop",

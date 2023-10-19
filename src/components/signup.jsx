@@ -4,6 +4,8 @@ import logo from '../assets/pasabay-orange-logo.png';
 import picture from '../assets/signup-picture.png';
 import '../css/signup.css';
 
+
+// Validation Forms
 const Signup = () => {
   const [name, setName] = useState('');
   const [nameError, setNameError] = useState('');
@@ -111,7 +113,7 @@ const Signup = () => {
       setCheckboxError('');
     }
 
-    // If all inputs are valid, store the data in localStorage
+    // If all inputs are valid, store the data in Local Storage
     if (
       !nameError &&
       !birthdayError &&
@@ -147,6 +149,7 @@ const Signup = () => {
         <Col className="text-center">
           <img id='picture' src={picture} alt="Your Picture" className="img-fluid" />
         </Col>
+
         <Col>
           <Form style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
@@ -154,13 +157,16 @@ const Signup = () => {
                 <img src={logo} alt="Your Logo" width="200" />
               </a>
             </Col>
+
             <div className='text-center'>
               <Label style={{ fontFamily: 'Manrope', fontWeight: '600' }}>Sign up</Label>
             </div>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="text" id="name" placeholder="Your Name" onChange={(e) => setName(e.target.value)} value={name} />
               {nameError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{nameError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Row>
                 <Col>
@@ -179,37 +185,45 @@ const Signup = () => {
                 </Col>
               </Row>
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="email" id="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
               {emailError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{emailError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="tel" id="mobile" placeholder="Phone number" onChange={(e) => setPhone(e.target.value)} value={phone} />
               {phoneError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{phoneError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="text" id="address" placeholder="Address" onChange={(e) => setAddress(e.target.value)} value={address} />
               {addressError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{addressError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
               {passwordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{passwordError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input type="password" id="repeatpassword" placeholder="Confirm password" onChange={(e) => setCpassword(e.target.value)} value={cpassword} />
               {cpasswordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{cpasswordError}</div>}
             </FormGroup>
+
             <FormGroup style={{ marginBottom: '15px' }}>
               <Label check>
                 <Input type="checkbox" id="termsCheck" onChange={(e) => setCheckbox(e.target.checked)} checked={checkbox} />{' '}
-                I agree to all statements in <a href="#" style={{ textDecoration: 'none' }}>Terms of Service</a>
+                I have read and agree to the <a href="#!" style={{textDecoration:'none'}}>Privacy Policy</a> and Tracking Policy. Our <a href="#" style={{ textDecoration: 'none' }}>Terms & Condition </a>apply.
               </Label>
               <br />
               {checkboxError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{checkboxError}</div>}
             </FormGroup>
+
             <div className="text-center">
               <Button style={{ backgroundColor: '#ff8811' }} type="submit">Sign Up</Button>
             </div>
+            
           </Form>
         </Col>
       </Row>

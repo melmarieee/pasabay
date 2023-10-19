@@ -1,123 +1,130 @@
 import React from 'react';
-import {
-  MDBFooter,
-  MDBContainer,
-  MDBCol,
-  MDBRow,
-} from 'mdb-react-ui-kit';
+import { MDBFooter, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
 
-const Footer = () => {
+export default function App() {
   return (
-    <>
-    <MDBFooter bgColor='secondary' className='text-white text-center text-lg-left'>
-      <MDBContainer className='p-4'>
-        <MDBRow>
-          <MDBCol lg='3' md='12' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase text-start py-1'>Carpool Organizer</h5>
 
-            <p className='text-start'>
-              Lorem ipsum dolor sit amet consectetur, adipisicing elit. Iste atque ea quis molestias.
-              Fugiat pariatur maxime quis culpa corporis vitae repudiandae aliquam voluptatem veniam, est
-              atque cumque eum delectus sint!
-            </p>
-            <ul className='list-unstyled text-start '>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
-                  Home
-                </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
+    // Account Links
+    <MDBFooter bgColor='light' className='text-center text-lg-start text-muted'>
+      <section className='d-flex justify-content-center justify-content-lg-between p-4 border-bottom'>
+        <div className='me-5 d-none d-lg-block'>
+          <span>Get connected with us on social networks:</span>
+        </div>
+
+        <div>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="facebook-f" />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="twitter" />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="google" />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="instagram" />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="linkedin" />
+          </a>
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="github" />
+          </a>
+        </div>
+      </section>
+
+
+      {/* Footer Content */}
+      <section className=''>
+        <div className="container-fluid">
+          <MDBRow className='mt-3'>
+            <MDBCol md="3" lg="4" xl="3" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4' style={{color:'#ff8811'}}>
+                <MDBIcon icon="gem" className="me-3" />
+                PASABAY
+              </h6>
+              <h4>
+                Travel Together, Save Together with Pasabay.
+              </h4>
+              <p>Pasabay is a carpooling website that connects drivers and passengers for convenient and cost-effective rides. With just a few taps on your website, you can easily join a carpool or offer a ride to others going your way.</p>
+            </MDBCol>
+
+            <MDBCol md="2" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Services</h6>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
                   Benefits of Carpooling
                 </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
                   How does it work
                 </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
                   For who is it
                 </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
                   FAQ
                 </a>
-              </li>
-            </ul>
-          </MDBCol>
+              </p>
+            </MDBCol>
 
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase mb-0 text-start py-1'>Services</h5>
-
-            <ul className='list-unstyled text-start'>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
-                  Login
+            <MDBCol md="3" lg="2" xl="2" className='mx-auto mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Livemap</h6>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
+                  Search
                 </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
-                  Register
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
+                  Locations
                 </a>
-              </li>
-              <li>
-                <a href='#!' className='text-white text-decoration-none'>
-                  Privacy Policy
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
+                  Edit the map
                 </a>
-              </li>
-            </ul>
-          </MDBCol>
-
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-            <h5 className='text-uppercase mb-0 text-start py-1'>Contact</h5>
-
-            <ul className='list-unstyled text-start'>
-            <li>
-                <i class='bx bx-home-alt-2 '>
-                  Metro Manila,MN 7000, PH
-                </i>
-              </li>
-              <li>
-                <i class='bx bx-envelope '>
-                  HughMelFahb@carpool.com
-                </i>
-              </li>
-              <li>
-                <i class='bx bx-phone '>
-                  +63 932 577 832
-                </i>
-              </li>
-            </ul>
-          </MDBCol>
-          <MDBCol lg='3' md='6' className='mb-4 mb-md-0'>
-
-            <ul className='list-unstyled text-start py-3'>
-              <li>
-                <a href='#' className='text-white text-decoration-none'>
-                  <img src=""/> Applink1
+              </p>
+              <p>
+                <a href='#!' className='text-reset' style={{textDecoration:'none'}}>
+                  Major Events
                 </a>
-              </li>
-              <li>
-              <a href='#' className='text-white text-decoration-none'>
-                  <img src="" /> Applink 2
-                  </a>
-              </li>
-            </ul>
-          </MDBCol>
-        </MDBRow>
-      </MDBContainer>
-      <div className='text-center p-3' style={{ backgroundColor: '#000' }}>
-        &copy; {new Date().getFullYear()} Copyright:{' '}
-        <a className='text-white text-decoration-none' href='#'>
+              </p>
+            </MDBCol>
+
+            {/* Contact us */}
+            <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
+              <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
+              <p>
+                <MDBIcon icon="home" className="me-2" />
+                Metro Manila, MNY 7000, Philippines
+              </p>
+              <p>
+                <MDBIcon icon="envelope" className="me-3" />
+                Pasabay@gmail.com
+              </p>
+              <p>
+                <MDBIcon icon="phone" className="me-3" /> +63 9234 567 88
+              </p>
+              <p>
+                <MDBIcon icon="print" className="me-3" /> +63 9234 567 89
+              </p>
+            </MDBCol>
+          </MDBRow>
+          </div>
+      </section>
+
+      <div className='text-center p-4' style={{ backgroundColor: 'rgba(0, 0, 0, 0.05)' }}>
+        © 2023 Copyright:
+        <a className='text-reset fw-bold' style={{textDecoration:'none'}} href='/'>
           Pasabay.com
         </a>
       </div>
     </MDBFooter>
-    </>
   );
 }
-
-export default Footer;

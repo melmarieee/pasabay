@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from 'react';
+import React, { useState } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png';
 import companylogo from '../assets/pasabay-orange-logo.png';
@@ -21,7 +21,6 @@ function Login() {
   const [password, setPassword] = useState('');
   const [passwordError, setPasswordError] = useState('');
 
-  const [isButtonDisabled, setButtonDisabled] = useState(true);
 
   // Sample User
   const predefinedUserData = [
@@ -70,11 +69,6 @@ function Login() {
     }
   };
 
-    // Enable the login button only when both email and password are provided
-    useEffect(() => {
-      setButtonDisabled(!(email.trim() && password.trim()));
-    }, [email, password]);
-
   return (
     <Container style={{ paddingTop: '100px' }}>
       <Row className="align-items-center">
@@ -105,7 +99,7 @@ function Login() {
             </FormGroup>
 
             <div className="text-center" style={{ padding: '50px' }}>
-              <Button style={{ backgroundColor: '#ff8811' }}  disabled={isButtonDisabled} >Log in</Button>
+              <Button style={{ backgroundColor: '#ff8811' }} >Log in</Button>
               <br />
               <a href="/forgotpassword">
                 <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>

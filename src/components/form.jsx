@@ -206,7 +206,7 @@ const form = () => {
                                     <FormControl fullWidth>
                                     <TextField
                                         id="filled-number"
-                                        label="Pax"
+                                        label="Capacity"
                                         type="number"
                                         onChange={(event) => {
                                             setPax(event.target.value);

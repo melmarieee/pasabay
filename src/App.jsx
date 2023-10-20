@@ -17,6 +17,7 @@ import DragDrop from "./components/DragDrop";
 import ConfirmationComponent from "./components/ConfirmationComponent";
 import ShowRide from './components/show_ride';
 import Form from './components/form';
+import Password from "./components/Password";
 
 
 function App() {
@@ -85,6 +86,10 @@ function App() {
     {
       path: "/confirmation",
       element: <ConfirmationComponent />,
+    },
+    {
+      path: "/password",
+      element: <Password/>
     }
   ]);
 

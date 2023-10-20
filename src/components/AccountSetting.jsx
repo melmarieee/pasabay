@@ -2,49 +2,53 @@ import React from "react";
 import { Link } from "react-router-dom";
 import NavBar from "./common/navbar";
 import "../css/accountSetting.css";
+import Footer from '../components/common/footer'
+import { Container, Row, Col, Label, Button } from "reactstrap";
 
 const AccountSetting = () => {
   return (
     <>
       <NavBar />
       <body className="body">
-        <div className="container text center">
-          <div className="row">
-            <div className="col">
+        <Container className="container text center">
+          <Row className="row">
+            <Col className="col">
               <Link to="/account" className="aboutLink">
-                <h2 className="about">About you</h2>
+                <Label><h2 className="aboutAccount">About you</h2></Label>
               </Link>
-            </div>
-            <div className="col">
-              <h2 className="account">Account Setting</h2>
-            </div>
-          </div>
-        </div>
-        <section className="about-setting"></section>
+            </Col>
+            <Col className="col">
+              <Label><h2 className="account">Account Setting</h2></Label>
+            </Col>
+          </Row>
+        </Container>
         <hr />
-        <section className="settings">
+        <Container className="settings">
           <ul className="listFLex">
             <li className="list">
-              <p>Password</p>
+              <Link to="/password" className="passwordLink">
+                <Label><p>Password</p></Label>
+              </Link>
               <i class="fa-solid fa-angles-right"></i>
             </li>
             <li className="list">
-              <p>Privacy Policy</p>
+              <Label><p>Privacy Policy</p></Label>
               <i class="fa-solid fa-angles-right"></i>
             </li>
             <li className="list">
-              <p>Help Centre</p>
+              <Label><p>Help Centre</p></Label>
               <i class="fa-solid fa-angles-right"></i>
             </li>
             <li className="list">
-              <p>Emergency Contact</p>
+              <Label><p>Emergency Contact</p></Label>
               <i class="fa-solid fa-angles-right"></i>
             </li>
           </ul>
-        </section>
+        </Container>
         <hr />
-        <button type="button">Logout</button>
+        <Button type="submit" className="btnLogout">Logout</Button>
       </body>
+      <Footer/>
     </>
   );
 };

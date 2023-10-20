@@ -5,6 +5,8 @@ import data from "../json/mock-data.json";
 import EditTable from "./EditTable";
 import ReadTable from "./ReadTable";
 import NavBar from "./common/navbar";
+import Footer from "../components/common/footer";
+import { Col, Row, Container, Label } from "reactstrap";
 
 const Account = () => {
   const [contacts, setContancts] = useState(data);
@@ -67,54 +69,58 @@ const Account = () => {
     <>
       <NavBar />
       <body className="body">
-        <section className="about-setting">
-          <div className="container text center">
-            <div className="row">
-              <div className="col">
-                <h2 className="about">About you</h2>
-              </div>
-              <div className="col">
+        <Container className="about-setting">
+          <Container className="container text center">
+            <Row className="row">
+              <Col className="col">
+                <Label><h2 className="about">About you</h2></Label>
+              </Col>
+              <Col className="col">
                 <Link to="/accountSetting" className="accountLink">
-                  <h2 className="account">Account Setting</h2>
+                  <Label><h2 className="account">Account Setting</h2></Label>
                 </Link>
-              </div>
-            </div>
-          </div>
-        </section>
+              </Col>
+            </Row>
+          </Container>
+        </Container>
         <hr />
-        <section className="detailsContainer">
-          <div className="container text center">
-            <div className="row">
-              <div className="col">
-                <img src="../src/assets/carpoollogo.png" alt="" />
-              </div>
-              <div className="col">
-                <form action="#" onSubmit={handleEditFormSubmit}>
-                  {contacts.map((contact) => (
-                    <>
-                      {editContactId === contact.id ? (
-                        <EditTable
-                          editFormData={editFormData}
-                          handleEditFormChange={handleEditFormChange}
-                          handleCancelClick={handleCancelClick}
-                        />
-                      ) : (
-                        <ReadTable
-                          contact={contact}
-                          handleEditClick={handleEditClick}
-                        />
-                      )}
-                    </>
-                  ))}
-                </form>
-              </div>
-            </div>
-          </div>
-        </section>
+        <Container className="accountContainerFlex">
+          <Row>
+            <Col className="accountImg">
+              <img
+                src="../src/assets/carpoollogo.png"
+                alt=""
+                className="img-fluid"
+              />
+            </Col>
+            <Col>
+              <form action="#" onSubmit={handleEditFormSubmit}>
+                {contacts.map((contact) => (
+                  <>
+                    {editContactId === contact.id ? (
+                      <EditTable
+                        editFormData={editFormData}
+                        handleEditFormChange={handleEditFormChange}
+                        handleCancelClick={handleCancelClick}
+                      />
+                    ) : (
+                      <ReadTable
+                        contact={contact}
+                        handleEditClick={handleEditClick}
+                      />
+                    )}
+                  </>
+                ))}
+              </form>
+            </Col>
+          </Row>
+        </Container>
         <hr />
-        <section className="validInfoContainer">
-          <h2>Verify your profile</h2>
-          <div className="validInfo">
+        <Container className="validInfoContainer">
+          <Label>
+            <h2>Verify your profile</h2>
+          </Label>
+          <Row className="validInfo">
             <ul>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
@@ -129,23 +135,28 @@ const Account = () => {
                 </Link>
               </li>
             </ul>
-          </div>
-        </section>
+          </Row>
+        </Container>
         <hr />
-        <section className="aboutYou">
-          <h2>About you</h2>
-          <ul>
-            <li>
-              <i class="fa-solid fa-circle-plus"></i>
-              <p> Mini Bio</p>
-            </li>
-            <li>
-              <i class="fa-solid fa-circle-plus"></i>
-              <p> Travel Preference</p>
-            </li>
-          </ul>
-        </section>
+        <Container className="aboutYou">
+          <Label>
+            <h2>About you</h2>
+          </Label>
+          <Row>
+            <ul>
+              <li>
+                <i class="fa-solid fa-circle-plus"></i>
+                <p> Mini Bio</p>
+              </li>
+              <li>
+                <i class="fa-solid fa-circle-plus"></i>
+                <p> Travel Preference</p>
+              </li>
+            </ul>
+          </Row>
+        </Container>
       </body>
+      <Footer />
     </>
   );
 };

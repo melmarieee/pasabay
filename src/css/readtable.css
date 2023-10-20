@@ -1,8 +1,13 @@
-button {
-    background-color: #fae8d6;
-    border-color: #5EB1BF;
+.buttonReadTable {
+    background-color: #FF8811;
     border-radius: 8px;
-    color: #FF8811;
+    color: #fff;
+    border: none;
     margin: 10px;
-    margin-right: 10px;
+}
+.RTHeading {
+    padding: 0;
+}
+.ReadtableContainer .row {
+    margin: 10px 0;
 }

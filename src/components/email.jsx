@@ -1,6 +1,8 @@
 import React, { useState } from "react";
 import NavBar from "../components/common/navbar";
 import "../css/email.css";
+import { FormGroup, Label, Input, Button } from "reactstrap";
+import Footer from '../components/common/footer'
 
 const Email = () => {
   const [email, setEmail] = useState("");
@@ -24,38 +26,34 @@ const Email = () => {
     <>
       <NavBar />
       <body className="body">
-        <div className="email-header">
-          <h2>Email Verification</h2>
-        </div>
         <div className="container text center">
           <div className="row">
             <div className="col">
               <div className="img-container">
-                <img src="../src/assets/Email campaign.gif" alt="" />
+                <img src="../src/assets/Email campaign.gif" alt="" className="img-fluid"/>
               </div>
             </div>
             <div className="col">
-              <div className="app">
-                <div className="card">
-                  <label htmlFor="email" className="label">
-                    Email:
-                  </label>
-                  <input
-                    id="email"
-                    className="input"
-                    type="email"
-                    placeholder="email"
-                    value={email}
-                    onChange={handleOnChange}
-                  />
-                  <button onClick={emailValidation}>Check</button>
-                  <p className="message">{message}</p>
-                </div>
-              </div>
+                <Label className="labelHeading">
+                  <h1>Email Confirmation</h1>
+                </Label>
+              <FormGroup className="formEmail">
+                <Input
+                  id="email"
+                  className="input"
+                  type="email"
+                  placeholder="email"
+                  value={email}
+                  onChange={handleOnChange}
+                />
+                <Button onClick={emailValidation} className="btnEmail">Confirm</Button>
+                <Label className="message">{message}</Label>
+              </FormGroup>
             </div>
           </div>
         </div>
       </body>
+      <Footer/>
     </>
   );
 };

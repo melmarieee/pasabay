@@ -14,7 +14,6 @@ import CarPool from './components/carpool';
 import ContactNum from "./components/ContactNum";
 import Email from "./components/email";
 import DragDrop from "./components/DragDrop";
-import ConfirmationComponent from "./components/ConfirmationComponent";
 import ShowRide from './components/show_ride';
 import Form from './components/form';
 import Password from "./components/Password";
@@ -82,10 +81,6 @@ function App() {
     {
       path:"/dragdrop",
       element: <DragDrop/>
-    },
-    {
-      path: "/confirmation",
-      element: <ConfirmationComponent />,
     },
     {
       path: "/password",

@@ -1,6 +1,6 @@
 import React, { useState } from 'react';
 import { Link } from 'react-router-dom'; // Import the Link component
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import { Container, Row, Col, Button, Form, FormGroup, Label, Input, Modal, ModalHeader, ModalBody, ModalFooter } from 'reactstrap';
 import logo from '../assets/pasabay-orange-logo.png';
 import picture from '../assets/signup-picture.png';
 import '../css/signup.css';
@@ -14,7 +14,7 @@ import axios from "axios"
 
 const Signup = () => {
   const [name, setName] = useState('');
-  const [birthday, setBirthday] = useState(dayjs('2023-10-24'));
+  const [birthday, setBirthday] = useState(dayjs(''));
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -22,6 +22,7 @@ const Signup = () => {
   const [password, setPassword] = useState('');
   const [cpassword, setCpassword] = useState('');
   const [checkbox, setCheckbox] = useState(false);
+  const [modalOpen, setModalOpen] = useState(false);
 
   const signupURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/signup";
 
@@ -38,13 +39,12 @@ const Signup = () => {
       password: password,
     })
     .then(function (response) {
-      window.location.href = '/login';
+      setModalOpen(true);
     })
     .catch(function (error) {
       alert(error)
       console.log(error);
     });
-
   };
 
   return (
@@ -135,6 +135,17 @@ const Signup = () => {
           </Form>
         </Col>
       </Row>
+      <Modal className="centered-modal" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
+        <ModalHeader toggle={() => setModalOpen(false)} className='Header-modal' >
+        <i class="fa-regular fa-circle-check check"></i>
+        </ModalHeader>
+        <ModalBody>
+        Your registration was successful! 🎉
+        </ModalBody>
+        <ModalFooter>
+          <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>
+        </ModalFooter>
+      </Modal>
     </div>
   );
 };

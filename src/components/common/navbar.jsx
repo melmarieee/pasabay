@@ -48,7 +48,7 @@ const Header = (props) => {
                         <img src={PasabayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
                     </a>
                     <div className="header-navbar-links">  
-                    <NavLink href="/" id='home'>Home</NavLink>
+                    <NavLink href="/" id='home'className='nav-home' >Home</NavLink>
                     <NavLink href="/carpool" id='carpool'>Carpool</NavLink>
                     {user ? 
                     <NavLink className='margin-negative-nav'>

@@ -9,3 +9,44 @@
         margin-bottom: .125rem;
     }    
 }
+
+/* Pop up Modal */
+.modal-content {
+  border-radius: 20px;
+}
+.centered-modal .modal-dialog {
+  display: flex;
+  align-items: center;
+  justify-content: center;
+  margin: 0;
+  border-radius: 100px;
+}
+.btn-success {
+  background-color: #ff8811;
+  transition: .3s;
+}
+.btn-success:hover {
+  background-color: #ff8811;
+  transition: .3s;
+}
+.btn-close {
+  background-color: #fff;
+  color: #fff;
+}
+.Header-modal{
+  text-align: center;
+  background-color:  #35a77e;
+  border-top-right-radius: 10px;
+  border-top-left-radius: 10px;
+}
+.check {
+  margin-left: 210px;
+  font-size: 50px;
+  color: #fff;
+}
+.modal-body{
+  text-align: center;
+}
+.modal-footer {
+  justify-content: center;
+}

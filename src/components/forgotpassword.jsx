@@ -57,7 +57,7 @@ const Forgotpassword = () => {
             </FormGroup>
 
               <div className='text-center'>
-              <Button style={{backgroundColor: '#ff8811'}} onClick={handleForgotPassword}>Forgot password</Button>
+              <Button style={{backgroundColor: '#ff8811'}} onClick={handleForgotPassword}>Reset Password</Button>
               </div>
 
           </Form>

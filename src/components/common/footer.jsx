@@ -1,5 +1,6 @@
 import React from 'react';
 import { MDBFooter, MDBRow, MDBCol, MDBIcon } from 'mdb-react-ui-kit';
+import '../../css/footer.css'
 
 export default function App() {
   return (
@@ -12,7 +13,7 @@ export default function App() {
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset'>
+          <a href='' className='me-4 text-reset icon'>
             <MDBIcon fab icon="facebook-f" />
           </a>
           <a href='' className='me-4 text-reset'>

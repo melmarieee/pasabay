@@ -1,22 +1,30 @@
-import React,{useState} from 'react';
-import '../css/forgotpassword.css'
-import logo from '../assets/pasabay-orange-logo.png';
-import picture from '../assets/forgotpassword-picture.png'
-import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
+import React, { useState, useEffect } from "react";
+import {
+  Container,
+  Row,
+  Col,
+  Button,
+  Form,
+  FormGroup,
+  Label,
+  Input,
+} from "reactstrap";
+import picture from "../assets/forgotpassword-picture.png";
+import companylogo from "../assets/pasabay-orange-logo.png";
+import "../css/login.css";
 
-const Forgotpassword = () => {
-  
+function Forgotpassword() {
   // Styles
   const formStyle = {
-    padding: '20px',
+    padding: "20px",
   };
 
   const formGroupStyle = {
-    marginBottom: '15px',
+    marginBottom: "15px",
   };
 
   // State to store the email input
-  const [email, setEmail] = useState('');
+  const [email, setEmail] = useState("");
 
   const handleEmailChange = (event) => {
     setEmail(event.target.value);
@@ -24,47 +32,63 @@ const Forgotpassword = () => {
 
   const handleForgotPassword = () => {
     // Save the email to local storage
-    localStorage.setItem('userEmail', email);
+    localStorage.setItem("userEmail", email);
 
     // Perform the rest of your Forgot Password logic here
 
     // For example, you can redirect the user to another page
     // window.location.href= '/resetpassword';
   };
-
   return (
-    <Container className='fgp-container'>
-      <Row className="align-items-center" >
-        <Col className="text-center">
-            <img id='picture' src={picture} alt="Your Picture" className="img-fluid" />
+    <div>
+      <Row>
+        <Col className="text-center image-left-pic-container">
+          <img
+            id="picture-login"
+            src={picture}
+            alt="Your Picture"
+            className="img-fluid p-5"
+          />
         </Col>
-
-        <Col>
+        <Col className="padding-top-login-signup">
           <Form style={formStyle}>
-          <Col className="text-center" style={{ padding: '20px' }}>
-            <a href="/">
-          <img src={logo} alt="Your Logo" width="200" />
-          </a>
-        </Col>
-
-        <div className='text-center'>
-        <Label style={{fontFamily:'Manrope', fontWeight:'600'}}>Forgot Password</Label>
-        </div>
-
+            <Col className="text-center mb-5">
+              <a href="/">
+                <img src={companylogo} alt="Your Logo" width="250" />
+              </a>
+            </Col>
+            <div className="px-5 text-center">
+              <h1>
+                <b>Forgot Password?</b>
+              </h1>
+              <p>No worries! Enter your email and we will send you a reset</p>
+            </div>
             <FormGroup style={formGroupStyle}>
-                <Label>Email<span style={{color: 'red'}}>*</span></Label>
-              <Input type="email" id="name" value={email} onChange={handleEmailChange} />
+              <Input
+                type="email"
+                id="name"
+                placeholder="Email"
+                value={email}
+                onChange={handleEmailChange}
+              />
             </FormGroup>
 
-              <div className='text-center'>
-              <Button style={{backgroundColor: '#ff8811'}} onClick={handleForgotPassword}>Reset Password</Button>
-              </div>
+            <div className="text-center" style={{ padding: "50px" }}>
+              <Button
+                style={{ backgroundColor: "#ff8811" }}
+                onClick={handleForgotPassword}
+              >
+                Send Request
+              </Button>
+              <br />
+              <br />
+            </div>
 
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
-};
+}
 
 export default Forgotpassword;

@@ -33,7 +33,7 @@ const Forgotpassword = () => {
   };
 
   return (
-    <Container style={{ paddingTop: '100px'}}>
+    <Container className='fgp-container'>
       <Row className="align-items-center" >
         <Col className="text-center">
             <img id='picture' src={picture} alt="Your Picture" className="img-fluid" />

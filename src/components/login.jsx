@@ -1,8 +1,12 @@
-import React, { useState } from 'react';
+import React, { useState, useEffect } from 'react';
 import { Container, Row, Col, Button, Form, FormGroup, Label, Input } from 'reactstrap';
 import picture from '../assets/login-picture.png';
 import companylogo from '../assets/pasabay-orange-logo.png';
 import '../css/login.css';
+import axios from "axios"
+
+const loginURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/login";
+
 function Login() {
 
   // Styles
@@ -14,62 +18,73 @@ function Login() {
     marginBottom: '15px',
   };
 
-  // Validation Forms
   const [email, setEmail] = useState('');
-  const [emailError, setEmailError] = useState('');
-
   const [password, setPassword] = useState('');
-  const [passwordError, setPasswordError] = useState('');
+  const [errorLogin, setErrorLogin] = useState('');
 
-  // Validation Checks and Local Storage
+
   const handleLogin = (e) => {
     e.preventDefault();
+  
+    axios.post(loginURL, {
+      email: email,
+      password: password,
+    })
+    .then(function (response) {
+      console.log(response.data.data)
+      if (response.data.data.length == 1) {
+        window.localStorage.setItem("userLogin", JSON.stringify(response.data.data[0]));
+        window.location.href = '/';
+      }
 
-    if (email.trim() === '') {
-      setEmailError('Email is Required');
-    } else {
-      setEmailError('');
-      localStorage.setItem('userEmail', email);
-    }
-
-    if (password.trim() === '') {
-      setPasswordError('Password is Required');
-    } else {
-      setPasswordError('');
-    }
+      if (response.data.data == 0) {
+        setErrorLogin(<p class="mx-5 text-danger">Incorrect email or password</p>)
+      }
+    })
+    .catch(function (error) {
+      alert(error)
+      console.log(error);
+    });
   };
 
-  return (
-    <Container style={{ paddingTop: '100px' }}>
-      <Row className="align-items-center">
-        <Col className="text-center">
-          <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid" />
-        </Col>
+  useEffect(() => {
+    if (typeof window !== 'undefined') {
+      if (window.localStorage.getItem("userLogin")) {
+        window.location.href = '/';
+      }
+   }
+  }, [])
 
-        <Col>
+
+  return (
+    <div>
+      <Row>
+        <Col className="text-center image-left-pic-container">
+          <img id="picture-login" src={picture} alt="Your Picture" className="img-fluid p-5" />
+        </Col>
+        <Col className='padding-top-login-signup'>
           <Form style={formStyle} onSubmit={handleLogin}>
-            <Col className="text-center" style={{ padding: '20px' }}>
+            <Col className="text-center mb-5">
               <a href="/">
-                <img src={companylogo} alt="Your Logo" width="200" />
+                <img src={companylogo} alt="Your Logo" width="250" />
               </a>
             </Col>
-
-            <div className='text-center'>
-              <Label style={{ fontFamily: 'Manrope', fontWeight: '600' }}>Please login to your account</Label>
+            <div className='px-5 text-center'>
+              <h1><b>Welcome Back!</b></h1>
             </div>
-
+            <div className='px-5 mb-5'>
+              <Label className='text-secondary'>Please enter your details</Label>
+            </div>
             <FormGroup style={formGroupStyle}>
-              <Input type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-              {emailError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{emailError}</div>}
+              <Input required className="input-container mx-5" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
             </FormGroup>
 
             <FormGroup style={formGroupStyle}>
-              <Input type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
-              {passwordError && <div style={{ fontSize: '12px', width: '100%', color: 'red' }}>{passwordError}</div>}
+              <Input required className="input-container mx-5 my-4" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
             </FormGroup>
-
+            {errorLogin}
             <div className="text-center" style={{ padding: '50px' }}>
-              <Button style={{ backgroundColor: '#ff8811' }}>Log in</Button>
+              <Button style={{ backgroundColor: '#ff8811' }} >Log in</Button>
               <br />
               <a href="/forgotpassword">
                 <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>
@@ -78,13 +93,12 @@ function Login() {
             </div>
 
             <div className='text-center'>
-              <Label style={{ fontFamily: 'Manrope', fontWeight: '600' }}>Don't have an account? <a href="/signup" style={{ textDecoration: 'none', color: '#ff8811' }}>Create New</a></Label>
+              <Label>Don't have an account? <a href="/signup" style={{ textDecoration: 'none', color: '#ff8811' }}>Sign up</a></Label>
             </div>
-
           </Form>
         </Col>
       </Row>
-    </Container>
+    </div>
   );
 }
 

@@ -2,7 +2,9 @@
     background-color: #fae8d6;
     height:100vh;
 }
-
+img, svg {
+    vertical-align: middle;
+}
 @media screen and (max-width: 769px) {
 #picture-login {
     display: none;
@@ -10,4 +12,16 @@
 .image-left-pic-container {
     display: none;
 }
+}
+.input-container{
+    width: 90%;
+}
+.button-info{
+    border-color: #fae8d6 !important;
+    background-color: #ff8811;
+    border-radius: 8px;
+}
+
+.padding-top-login-signup {
+    margin-top: 60px;
 }

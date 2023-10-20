@@ -13,23 +13,23 @@ export default function App() {
         </div>
 
         <div>
-          <a href='' className='me-4 text-reset icon'>
-            <MDBIcon fab icon="facebook-f" />
+          <a href='' className='me-4 text-reset'>
+            <MDBIcon fab icon="facebook-f" className='icon-ft' />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="twitter" />
+            <MDBIcon fab icon="twitter" className='icon-ft' />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="google" />
+            <MDBIcon fab icon="google" className='icon-ft' />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="instagram" />
+            <MDBIcon fab icon="instagram" className='icon-ft' />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="linkedin" />
+            <MDBIcon fab icon="linkedin" className='icon-ft' />
           </a>
           <a href='' className='me-4 text-reset'>
-            <MDBIcon fab icon="github" />
+            <MDBIcon fab icon="github" className='icon-ft' />
           </a>
         </div>
       </section>
@@ -102,18 +102,18 @@ export default function App() {
             <MDBCol md="4" lg="3" xl="3" className='mx-auto mb-md-0 mb-4'>
               <h6 className='text-uppercase fw-bold mb-4'>Contact</h6>
               <p>
-                <MDBIcon icon="home" className="me-2" />
+                <MDBIcon icon="home" className="me-2 icon-ft" />
                 Metro Manila, MNY 7000, Philippines
               </p>
               <p>
-                <MDBIcon icon="envelope" className="me-3" />
+                <MDBIcon icon="envelope" className="me-3 icon-ft" />
                 Pasabay@gmail.com
               </p>
               <p>
-                <MDBIcon icon="phone" className="me-3" /> +63 9234 567 88
+                <MDBIcon icon="phone" className="me-3 icon-ft" /> +63 9234 567 88
               </p>
               <p>
-                <MDBIcon icon="print" className="me-3" /> +63 9234 567 89
+                <MDBIcon icon="print" className="me-3 icon-ft" /> +63 9234 567 89
               </p>
             </MDBCol>
           </MDBRow>

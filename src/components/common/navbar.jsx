@@ -29,7 +29,6 @@ const Header = (props) => {
     const toggleDropDown = () => setDropdownOpen((prevState) => !prevState);
     
     
-    console.log(user)
     const [deviceWidth, _] = useState(0)
 
     const toggle = () => setIsOpen(!isOpen)
@@ -39,7 +38,6 @@ const Header = (props) => {
 
         window.location.href = "/login";
     }
-
     
     return(
         <>
@@ -53,10 +51,12 @@ const Header = (props) => {
                     {user ? 
                     <NavLink className='margin-negative-nav'>
                         <Dropdown className="navbutton-dropdown" isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
-                            <DropdownToggle caret><b>{user.name}</b></DropdownToggle>
+                            <DropdownToggle caret><b>{user.user.name}</b></DropdownToggle>
                             <DropdownMenu>
-                            <DropdownItem>Account</DropdownItem>
-                            <DropdownItem>Rides</DropdownItem>
+                                <DropdownItem>Account</DropdownItem>
+                                <DropdownItem href='/rides'>Rides</DropdownItem>
+                                <DropdownItem href='/drive'>Drives</DropdownItem>
+                                <DropdownItem href='/form'>Create Ride</DropdownItem>
                             <DropdownItem onClick={toggleLogout.bind(this)}>Logout</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>

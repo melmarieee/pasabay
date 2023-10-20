@@ -20,7 +20,7 @@ const Home = () => {
                 <button type="button" class="btn btn-lg btn-primary rounded button-find-ride">Find Rides</button>
               </div>
               <div class="col-lg-6 px-4 py-3">
-                <button type="button" class="btn btn-lg btn-primary rounded button-create-ride border-white">Create Ride</button>
+                <a href="/form"><button type="button" class="btn btn-lg btn-primary rounded button-create-ride border-white">Create Ride</button></a>
               </div>
             </div>
           </div>

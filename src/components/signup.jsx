@@ -14,7 +14,7 @@ import axios from "axios"
 
 const Signup = () => {
   const [name, setName] = useState('');
-  const [birthday, setBirthday] = useState(dayjs(''));
+  const [birthday, setBirthday] = useState(dayjs('10/10/2023'));
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -135,12 +135,13 @@ const Signup = () => {
           </Form>
         </Col>
       </Row>
-      <Modal className="centered-modal" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
+      <Modal className="centered-modal" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
         <ModalHeader toggle={() => setModalOpen(false)} className='Header-modal' >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
         <ModalBody>
-        Your registration was successful! 🎉
+        <h4>Congratulations {name}  🎉 </h4>
+        <p>Your account is successfully created.</p>
         </ModalBody>
         <ModalFooter>
           <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>

@@ -1,24 +1,13 @@
-/* .nav-pasabay {
-    background-color: #fff;
-    position: fixed;
-    width: 100%;
-}
+/* 
 
-.logo {
-    width: 200px;
-} */
-
-.header-navbar-links .nav-home {
-  color: #ff8811;
-}
 b, strong {
   font-size: 19px;
-}
-.margin-negative-nav {
+} */
+/* .margin-negative-nav {
   color: #ff8811;
-}
-.margin-negative-nav:hover {
-  color: #ff8811;
+} */
+.nav:hover {
+  color: black;
 }
 
 .navbutton-dropdown button {
@@ -35,9 +24,9 @@ b, strong {
 .btn-secondary.dropdown-toggle {
   color: #000;
 }
-.btn-check:active+.btn-secondary:focus, .btn-check:checked+.btn-secondary:focus, .btn-secondary.active:focus, .btn-secondary:active:focus, .show>.btn-secondary.dropdown-toggle:focus {
+/* .btn-check:active+.btn-secondary:focus, .btn-check:checked+.btn-secondary:focus, .btn-secondary.active:focus, .btn-secondary:active:focus, .show>.btn-secondary.dropdown-toggle:focus {
   box-shadow: #FFF;
-}
+} */
 .btn-secondary.dropdown-toggle:focus {
   box-shadow: #FFF;
 }
@@ -81,7 +70,7 @@ button.dropdown-toggle.btn.btn-secondary{
   font-family: 'Manrope';
   font-weight: 600;
   background-color: #FFF;
-  transition: 0.6s;
+  transition: 10s;
   font-size: 20px;
 }
 .burger-info{
@@ -112,12 +101,12 @@ button.dropdown-toggle.btn.btn-secondary{
 .header-navbar-links{
   display: flex;
   gap: 20px;
-  color: white;
   padding: 5px 0;
   align-items: center;
 }
 .header-navbar-links a:hover{
-  border-bottom: 2px solid #FFF;
+  border-bottom: 2px solid black !important;
+  color: black !important;
 }
 @media screen and (max-width: 840px) {
   .header{
@@ -128,13 +117,9 @@ button.dropdown-toggle.btn.btn-secondary{
   .navbar-toggler{
     border: none;
   }
-  /* .navbar-toggler-icon{
-    background-image:url('../assets/paw-icon.png') !important;
-  } */
-  .header-navbar-links{
+  .header-navbar-links a:active{
     display: none;
     gap: 30px;
-    color: white;
     padding: 5px 0;
   }
   .navbar-toggler{

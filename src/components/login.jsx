@@ -31,9 +31,13 @@ function Login() {
       password: password,
     })
     .then(function (response) {
-      console.log(response.data.data)
-      if (response.data.data.length == 1) {
-        window.localStorage.setItem("userLogin", JSON.stringify(response.data.data[0]));
+      
+      if (response.data.data) {
+        const data = {
+          "user": response.data.data.user[0],
+          "vehicle": response.data.data.vehicle
+        }
+        window.localStorage.setItem("userLogin", JSON.stringify(data));
         window.location.href = '/';
       }
 

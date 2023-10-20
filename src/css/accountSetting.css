@@ -1,6 +1,19 @@
 .body {
     margin: 8rem;
 }
+.aboutAccount {
+    margin: 0 184px;
+    padding: 5px;
+    background-color: #FF8811;
+    border-color: #5EB1BF;
+    color: white;
+    border: solid;
+    border-width: 1px;
+    border-radius: 5px;
+    width: 16rem;
+    text-align: center;
+    font-size: 20px;
+}
 .settings li {
     display: flex;
     align-items: center;
@@ -12,4 +25,16 @@
 }
 .settings p {
     margin: 10px;
+}
+.passwordLink {
+    text-decoration: none;
+    color: black;
+}
+.btnLogout {
+    background-color: #FF8811;
+}
+@media screen and (max-width: 768px) {
+    .aboutAccount, .account {
+        margin: 0;
+    }
 }

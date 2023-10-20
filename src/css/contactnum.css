@@ -20,6 +20,15 @@
     margin-top: 10px;
     font-size: 14px;
 }
-/* .flag {
-    width: 100% !important;
-} */
+.btnContact {
+    margin: 10px 7rem;
+    background-color: #FF8811;
+}
+.contactHeading {
+    padding: 20px 0;
+}
+@media screen and (max-width: 768px) {
+    .image-contact img {
+        display: none;
+    }
+}

@@ -1,0 +1,22 @@
+.btnBio {
+    background-color: #FF8811;
+    margin: 15px;
+    border-radius: 8px;
+}
+.textArea-container {
+    text-align: center;
+}
+.txtAreaInput {
+    border-radius: 10px;
+}
+@media screen and (max-width: 768px) {
+    .btnBio {
+        margin: 0;
+    }
+    .imgBio img {
+        display: none;
+    }
+    .rowBio {
+        display: grid;
+    }
+}

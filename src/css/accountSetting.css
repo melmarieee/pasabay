@@ -2,26 +2,31 @@
     margin: 8rem;
 }
 .aboutAccount {
-    margin: 0 184px;
-    padding: 5px;
+    margin: 0 10rem;
+    padding: 10px;
+    height: 3rem;
     background-color: #FF8811;
     border-color: #5EB1BF;
     color: white;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    width: 16rem;
+    width: 75%;
     text-align: center;
     font-size: 20px;
+    align-items: center;
+}
+.aboutAccount:hover {
+    background-color: #DF6900;
 }
 .settings li {
+    list-style: none;
     display: flex;
     align-items: center;
 }
 .settings i {
     padding: 10px;
-    position: absolute;
-    right: 10rem;
+    color: #5EB1BF;
 }
 .settings p {
     margin: 10px;
@@ -29,6 +34,35 @@
 .passwordLink {
     text-decoration: none;
     color: black;
+}
+.passwordLink:hover {
+    background-color: #00b4d8;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
+}
+.emergencyContactLink {
+    text-decoration: none;
+    color: black;
+}
+.emergencyContactLink:hover {
+    background-color: #00b4d8;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
+}
+.helpCentreLink {
+    text-decoration: none;
+    color: black;
+}
+.helpCentreLink:hover {
+    background-color: #00b4d8;
+    color: #fff;
+    border-radius: 10px;
+    width: 100%;
+    text-align: start;
 }
 .btnLogout {
     background-color: #FF8811;

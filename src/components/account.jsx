@@ -69,19 +69,21 @@ const Account = () => {
     <>
       <NavBar />
       <body className="body">
-        <Container className="about-setting">
-          <Container className="container text center">
-            <Row className="row">
-              <Col className="col">
-                <Label><h2 className="about">About you</h2></Label>
-              </Col>
-              <Col className="col">
-                <Link to="/accountSetting" className="accountLink">
-                  <Label><h2 className="account">Account Setting</h2></Label>
-                </Link>
-              </Col>
-            </Row>
-          </Container>
+        <Container className="container text center">
+          <Row className="row">
+            <Col className="col">
+              <Label>
+                <h2 className="about">About you</h2>
+              </Label>
+            </Col>
+            <Col className="col">
+              <Link to="/accountSetting" className="accountLink">
+                <Label>
+                  <h2 className="account">Account Setting</h2>
+                </Label>
+              </Link>
+            </Col>
+          </Row>
         </Container>
         <hr />
         <Container className="accountContainerFlex">
@@ -146,11 +148,15 @@ const Account = () => {
             <ul>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
-                <p> Mini Bio</p>
+                <Link to="/bio" className="bioLink">
+                  <p> Mini Bio</p>
+                </Link>
               </li>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>
-                <p> Travel Preference</p>
+                <Link to="/travel-preference" className="preferenceLink">
+                  <p> Travel Preference</p>
+                </Link>
               </li>
             </ul>
           </Row>

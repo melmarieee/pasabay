@@ -5,26 +5,30 @@
 .text-home {
   font-size: 24px;
 }
-
+/* remove border color for button */
 .button-find-ride {
   background-color: #FF8811;
-  border-color: #5EB1BF;
+  border: 2px solid #FF8811;
+  color: #FFF;
   width: 100%;
+  transition: 0.3s;
 }
 
 .button-create-ride {
   width: 100%;
   color: #FF8811;
-  background-color: #fae8d6;
+  background-color: #FFF;
+  border: 2px solid #FF8811;
+  transition: 0.3s;
 }
 
 .button-find-ride:hover {
-  background-color: #FF8811;
+  background-color: #DF6900;
+  color: #FFF;
 }
+
 .button-create-ride:hover {
   background-color: #fae8d6;
-  border-color: #FF8811;
-  color: #FF8811;
 }
 
 .card-color-1 {

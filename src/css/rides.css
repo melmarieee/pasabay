@@ -36,9 +36,6 @@
     width: 16rem;
     text-align: center;
 }
-.accordionContent button{
-    width: 50%;
-}
 .accordion-button{
     background-color: #fae8d6 !important;
     color: #FF8811 !important;
@@ -50,6 +47,12 @@
 .tripLink {
     text-decoration: none;
 }
-.tripHeader {
-    text-align: start;
+.btnRides {
+    background-color: #FF8811;
+    border-radius: 8px;
+}
+@media screen and (max-width: 768px) {
+    .trips .history {
+        margin: 0;
+    }
 }

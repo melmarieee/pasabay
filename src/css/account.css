@@ -8,38 +8,79 @@
     text-decoration: none;
     color: black;
 }
+.contactLink:hover {
+    background-color: #DF6900;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: start;
+}
 .emailLink {
     text-decoration: none;
     color: black;
 }
+.emailLink:hover {
+    background-color: #DF6900;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: start;
+}
+.bioLink {
+    text-decoration: none;
+    color: black;
+}
+.bioLink:hover {
+    background-color: #DF6900;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: start;
+}
+.preferenceLink {
+    text-decoration: none;
+    color: black;
+}
+.preferenceLink:hover {
+    background-color: #DF6900;
+    color: #fff;
+    border-radius: 5px;
+    width: 100%;
+    text-align: start;
+}
 .about {
     margin: 0 10rem;
-    padding: 5px;
+    padding: 10px;
+    height: 3rem;
     background-color: #FF8811;
     border-color: #5EB1BF;
     color: white;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    width: 16rem;
+    width: 75%;
     text-align: center;
     font-size: 20px;
+    align-items: center;
 }
 .about:hover {
-    background-color: #5EB1BF;
+    background-color: #DF6900;
 }
 .account {
     margin: 0 10rem;
-    padding: 5px;
+    padding: 10px;
+    height: 3rem;
     color: #FF8811;
-    background-color: #fae8d6;
+    background-color: #fFF;
     border-radius: 5px;
+    border: 2px solid #FF8811;
     font-size: 20px;
-    width: 16rem;
+    width: 65%;
     text-align: center;
+    align-items: center;
 }
 .account:hover {
-    background-color: #5EB1BF;
+    background-color: #fae8d6;
 }
 .validInfoContainer, .aboutYou {
     text-align: center;

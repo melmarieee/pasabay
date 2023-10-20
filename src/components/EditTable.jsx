@@ -56,7 +56,7 @@ const EditTable = ({
             />
           </Row>
           <Row>
-            <Button type="submit" className="btnEditTable">
+            <Button type="submit" className="btnEditTable saveButton">
               Save
             </Button>
             <Button

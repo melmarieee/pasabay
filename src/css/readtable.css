@@ -1,9 +1,16 @@
 .buttonReadTable {
     background-color: #FF8811;
-    border-radius: 8px;
+    border-radius: 5px;
     color: #fff;
     border: none;
-    margin: 10px;
+    margin: 10px 0;
+    padding: 11px;
+    width: 210%;
+    height: 200%;
+    font-size: 20px;
+}
+.buttonReadTable:hover {
+    background-color: #DF6900;
 }
 .RTHeading {
     padding: 0;

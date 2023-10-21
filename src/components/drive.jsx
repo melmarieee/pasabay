@@ -112,7 +112,6 @@ export default function LabTabs() {
                 ""
               }
               {drives.map((drive) => (
-                <>
                  <Accordion className='mt-3'>
                   <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}
@@ -133,8 +132,6 @@ export default function LabTabs() {
                                 <li><span className='text-secondary'>Going To:</span> {drive.end_location}</li>
                                 <li><span className='text-secondary'>Price / Person :</span> ₱ {drive.price}</li>
                             </ul>
-                          </div>
-                        </div>
                       </div>
                       <div className='button1-info'>
                       <button type="button" class="button1-info btn-comride-drive">Complete Ride</button>

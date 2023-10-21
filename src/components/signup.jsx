@@ -56,7 +56,7 @@ const Signup = () => {
         <Col className='padding-top-login-signup'>
           <Form className='signup-form' style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
-            <Button href='/login' style={{float: 'right'}}>X</Button>
+            <Button className='btn-close-signup' href='/login' style={{float: 'right'}}>X</Button>
               <a href="/">
                 <img src={logo} alt="Your Logo" width="250"/>
               </a>
@@ -136,15 +136,15 @@ const Signup = () => {
           </Form>
         </Col>
       </Row>
-      <Modal className="centered-modal" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
-        <ModalHeader toggle={() => setModalOpen(false)} className='Header-modal' >
+      <Modal className="centered-modal-signup" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
+        <ModalHeader className='modal-header-signup' toggle={() => setModalOpen(false)}  >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
-        <ModalBody>
+        <ModalBody className='modal-body-signup'>
         <h4>Congratulations {name}  🎉 </h4>
         <p>Your account is successfully created.</p>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter className='modal-footer-signup'>
           <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>
         </ModalFooter>
       </Modal>

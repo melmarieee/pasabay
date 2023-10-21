@@ -51,7 +51,7 @@ function Forgotpassword() {
         </Col>
         <Col className="padding-top-fgp">
           <Form style={formStyle} className="fgp-form">
-            <Button href='/login' style={{float: 'right'}}>X</Button>
+            <Button className="btn-fgp" href='/login' style={{float: 'right'}}>X</Button>
             <Col className="text-center mb-5">
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />
@@ -75,7 +75,7 @@ function Forgotpassword() {
 
             <div className="text-center" style={{ padding: "50px" }}>
               <Button
-                style={{ backgroundColor: "#ff8811" }}
+                className="btn-fgp-srq"
                 onClick={handleForgotPassword}
               >
                 Send Request

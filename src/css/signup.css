@@ -1,3 +1,6 @@
+.signup-form{
+  margin-top: -20px;
+}
 @media screen and (max-width: 769px){
     #picture{
         display: none;
@@ -8,6 +11,11 @@
         padding-left: 1px;
         margin-bottom: .125rem;
     }    
+@media screen and (max-width: 320px){
+  .form-select{
+    width: 280px;
+  }
+}    
 }
 
 /* Pop up Modal */

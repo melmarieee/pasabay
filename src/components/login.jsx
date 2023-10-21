@@ -65,6 +65,7 @@ function Login() {
         <Col className='padding-top-login-signup'>
           <Form style={formStyle} onSubmit={handleLogin}>
             <Col className="text-center mb-5">
+            <Button href='/' style={{float: 'right'}}>X</Button>
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />
               </a>
@@ -76,11 +77,11 @@ function Login() {
               <Label className='text-secondary'>Please enter your details</Label>
             </div>
             <FormGroup style={formGroupStyle}>
-              <Input required className="input-container mx-5" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+              <Input required className="input-container mx-5 li-email" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
             </FormGroup>
 
             <FormGroup style={formGroupStyle}>
-              <Input required className="input-container mx-5 my-4" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
+              <Input required className="input-container mx-5 my-4 li-pass" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
             </FormGroup>
             {errorLogin}
             <div className="text-center" style={{ padding: '50px' }}>

@@ -69,7 +69,7 @@ function Login() {
         <Col className='padding-top-login-signup'>
           <Form style={formStyle} onSubmit={handleLogin}>
             <Col className="text-center mb-5">
-            <Button href='/' style={{float: 'right'}}>X</Button>
+            <Button className='btn-login' href='/' style={{float: 'right'}}>X</Button>
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />
               </a>
@@ -89,7 +89,7 @@ function Login() {
             </FormGroup>
             {errorLogin}
             <div className="text-center" style={{ padding: '50px' }}>
-              <Button style={{ backgroundColor: '#ff8811' }} >Log in</Button>
+              <Button className='btn-login-sbmt'>Log in</Button>
               <br />
               <a href="/forgotpassword">
                 <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>

@@ -16,6 +16,25 @@ img, svg {
 .padding-top-login-signup {
     margin-top: 60px;
 }
+.btn-login{
+    background-color: #ff8811;
+    border: 1px solid #fff;
+}
+.btn-login:hover{
+    background-color: #DF6900;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-login-sbmt{
+    background-color: #ff8811;
+    border: 1px solid #fff;
+    color: #fff;
+}
+.btn-login-sbmt:hover{
+    background-color: #DF6900 !important;
+    border: 1px solid #fff;
+    color: #fff;
+}
 @media screen and (max-width: 769px) {
 #picture-login {
     display: none;

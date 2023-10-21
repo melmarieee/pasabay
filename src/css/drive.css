@@ -1,8 +1,5 @@
-.button1-inf-container{
-   width: 100%;
-}
-.button1-info {
-    width: 200px;
+.button1-info{
+   width: 150px;
 }
 .change1-info .Mui-selected{
     color: #ff8811 !important;
@@ -22,3 +19,16 @@
 .btn-comride-drive:hover {
     background-color: #DF6900;
 }
+.button1-inf-container{
+   width: 100%;
+}
+.button1-info {
+    width: 200px;
+}
+.change1-info .Mui-selected{
+    color: #ff8811 !important;
+}
+.MuiTabs-indicator {
+    background-color: #ff8811 !important;
+}
+

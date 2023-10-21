@@ -112,6 +112,7 @@ export default function LabTabs() {
                 ""
               }
               {drives.map((drive) => (
+                <>
                  <Accordion className='mt-3'>
                   <AccordionSummary
                       expandIcon={<ExpandMoreIcon />}

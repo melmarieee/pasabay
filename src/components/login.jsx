@@ -69,7 +69,7 @@ function Login() {
         <Col className='padding-top-login-signup'>
           <Form style={formStyle} onSubmit={handleLogin}>
             <Col className="text-center mb-5">
-            <Button className='btn-login' href='/' style={{float: 'right'}}>X</Button>
+            <Button className='btn-close-login' href='/'><i class="fa-solid fa-chevron-left"></i></Button>
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />
               </a>

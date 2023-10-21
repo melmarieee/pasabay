@@ -18,7 +18,6 @@ import ShowRide from './components/show_ride';
 import Form from './components/form';
 import Password from "./components/Password";
 import Drive from "./components/drive"
-
 import MiniBio from "./components/MiniBio";
 import TravelPreference from "./components/TravelPreference";
 import EmergencyContact from "./components/EmergencyContact";

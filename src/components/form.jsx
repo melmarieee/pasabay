@@ -111,7 +111,7 @@ const form = () => {
         {
             user.vehicle.length != 0 ?
             <div>
-                <div className='p-4 mt-5 my-5 '>
+                <div className='pt-4 mt-5 '>
                 <h1 className='text-center mt-5'>Create a Ride</h1>
             </div>
             <div>

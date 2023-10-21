@@ -105,6 +105,12 @@ export default function LabTabs() {
               </TabList>
             </Box>
             <TabPanel value="1" className='mx-4 pt-4'>
+              {
+                drives.length == 0 ?
+                <h1 className='text-center pt-5 text-secondary'>There are no upcoming drive yet</h1>
+                :
+                ""
+              }
               {drives.map((drive) => (
                  <Accordion className='mt-3'>
                   <AccordionSummary
@@ -159,6 +165,12 @@ export default function LabTabs() {
               ))}
             </TabPanel>
             <TabPanel value="2" className='mx-4 pt-4'>
+              {
+                drivesHistory.length == 0 ?
+                <h1 className='text-center pt-5 text-secondary'>There are no history drive yet</h1>
+                :
+                ""
+              }
               {drivesHistory.map((drive) => (
                   <Accordion className='mt-3'>
                     <AccordionSummary

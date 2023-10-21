@@ -53,7 +53,7 @@ const Header = (props) => {
                         <Dropdown className="navbutton-dropdown" isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
                             <DropdownToggle caret><b>{user.user.name}</b></DropdownToggle>
                             <DropdownMenu>
-                                <DropdownItem>Account</DropdownItem>
+                                <DropdownItem href='/account'>Account</DropdownItem>
                                 <DropdownItem href='/rides'>Rides</DropdownItem>
                                 <DropdownItem href='/drive'>Drives</DropdownItem>
                                 <DropdownItem href='/form'>Create Ride</DropdownItem>

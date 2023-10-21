@@ -166,12 +166,12 @@ const Signup = () => {
         </Col>
       </Row>
       <Modal className="centered-modal-signup" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
-        <ModalHeader className='modal-header-signup' toggle={() => setModalOpen(false)}  >
+        <ModalHeader className='modal-header-signup' >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
         <ModalBody className='modal-body-signup'>
-        <h4>Congratulations {name}  🎉 </h4>
-        <p>Your account is successfully created.</p>
+        <h4 className='text-center'>Congratulations {name}  🎉 </h4>
+        <p className='text-center'>Your account is successfully created.</p>
         </ModalBody>
         <ModalFooter className='modal-footer-signup'>
           <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>

@@ -13,11 +13,12 @@ import AccountSetting from "./components/AccountSetting";
 import CarPool from './components/carpool';
 import ContactNum from "./components/ContactNum";
 import Email from "./components/email";
-import DragDrop from "./components/DragDrop";
-import ConfirmationComponent from "./components/ConfirmationComponent";
+// import DragDrop from "./components/DragDrop";
 import ShowRide from './components/show_ride';
 import Form from './components/form';
 import Password from "./components/Password";
+import Drive from "./components/drive"
+
 import MiniBio from "./components/MiniBio";
 import TravelPreference from "./components/TravelPreference";
 import EmergencyContact from "./components/EmergencyContact";
@@ -83,16 +84,12 @@ function App() {
       element: <Email/>
     },
     {
-      path:"/dragdrop",
-      element: <DragDrop/>
-    },
-    {
-      path: "/confirmation",
-      element: <ConfirmationComponent />,
-    },
-    {
       path: "/password",
       element: <Password/>
+    },
+    {
+      path: "/drive",
+      element: <Drive/>
     },
     {
       path: "/bio",

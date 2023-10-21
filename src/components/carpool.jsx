@@ -50,6 +50,10 @@ const Search = () => {
   }
 
   const searchRides = () => {
+    if (!fromLocation || !toLocation || !date || !pax) {
+      alert("Please complete all the fields")
+      return;
+    }
     const data = {
       origin_city: fromLocation.value.terms[0].value.toLowerCase(),
       destination_city: toLocation.value.terms[0].value.toLowerCase(),
@@ -200,7 +204,7 @@ const Search = () => {
           {
             searchResults.length == 0 ?
             <div>
-              <h1 className='text-center mt-5 text-secondary'>Please search to find a ride</h1>
+              <h1 className='text-center mt-5 text-secondary'>Please search to find a ride<i class="fas fa-magnifying-glass mx-2"></i></h1>
             </div>
             :
             ""

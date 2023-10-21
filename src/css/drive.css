@@ -1,5 +1,8 @@
-.button1-info{
-   width: 150px;
+.button1-inf-container{
+   width: 100%;
+}
+.button1-info {
+    width: 200px;
 }
 .change1-info .Mui-selected{
     color: #ff8811 !important;
@@ -7,3 +10,4 @@
 .MuiTabs-indicator {
     background-color: #ff8811 !important;
 }
+

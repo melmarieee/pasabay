@@ -61,7 +61,8 @@ const form = () => {
             end_google_place_id: toLocation.toLowerCase(),
             price: Math.round(distanceValue / 1000 * 8),
             distance: distance,
-            pax: pax
+            pax: pax,
+            estimated_travel: duration
         }
 
         axios.post(createRideURL, data)

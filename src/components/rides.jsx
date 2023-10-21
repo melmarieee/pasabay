@@ -38,6 +38,7 @@ export default function Rides() {
       params: data
     })
     .then(function (response) {
+      console.log(response.data.data)
       setRides(response.data.data.results);
     })
     .catch(function (error) {
@@ -107,21 +108,32 @@ export default function Rides() {
                     <Typography>
                       <div className='container-fluid'>
                         <div className='row'>
-                          <div className='col-md-6 trip-info'>
-                          <h5><b>Trip Details</b></h5>
+                          <div className='col-md-4 trip-info'>
+                          <h5><b>Ride Details</b></h5>
                           <br />
                             <ul>
                                 <li><span className='text-secondary'>Date and Time:</span> {dayjs(drive.date).format('MMMM, DD, YYYY')} ({drive.time})</li>
                                 <li><span className='text-secondary'>Going from:</span> {drive.start_location}</li>
                                 <li><span className='text-secondary'>Going To:</span> {drive.end_location}</li>
-                                <li><span className='text-secondary'>Price / Person :</span> ₱ {drive.price}</li>
+                                <li><span className='text-secondary'>Price : </span><span className='text-success'>₱ {drive.price}</span></li>
                             </ul>
+                          </div>     
+                          <div className='col-md-4 trip-info'>
+                            <h5><b>Travel Details</b></h5>
+                            <br />
+                              <ul>
+                                  <li><span className='text-secondary'>Distance:</span> {drive.distance}</li>
+                                  <li><span className='text-secondary'>Estimated Duration:</span> {drive.estimated_travel}</li>
+                              </ul>
                           </div>
-                          <div className='col-md-6'>
-                            <h5><b>Passengers Info</b></h5>
-                           
-                          </div>
-                         
+                          <div className='col-md-4 trip-info'>
+                            <h5><b>Driver Details</b></h5>
+                            <br />
+                              <ul>
+                                  <li><span className='text-secondary'>Distance:</span> {drive.distance}</li>
+                                  <li><span className='text-secondary'>Estimated Duration:</span> {drive.estimated_travel}</li>
+                              </ul>
+                          </div>                         
                         </div>
                       </div>
                     </Typography>
@@ -148,7 +160,7 @@ export default function Rides() {
                       <Typography>
                         <div className='container-fluid'>
                           <div className='row'>
-                            <div className='col-md-6 trip-info'>
+                            <div className='col-md-12 trip-info'>
                             <h5><b>Trip Details</b></h5>
                             <br />
                               <ul>
@@ -158,26 +170,7 @@ export default function Rides() {
                                   <li><span className='text-secondary'>Price / Person :</span> ₱ {drive.price}</li>
                               </ul>
                             </div>
-                            <div className='col-md-6'>
-                              <h5><b>Passengers Info</b></h5>
-                              {
-                                drive.bookings.length == 0 ?
-                                <h5 className='text-center mt-5 text-secondary'><b>No passengers yet</b></h5>
-                                :
-                                ""
-                              }
-                              {drive.bookings.map((book) => (
-                              <div>
-                                <div className='col-md-4'>
-                                  <p> <i class="fas fa-user my-1 mx-1"></i> {book.name} <i class="far fa-circle-check text-success mx-1"></i></p>
-                                  <ul>
-                                      <li>Number of Pax : {drive.pax}</li>
-                                      <li>Contact Number : {book.phone}</li>
-                                  </ul>
-                                </div>
-                              </div>
-                            ))}
-                            </div>
+                           
                           </div>
                         </div>
                       </Typography>

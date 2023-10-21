@@ -19,6 +19,7 @@ import {
 
 
 const searchRideURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/search_rides";
+const bookRideURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/book_ride";
 
 const Search = () => {                            
   const [fromLocation, setFromLocation] = useState(null);
@@ -31,6 +32,8 @@ const Search = () => {
   const center = { lat: 14.5837893, lng: 121.1170287 }
   const [map, setMap] = useState(null)
   const [activeBook, setActiveBook] = useState(null)
+  const user_session = window.localStorage.getItem("userLogin");
+  const [user, setUser] = React.useState(JSON.parse(user_session));
 
   const toggleModalClose = () => {
     console.log(activeBook)
@@ -38,7 +41,21 @@ const Search = () => {
   }
 
   const ConfirmBookRide = () => {
-    window.location.href = "/rides"
+    console.log(activeBook)
+    const data = {
+      ride_id: activeBook.ride_id,
+      passenger_id: user.user.id,
+      pax: parseInt(pax),
+    }
+    axios.post(bookRideURL, data)
+    .then(function (response) {
+        window.location.href = "/rides"
+    })
+    .catch(function (error) {
+      alert(error)
+    console.log(error);
+    });
+
   }
  
   const bookRide = (result) => {

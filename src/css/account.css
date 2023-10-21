@@ -123,9 +123,15 @@
     .btn-account-container {
         width: 150%;
         margin: 0 -145px;
-    }   
+    }
+    .body {
+        padding: 40px 0;
+    }
 }
 @media screen and (max-width: 425px) {
+    .body {
+        padding: 80px 0;
+    }
     .btn-account-container {
         margin: 0 -50px;
         padding: 0;

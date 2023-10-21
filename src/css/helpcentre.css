@@ -92,10 +92,10 @@
         margin: 0 -110px;
     }
     .cmnP-img {
-        width: 100%;
+        width: 30% !important;
         position: absolute;
-        top: 470px;
-        left: 100px;
+        top: 570px;
+        left: 150px;
     }
     .commonProblems-item {
         width: 17%;
@@ -108,9 +108,9 @@
         width: 25%
     }
     .chat-img {
-        width: 100%;
+        width: 30% !important;
         position: absolute;
-        top: 635px;
-        left: 90px;
+        top: 730px;
+        left: 150px;
     }
 }

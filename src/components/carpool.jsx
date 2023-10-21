@@ -127,14 +127,14 @@ const Search = () => {
              
             </ModalBody>
             <ModalFooter>
-                <div className='row text-right'>
+                <div className='row text-right btn-modal-container'>
                   <div className='col-md-6'>
-                    <Button  onClick={toggleModalClose}>
+                    <button onClick={toggleModalClose} className='btn-canel-modal'>
                         Cancel
-                    </Button>
+                    </button>
                   </div>
                   <div className='col-md-6'>
-                    <button onClick={ConfirmBookRide} type="button" class="btn btn-primary rounded button-find-ride">Book</button>
+                    <button onClick={ConfirmBookRide} type="button" class="rounded button-find-ride btn-book-modal">Book</button>
                   </div>
                 </div>
             </ModalFooter>
@@ -194,7 +194,7 @@ const Search = () => {
                     </div>
                   </div>
                   <div className="col-md-2">
-                    <button onClick={searchRides} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Search</button>
+                    <button onClick={searchRides} type="button" class="btn-lg rounded button-find-ride">Search</button>
                   </div>
                 </div>
               </div>
@@ -240,7 +240,7 @@ const Search = () => {
                   <p><h3>Date and time</h3>{dayjs(result.date).format('MMMM, DD, YYYY')} {result.time}</p>
                 </div>
                 <div className="col-md-1 mt-4">
-                  <button onClick={bookRide.bind(this, result)} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+                  <button onClick={bookRide.bind(this, result)} type="button" class="btn-lg rounded button-find-ride btn-book-ride">Book</button>
                 </div>
               </div>
             </div>

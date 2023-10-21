@@ -83,7 +83,7 @@ export default function LabTabs() {
                         </div>
                       </div>
                       <div className='button1-info'>
-                      <button type="button" class="btn btn-success button1-info">Complete Ride</button>
+                      <button type="button" class="button1-info btn-comride-drive">Complete Ride</button>
                       </div>
                     </Typography>
                   </AccordionDetails>
@@ -137,7 +137,7 @@ export default function LabTabs() {
                         </div>
                       </div>
                       <div className='button1-info'>
-                      <button type="button" class="btn btn-success button1-info">Complete Ride</button>
+                      <button type="button" class="button1-info btn-comride-drive">Complete Ride</button>
                       </div>
                     </Typography>
                   </AccordionDetails>

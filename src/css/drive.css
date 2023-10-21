@@ -7,3 +7,15 @@
 .MuiTabs-indicator {
     background-color: #ff8811 !important;
 }
+.btn-comride-drive {
+    background-color: #FF8811;
+    border: none;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 5px;
+    width: 180%;
+    padding: 10px;
+}
+.btn-comride-drive:hover {
+    background-color: #DF6900;
+}

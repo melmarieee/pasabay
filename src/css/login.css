@@ -5,14 +5,6 @@
 img, svg {
     vertical-align: middle;
 }
-@media screen and (max-width: 769px) {
-#picture-login {
-    display: none;
-}
-.image-left-pic-container {
-    display: none;
-}
-}
 .input-container{
     width: 90%;
 }
@@ -21,7 +13,17 @@ img, svg {
     background-color: #ff8811;
     border-radius: 8px;
 }
-
 .padding-top-login-signup {
     margin-top: 60px;
+}
+@media screen and (max-width: 769px) {
+#picture-login {
+    display: none;
+}
+.image-left-pic-container {
+    display: none;
+}
+.li-email, .li-pass {
+    width: 80%;
+}
 }

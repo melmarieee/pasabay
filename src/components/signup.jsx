@@ -54,8 +54,9 @@ const Signup = () => {
           <img id='picture' src={picture} alt="Your Picture" className="img-fluid p-5 mt-5" />
         </Col>
         <Col className='padding-top-login-signup'>
-          <Form style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
+          <Form className='signup-form' style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
+            <Button className='btn-close-signup' href='/login' style={{float: 'right'}}>X</Button>
               <a href="/">
                 <img src={logo} alt="Your Logo" width="250"/>
               </a>
@@ -86,8 +87,8 @@ const Signup = () => {
                         </DemoContainer>
                     </LocalizationProvider>
                 </Col>
-                <Col>
-                  <Input required className="mt-2" type="select" onChange={(e) => setGender(e.target.value)} value={gender}>
+                <Col className='gender-signup'>
+                  <Input required className="mt-2 " type="select" onChange={(e) => setGender(e.target.value)} value={gender}>
                     <option value="">Select Gender</option>
                     <option value="male">Male</option>
                     <option value="female">Female</option>
@@ -125,7 +126,7 @@ const Signup = () => {
             </FormGroup>
 
             <div className='text-center'>
-              <p>Already have an account?<Link to="/login" style={{textDecoration:'none'}}> Log in</Link></p>
+              <p>Already have an account?<Link to="/login" style={{textDecoration:'none', color:'#ff8811' }}> Log in</Link></p>
             </div>
 
             <div className="text-center">
@@ -135,15 +136,15 @@ const Signup = () => {
           </Form>
         </Col>
       </Row>
-      <Modal className="centered-modal" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
-        <ModalHeader toggle={() => setModalOpen(false)} className='Header-modal' >
+      <Modal className="centered-modal-signup" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
+        <ModalHeader className='modal-header-signup' toggle={() => setModalOpen(false)}  >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
-        <ModalBody>
+        <ModalBody className='modal-body-signup'>
         <h4>Congratulations {name}  🎉 </h4>
         <p>Your account is successfully created.</p>
         </ModalBody>
-        <ModalFooter>
+        <ModalFooter className='modal-footer-signup'>
           <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>
         </ModalFooter>
       </Modal>

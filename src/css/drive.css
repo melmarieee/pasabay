@@ -1,4 +1,9 @@
-.box-1-info{
-    border: solid 10px gray;
-    border-color: gray;
+.button1-info{
+   width: 150px;
+}
+.change1-info .Mui-selected{
+    color: #ff8811 !important;
+}
+.MuiTabs-indicator {
+    background-color: #ff8811 !important;
 }

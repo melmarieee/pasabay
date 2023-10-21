@@ -1,4 +1,4 @@
-import React, { useState, useEffect } from "react";
+import React, { useState } from "react";
 import {
   Container,
   Row,
@@ -11,7 +11,7 @@ import {
 } from "reactstrap";
 import picture from "../assets/forgotpassword-picture.png";
 import companylogo from "../assets/pasabay-orange-logo.png";
-import "../css/login.css";
+import "../css/forgotpassword.css";
 
 function Forgotpassword() {
   // Styles
@@ -42,16 +42,16 @@ function Forgotpassword() {
   return (
     <div>
       <Row>
-        <Col className="text-center image-left-pic-container">
+        <Col className="text-center image-left-pic-container-fgp">
           <img
-            id="picture-login"
             src={picture}
             alt="Your Picture"
             className="img-fluid p-5"
           />
         </Col>
-        <Col className="padding-top-login-signup">
-          <Form style={formStyle}>
+        <Col className="padding-top-fgp">
+          <Form style={formStyle} className="fgp-form">
+            <Button className="btn-fgp" href='/login' style={{float: 'right'}}>X</Button>
             <Col className="text-center mb-5">
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />
@@ -61,7 +61,7 @@ function Forgotpassword() {
               <h1>
                 <b>Forgot Password?</b>
               </h1>
-              <p>No worries! Enter your email and we will send you a reset</p>
+              <p>No worries! Enter your email and we will send you a reset password</p>
             </div>
             <FormGroup style={formGroupStyle}>
               <Input
@@ -75,7 +75,7 @@ function Forgotpassword() {
 
             <div className="text-center" style={{ padding: "50px" }}>
               <Button
-                style={{ backgroundColor: "#ff8811" }}
+                className="btn-fgp-srq"
                 onClick={handleForgotPassword}
               >
                 Send Request

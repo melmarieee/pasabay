@@ -2,21 +2,26 @@
   margin-top: -20px;
 }
 .btn-close-signup{
-  position: absolute;
-  right: 20px;
-  float: right;
-  background-color: #ff8811;
-  border: 1px solid #fff;
-  color: #fff;
-}
-.btn-close-signup:hover{
-  background-color: #DF6900 !important;
-  border: 1px solid #fff;
-  color: #fff;
+display: none;
+float: left;
 }
 @media screen and (max-width: 769px){
     #picture{
         display: none;
+    }
+    .btn-close-signup{
+      position: absolute;
+      left: 20px;
+      display: block;
+      background-color: transparent;
+      color: #ff8811;
+      border: 1px solid transparent;
+      transition: 0.3s;
+    }
+    .btn-close-signup:hover{
+      background-color: transparent !important;
+      border: 1px solid transparent !important;
+      color: #000;
     }
     .form-select{
         display: block;
@@ -30,7 +35,6 @@
   }
 }    
 }
-.btn-close {display: none;}
 
 /* Pop up Modal */
 .modal-content {
@@ -67,7 +71,6 @@
   color: #fff;
 }
 
-.modal-body-signup{
 
 /* .modal-body{
 

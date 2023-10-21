@@ -23,12 +23,37 @@ const Signup = () => {
   const [cpassword, setCpassword] = useState('');
   const [checkbox, setCheckbox] = useState(false);
   const [modalOpen, setModalOpen] = useState(false);
+  const [formErrors, setFormErrors] = useState({});
 
-  const signupURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/signup";
+    const signupURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/signup";
+
+    const validateForm = () => {
+      const errors = {};
+  
+      if (!password) {
+        errors.password = "Password is required";
+      }
+  
+      if (!cpassword) {
+        errors.cpassword = "Confirm password is required";
+      } else if (cpassword !== password) {
+        errors.cpassword = "Passwords do not match";
+      }
+  
+      if (!checkbox) {
+        errors.checkbox = "You must agree to the terms";
+      }
+  
+      setFormErrors(errors);
+      return Object.keys(errors).length === 0;
+    };
 
   const handleFormSubmit = (e) => {
     e.preventDefault();
 
+    const isFormValid = validateForm();
+
+    if (isFormValid){
     axios.post(signupURL, {
       name: name,
       birthday: birthday,
@@ -39,12 +64,13 @@ const Signup = () => {
       password: password,
     })
     .then(function (response) {
+      console.log("Modal should open now");
       setModalOpen(true);
     })
     .catch(function (error) {
-      alert(error)
-      console.log(error);
+      console.error("Error",error);
     });
+   }
   };
 
   return (
@@ -56,7 +82,7 @@ const Signup = () => {
         <Col className='padding-top-login-signup'>
           <Form className='signup-form' style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
-            <Button className='btn-close-signup' href='/login' style={{float: 'right'}}>X</Button>
+            <Button className='btn-close-signup' href='/login'><i class="fa-solid fa-chevron-left"></i></Button>
               <a href="/">
                 <img src={logo} alt="Your Logo" width="250"/>
               </a>
@@ -111,10 +137,12 @@ const Signup = () => {
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
+              {formErrors.password && <div className="text-danger">{formErrors.password}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="password" id="repeatpassword" placeholder="Confirm password" onChange={(e) => setCpassword(e.target.value)} value={cpassword} />
+              {formErrors.cpassword && <div className="text-danger">{formErrors.cpassword}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
@@ -122,6 +150,7 @@ const Signup = () => {
                 <Input required type="checkbox" id="termsCheck" onChange={(e) => setCheckbox(e.target.checked)} checked={checkbox} />{' '}
                 I have read and agree to the <a href="#!" style={{textDecoration:'none'}}>Privacy Policy</a> and Tracking Policy. Our <a href="#" style={{ textDecoration: 'none' }}>Terms & Condition </a>apply.
               </Label>
+              {formErrors.checkbox && <div className="text-danger">{formErrors.checkbox}</div>}
               <br />
             </FormGroup>
 
@@ -130,19 +159,19 @@ const Signup = () => {
             </div>
 
             <div className="text-center">
-              <Button style={{ backgroundColor: '#ff8811' }} type="submit">Sign Up</Button>
+              <Button style={{ backgroundColor: '#ff8811' }} onClick={handleFormSubmit} type='submit'>Sign Up</Button>
             </div>
             
           </Form>
         </Col>
       </Row>
       <Modal className="centered-modal-signup" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
-        <ModalHeader className='modal-header-signup' toggle={() => setModalOpen(false)}  >
+        <ModalHeader className='modal-header-signup' >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
         <ModalBody className='modal-body-signup'>
-        <h4>Congratulations {name}  🎉 </h4>
-        <p>Your account is successfully created.</p>
+        <h4 className='text-center'>Congratulations {name}  🎉 </h4>
+        <p className='text-center'>Your account is successfully created.</p>
         </ModalBody>
         <ModalFooter className='modal-footer-signup'>
           <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>

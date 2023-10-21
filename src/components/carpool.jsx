@@ -140,7 +140,7 @@ const Search = () => {
             </ModalFooter>
         </Modal>
         <div class="container-fluid pt-5 mt-5">
-            <h1 className="text-center pb-4">Where do you want to go?</h1>
+            <h1 className="text-center pb-4 mt-4">Where do you want to go?</h1>
             <div className="px-4 pt-2 pb-4 background-search">
               <div className="row">
                 <div className="row pt-3">

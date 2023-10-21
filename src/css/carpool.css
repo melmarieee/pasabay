@@ -9,4 +9,13 @@
 .place-top-padding {
     padding-top: 10px;
 }
+.btn-carpool-search {
+    width: 100%;
+    height: 100%;
+    border: none;
+}
+.btn-carpool-book {
+    border: none;
+    height: 39%;
+}
 

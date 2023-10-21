@@ -7,7 +7,6 @@ import {
   Col,
   Label,
   Input,
-  Button,
   FormGroup,
 } from "reactstrap";
 import "../css/emergencycontact.css";
@@ -46,7 +45,7 @@ const EmergencyContact = () => {
                   placeholder="Relationship"
                   className="emergency-input-form"
                 />
-                <Button type="submit" className="btn-emergency">Save Contact</Button>
+                <button type="submit" className="btn-emergency">Save Contact</button>
               </FormGroup>
             </Col>
           </Row>

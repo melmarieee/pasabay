@@ -8,20 +8,38 @@
 }
 .btn-emergency {
     background-color: #FF8811;
-    border-radius: 10px;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    border: none;
+    width: 45%;
+    padding: 10px;
+}
+.btn-emergency:hover {
+    background: #DF6900;
 }
 .emegergencyContact-container {
     margin: 30px 0;
+    padding: 20px;
 }
 @media screen and (max-width: 768px) {
     .emergency-input-form {
         width: 100%;
     }
-    .img-emergencyContact img {
+    .img-emergencyContact {
         display: none;
     }
-    .emegergencyContact-container {
-        display: grid;
-        grid-template-columns: 8fr;
+}
+@media screen and (max-width: 425px) {
+    .emergencyHeading {
+        margin: 0 -80px;
+    }
+    .emergency-input-form {
+        width: 250%;
+        margin: 0 -80px;
+    }
+    .btn-emergency {
+        width: 200%;
+        margin: 15px -80px;
     }
 }

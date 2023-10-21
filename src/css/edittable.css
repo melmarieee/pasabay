@@ -1,11 +1,21 @@
 .btnEditTable {
     background-color: #FF8811;
-    width: 15%;
-    border-radius: 8px;
+    width: 18%;
+    height: 60%;
+    border-radius: 5px;
     margin: 20px;
+    font-size: 20px;
 }
 .CancelButton {
-    background-color: transparent;
+    background-color: #FFF;
+    color: #FF8811;
+    border: 2px solid #FF8811;
+}
+.saveButton:hover {
+    background-color: #DF6900;
+}
+.CancelButton:hover {
+    background-color: #fae8d6;
     color: #FF8811;
 }
 .inputEditTable {

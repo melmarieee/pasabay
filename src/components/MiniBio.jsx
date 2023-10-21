@@ -1,7 +1,7 @@
 import React from "react";
 import Navbar from "../components/common/navbar";
 import Footer from "../components/common/footer";
-import { Container, Row, Col, Label, Input, Button } from "reactstrap";
+import { Container, Row, Col, Label, Input } from "reactstrap";
 import "../css/minibio.css";
 
 const MiniBio = () => {
@@ -28,9 +28,9 @@ const MiniBio = () => {
                 placeholder="What are your interests?"
                 className="txtAreaInput"
               ></Input>
-              <Button type="submit" className="btnBio">
+              <button type="submit" className="btnBio">
                 Save
-              </Button>
+              </button>
             </Col>
           </Row>
         </Container>

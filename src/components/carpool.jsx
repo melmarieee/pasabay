@@ -91,7 +91,7 @@ const Search = () => {
                     </div>
                   </div>
                   <div className="col-md-2">
-                    <button onClick={getLatLong} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Search</button>
+                    <button onClick={getLatLong} type="button" class="btn-lg rounded button-find-ride btn-carpool-search">Search</button>
                   </div>
                 </div>
               </div>
@@ -121,7 +121,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023 4:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn-lg rounded button-find-ride btn-carpool-book">Book</button>
             </div>
           </div>
           <div className="row bg-light p-3 mt-4 mx-2">
@@ -144,7 +144,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023 3:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn-lg rounded button-find-ride btn-carpool-book">Book</button>
             </div>
           </div>
           <div className="row bg-light p-3 mt-4 mx-2">
@@ -167,7 +167,7 @@ const Search = () => {
               <p><h3>Date and time</h3>October 24, 2023, 5:30 PM</p>
             </div>
             <div className="col-md-1 mt-4">
-              <button onClick={toggleModalClose} type="button" class="btn btn-lg btn-primary rounded button-find-ride">Book</button>
+              <button onClick={toggleModalClose} type="button" class="btn-lg rounded button-find-ride btn-carpool-book">Book</button>
             </div>
           </div>
         </div>

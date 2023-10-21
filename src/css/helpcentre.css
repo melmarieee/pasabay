@@ -14,9 +14,13 @@
 }
 .btnHelpCentre {
     background-color: #FF8811;
-    border-radius: 8px;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 20px;
     margin: 0 20px;
-    width: 20%;
+    width: 24%;
+    padding: 10px;
     height: 100%;
 }
 .commonProblems-container img {
@@ -30,7 +34,7 @@
 .search-helpCentre {
     width: 80%;
     padding: 10px;
-    border-radius: 10px;
+    border-radius: 5px;
     margin: 10px 0;
 }
 .search-btn {
@@ -64,4 +68,27 @@
 .chat-container {
     padding: 10px;
     align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .helpCetre-imgContainer {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .helpCentre-heading {
+        width: 150%;
+        margin: 0 -20px;
+    }
+    .helpForm-container {
+        width: 280%;
+        margin: 0 -110px;
+    }
+    .btnHelpCentre {
+        width: 40%;
+    }
+    .commonProblems-container {
+        width: 300%;
+        margin: 0 -110px;
+    }
 }

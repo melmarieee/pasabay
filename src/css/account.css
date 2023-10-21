@@ -48,17 +48,25 @@
     width: 100%;
     text-align: start;
 }
+.btn-account-container {
+    justify-content: center;
+    align-items: center;
+    text-align: center;
+}
+.about-btn-container {
+    padding: 0;
+    margin: 0 -112px;
+}
 .about {
-    margin: 0 10rem;
     padding: 10px;
-    height: 3rem;
+    height: 20%;
     background-color: #FF8811;
     border-color: #5EB1BF;
     color: white;
     border: solid;
     border-width: 1px;
     border-radius: 5px;
-    width: 75%;
+    width: 244%;
     text-align: center;
     font-size: 20px;
     align-items: center;
@@ -67,15 +75,14 @@
     background-color: #DF6900;
 }
 .account {
-    margin: 0 10rem;
     padding: 10px;
-    height: 3rem;
+    height: 18%;
     color: #FF8811;
     background-color: #fFF;
     border-radius: 5px;
     border: 2px solid #FF8811;
     font-size: 20px;
-    width: 65%;
+    width: 165%;
     text-align: center;
     align-items: center;
 }
@@ -113,10 +120,43 @@
     .accountImg img {
         max-width: 350px;
     }
-    .accountContainerFlex {
-        display: flex;
-    }
-    .about, .account {
+    .btn-account-container {
+        width: 150%;
+        margin: 0 -145px;
+    }   
+}
+@media screen and (max-width: 425px) {
+    .btn-account-container {
         margin: 0;
+        padding: 0;
+        display: grid;
+    }
+    .btn-account-container {
+        
+    }
+    .accountContainerFlex {
+        width: 260%;
+        margin: 0 -130px;
+    }
+    .validInfoContainer {
+        width: 260%;
+        margin: 0 -140px;
+    }
+    .validInfo {
+        margin: 0 60px;
+    }
+    .aboutYou {
+        width: 260%;
+        margin: 0 -140px;
+    }
+    .aboutYou-items {
+        margin: 0 60px;
+    }
+    .accountContainerFlex button {
+        margin: 0 90px;
+        width: 50%;
+    }
+    hr {
+        margin: 20px -60px;
     }
 }

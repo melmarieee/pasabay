@@ -28,7 +28,7 @@ const HelpCentre = () => {
             </Col>
             <Col className="helpCentre-container">
               <Label>
-                <h2>Help Centre</h2>
+                <h2 className="helpCentre-heading">Help Centre</h2>
               </Label>
               <FormGroup className="helpForm-container">
                 <Col className="helpCentre-heading-container">
@@ -49,9 +49,9 @@ const HelpCentre = () => {
                     placeholder="search"
                     className="search-helpCentre"
                   />
-                  <Button type="submit" className="btnHelpCentre">
+                  <button type="submit" className="btnHelpCentre">
                     Search
-                  </Button>
+                  </button>
                 </Col>
               </FormGroup>
               <hr />

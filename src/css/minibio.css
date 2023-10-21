@@ -1,7 +1,15 @@
 .btnBio {
     background-color: #FF8811;
     margin: 15px;
-    border-radius: 8px;
+    color: #FFF;
+    font-size: 20px;
+    border-radius: 5px;
+    border: none;
+    width: 21%;
+    height: 10%;
+}
+.btnBio:hover {
+    background-color: #DF6900;
 }
 .textArea-container {
     text-align: center;
@@ -18,5 +26,19 @@
     }
     .rowBio {
         display: grid;
+    }
+}
+@media screen and (max-width: 425px) {
+    .txtAreaInput {
+        width: 250%;
+        margin: 0 -90px;
+    }
+    .textArea-container h2 {
+        width: 250%;
+        margin: 0 -90px;
+    }
+    .btnBio {
+        width: 100%;
+        margin: 15px 0;
     }
 }

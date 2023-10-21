@@ -69,22 +69,20 @@ const Account = () => {
     <>
       <NavBar />
       <body className="body">
-        <Container className="container text center">
-          <Row className="row">
-            <Col className="col">
+          <Row className="row btn-account-container">
+            <Col className="col about-btn-container">
               <Label>
-                <h2 className="about">About you</h2>
+                <button className="about">About you</button>
               </Label>
             </Col>
-            <Col className="col">
+            <Col className="col account-btn-container">
               <Link to="/accountSetting" className="accountLink">
                 <Label>
-                  <h2 className="account">Account Setting</h2>
+                  <button className="account">Account Setting</button>
                 </Label>
               </Link>
             </Col>
           </Row>
-        </Container>
         <hr />
         <Container className="accountContainerFlex">
           <Row>
@@ -144,7 +142,7 @@ const Account = () => {
           <Label>
             <h2>About you</h2>
           </Label>
-          <Row>
+          <Row className="aboutYou-items">
             <ul>
               <li>
                 <i class="fa-solid fa-circle-plus"></i>

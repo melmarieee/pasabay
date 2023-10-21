@@ -10,22 +10,20 @@ const AccountSetting = () => {
     <>
       <NavBar />
       <body className="body">
-        <Container className="container text center">
-          <Row className="row">
-            <Col className="col">
+          <Row className="row btn-account-container">
+            <Col className="col about-btn-container">
               <Link to="/account" className="aboutLink">
                 <Label>
-                  <h2 className="aboutAccount">About you</h2>
+                  <button className="aboutAccount">About you</button>
                 </Label>
               </Link>
             </Col>
-            <Col className="col">
+            <Col className="col account-btn-container">
               <Label>
-                <h2 className="account">Account Setting</h2>
+                <button className="account">Account Setting</button>
               </Label>
             </Col>
           </Row>
-        </Container>
         <hr />
         <Container className="settings">
           <ul className="listFLex">

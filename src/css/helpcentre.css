@@ -88,7 +88,29 @@
         width: 40%;
     }
     .commonProblems-container {
-        width: 300%;
+        width: 280%;
         margin: 0 -110px;
+    }
+    .cmnP-img {
+        width: 100%;
+        position: absolute;
+        top: 470px;
+        left: 100px;
+    }
+    .commonProblems-item {
+        width: 17%;
+    }
+    .chat-container {
+        width: 280%;
+        margin: 0 -110px;
+    }
+    .chat-items {
+        width: 25%
+    }
+    .chat-img {
+        width: 100%;
+        position: absolute;
+        top: 635px;
+        left: 90px;
     }
 }

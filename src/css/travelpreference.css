@@ -29,3 +29,16 @@
 .preferenceContainer p:hover {
     color: #fff;
 }
+@media screen and (max-width: 768px) {
+    .tp-container {
+        width: 150%;
+        margin: 0 -150px;
+    }
+}
+@media screen and (max-width: 425px) {
+    .tp-container {
+        display: grid;
+        width: 300%;
+        margin: 0 -125px;
+    }
+}

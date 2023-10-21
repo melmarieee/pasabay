@@ -10,7 +10,7 @@ const TravelPreference = () => {
       <NavBar />
       <body className="body">
         <Container>
-          <Row>
+          <Row className="tp-container">
             <Col className="imgTravel">
               <img src="../src/assets/Positive thinking.gif" alt="" className="img-fluid"/>
             </Col>

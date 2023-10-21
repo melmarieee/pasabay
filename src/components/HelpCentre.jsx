@@ -56,28 +56,28 @@ const HelpCentre = () => {
               </FormGroup>
               <hr />
               <Row className="commonProblems-container">
-                <Col>
+                <Col className="commonProblems-item">
                   <h3>Common problems</h3>
                   <p>Look for common solutions</p>
                 </Col>
-                <Col>
+                <Col className="commonProblems-img">
                   <img
                     src="../src/assets/Overwhelmed.png"
                     alt=""
-                    className="img-fluid"
+                    className="img-fluid cmnP-img"
                   />
                 </Col>
               </Row>
               <Row className="chat-container">
-                <Col>
+                <Col className="chat-items">
                   <h3>Chat now</h3>
                   <p>Faster way to address your issues</p>
                 </Col>
-                <Col>
+                <Col className="chat-img-container">
                   <img
                     src="../src/assets/Chat_bot.png"
                     alt=""
-                    className="img-fluid"
+                    className="img-fluid chat-img"
                   />
                 </Col>
               </Row>

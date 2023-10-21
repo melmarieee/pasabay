@@ -127,12 +127,21 @@
 }
 @media screen and (max-width: 425px) {
     .btn-account-container {
-        margin: 0;
+        margin: 0 -50px;
         padding: 0;
         display: grid;
     }
     .btn-account-container {
-        
+        display: inline;
+    }
+    .about-btn-container {
+        margin: 0 -90px;
+    }
+    .account-btn-container{
+        margin: 0 -48%;
+    }
+    .account {
+        width: 212%;
     }
     .accountContainerFlex {
         width: 260%;

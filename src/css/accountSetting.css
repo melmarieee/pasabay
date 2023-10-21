@@ -65,9 +65,24 @@
 }
 .btnLogout {
     background-color: #FF8811;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    width: 8%;
+    padding: 10px;
 }
 @media screen and (max-width: 768px) {
     .aboutAccount, .account {
         margin: 0;
+    }
+}
+@media screen and (max-width: 425px) {
+    .settings {
+        margin: 0 -80px;
+        width: 200%;
+    }
+    .btnLogout {
+        width: 100%;
     }
 }

@@ -3,7 +3,7 @@ import { Link } from "react-router-dom";
 import NavBar from "./common/navbar";
 import "../css/accountSetting.css";
 import Footer from "../components/common/footer";
-import { Container, Row, Col, Label, Button } from "reactstrap";
+import { Container, Row, Col, Label } from "reactstrap";
 
 const AccountSetting = () => {
   return (
@@ -52,9 +52,9 @@ const AccountSetting = () => {
           </ul>
         </Container>
         <hr />
-        <Button type="submit" className="btnLogout">
+        <button type="submit" className="btnLogout">
           Logout
-        </Button>
+        </button>
       </body>
       <Footer />
     </>

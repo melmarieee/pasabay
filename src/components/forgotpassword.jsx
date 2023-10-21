@@ -51,7 +51,7 @@ function Forgotpassword() {
         </Col>
         <Col className="padding-top-fgp">
           <Form style={formStyle} className="fgp-form">
-            <Button className="btn-fgp" href='/login' style={{float: 'right'}}>X</Button>
+            <Button className="btn-close-fgp" href='/login'><i class="fa-solid fa-chevron-left"></i></Button>
             <Col className="text-center mb-5">
               <a href="/">
                 <img src={companylogo} alt="Your Logo" width="250" />

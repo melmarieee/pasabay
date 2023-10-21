@@ -16,14 +16,9 @@ img, svg {
 .padding-top-login-signup {
     margin-top: 60px;
 }
-.btn-login{
-    background-color: #ff8811;
-    border: 1px solid #fff;
-}
-.btn-login:hover{
-    background-color: #DF6900;
-    border: 1px solid #fff;
-    color: #fff;
+.btn-close-login{
+    display: none;
+    float: left;
 }
 .btn-login-sbmt{
     background-color: #ff8811;
@@ -41,6 +36,17 @@ img, svg {
 }
 .image-left-pic-container {
     display: none;
+}
+.btn-close-login{
+    display: block;
+    background-color: transparent;
+    color: #ff8811;
+    border: 1px solid transparent;
+}
+.btn-close-login:hover{
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: #DF6900;
 }
 .li-email, .li-pass {
     width: 80%;

@@ -37,7 +37,7 @@
 .passwordLink:hover {
     background-color: #00b4d8;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     text-align: start;
 }
@@ -48,7 +48,7 @@
 .emergencyContactLink:hover {
     background-color: #00b4d8;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     text-align: start;
 }
@@ -59,7 +59,7 @@
 .helpCentreLink:hover {
     background-color: #00b4d8;
     color: #fff;
-    border-radius: 10px;
+    border-radius: 5px;
     width: 100%;
     text-align: start;
 }

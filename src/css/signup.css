@@ -5,6 +5,27 @@
 display: none;
 float: left;
 }
+.btn-signup {
+  border: none;
+  border-radius: 5px;
+  color: #FFF;
+  font-size: 20px;
+  width: 15%;
+  padding: 10px;
+}
+.btn-signup:hover {
+  background-color: #DF6900 !important;
+}
+.btn-modal-signup {
+  background-color: #FF8811;
+  border: none;
+  color: #FFF;
+  font-size: 20px;
+  border-radius: 5px;
+  width: 27%;
+  padding: 10px;
+  margin: 0 180px;
+}
 @media screen and (max-width: 769px){
     #picture{
         display: none;

@@ -1,24 +1,3 @@
-.button1-info{
-   width: 150px;
-}
-.change1-info .Mui-selected{
-    color: #ff8811 !important;
-}
-.MuiTabs-indicator {
-    background-color: #ff8811 !important;
-}
-.btn-comride-drive {
-    background-color: #FF8811;
-    border: none;
-    color: #FFF;
-    font-size: 20px;
-    border-radius: 5px;
-    width: 180%;
-    padding: 10px;
-}
-.btn-comride-drive:hover {
-    background-color: #DF6900;
-}
 .button1-inf-container{
    width: 100%;
 }
@@ -31,4 +10,24 @@
 .MuiTabs-indicator {
     background-color: #ff8811 !important;
 }
-
+.button1-info{
+    width: 150px;
+ }
+ .change1-info .Mui-selected{
+     color: #ff8811 !important;
+ }
+ .MuiTabs-indicator {
+     background-color: #ff8811 !important;
+ }
+ .btn-comride-drive {
+     background-color: #FF8811;
+     border: none;
+     color: #FFF;
+     font-size: 20px;
+     border-radius: 5px;
+     width: 15%;
+     padding: 10px;
+ }
+ .btn-comride-drive:hover {
+     background-color: #DF6900;
+ }

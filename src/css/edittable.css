@@ -5,11 +5,12 @@
     border-radius: 5px;
     margin: 20px;
     font-size: 20px;
+    border: none;
 }
 .CancelButton {
     background-color: #FFF;
     color: #FF8811;
-    border: 2px solid #FF8811;
+    border: 3px solid #FF8811;
 }
 .saveButton:hover {
     background-color: #DF6900;

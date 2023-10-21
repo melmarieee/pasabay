@@ -132,24 +132,7 @@ export default function LabTabs() {
                                 <li><span className='text-secondary'>Going To:</span> {drive.end_location}</li>
                                 <li><span className='text-secondary'>Price / Person :</span> ₱ {drive.price}</li>
                             </ul>
-                      </div>
-                      <div className='button1-info'>
-                      <button type="button" class="button1-info btn-comride-drive">Complete Ride</button>
-                      </div>
-                    </Typography>
-                  </AccordionDetails>
-              </Accordion>
-              <Accordion className='mt-3'>
-                  <AccordionSummary
-                      expandIcon={<ExpandMoreIcon />}
-                      aria-controls="panel1a-content"
-                      id="panel1a-header">
-                    <Typography> <span class="badge rounded-pill bg-warning text-dark p-2 mx-3"> Upcoming</span><i class="fas fa-calendar-check mx-3"></i>October 30, 2023 <i class="fas fa-arrow-right-long mx-3"></i> Mandaluyong <i class="fas fa-arrow-right-long mx-3"></i> Quezon City </Typography>
-                  </AccordionSummary>
-                  <AccordionDetails>
-                    <Typography>
-                    <div className='container-fluid'>
-                        <div className='row'>
+                          </div>
                           <div className='col-md-6'>
                             <h5><b>Passengers Info</b></h5>
                             {
@@ -173,10 +156,8 @@ export default function LabTabs() {
                          
                         </div>
                       <div className='text-right button1-inf-container'>
-                        <button onClick={completeRide.bind(this, drive.id)} type="button" class="btn btn-success button1-info">Complete Ride</button>
+                        <button onClick={completeRide.bind(this, drive.id)} type="button" class="button1-info btn-comride-drive">Complete Ride</button>
                       </div>
-                      <div className='button1-info'>
-                      <button type="button" class="button1-info btn-comride-drive">Complete Ride</button>
                       </div>
                     </Typography>
                   </AccordionDetails>

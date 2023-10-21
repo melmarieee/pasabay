@@ -9,7 +9,7 @@
     color: black;
 }
 .contactLink:hover {
-    background-color: #DF6900;
+    background-color: #00b4d8;
     color: #fff;
     border-radius: 5px;
     width: 100%;
@@ -20,7 +20,7 @@
     color: black;
 }
 .emailLink:hover {
-    background-color: #DF6900;
+    background-color: #00b4d8;
     color: #fff;
     border-radius: 5px;
     width: 100%;
@@ -31,7 +31,7 @@
     color: black;
 }
 .bioLink:hover {
-    background-color: #DF6900;
+    background-color: #00b4d8;
     color: #fff;
     border-radius: 5px;
     width: 100%;
@@ -42,7 +42,7 @@
     color: black;
 }
 .preferenceLink:hover {
-    background-color: #DF6900;
+    background-color: #00b4d8;
     color: #fff;
     border-radius: 5px;
     width: 100%;
@@ -80,7 +80,7 @@
     color: #FF8811;
     background-color: #fFF;
     border-radius: 5px;
-    border: 2px solid #FF8811;
+    border: 3px solid #FF8811;
     font-size: 20px;
     width: 165%;
     text-align: center;

@@ -20,7 +20,6 @@ import TextField from '@mui/material/TextField';
 import {
     GoogleMap,
     DirectionsRenderer,
-    Autocomplete
   } from '@react-google-maps/api'
 
   const createRideURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/create_ride";
@@ -55,8 +54,8 @@ const form = () => {
             end_location: toLocation,
             date: dayjs(date).format('MM/DD/YYYY'),
             time: dayjs(time).format('hh:mm A'),
-            driver_id: user.user.id,
-            vehicle_id: vehicle,
+            driver_id: parseInt(user.user.id),
+            vehicle_id: parseInt(vehicle),
             status: "published",
             start_google_place_id: fromLocation.toLowerCase(),
             end_google_place_id: toLocation.toLowerCase(),
@@ -155,6 +154,11 @@ const form = () => {
                                 <div class="col-md-6">
                                         <label class="form-label" for="form6Example1">Origin</label>
                                         <GooglePlacesAutocomplete 
+                                            autocompletionRequest={{
+                                                componentRestrictions: {
+                                                country: ['ph'],
+                                                }
+                                            }}
                                             selectProps={{
                                                 fromLocation,
                                                 onChange: handleFrom,
@@ -166,6 +170,11 @@ const form = () => {
                                 <div class="col-md-6">
                                         <label class="form-label" for="form6Example2">Destination</label>
                                         <GooglePlacesAutocomplete 
+                                            autocompletionRequest={{
+                                                componentRestrictions: {
+                                                country: ['ph'],
+                                                }
+                                            }}
                                             selectProps={{
                                                 toLocation,
                                                 onChange: handleTo,

@@ -35,33 +35,21 @@
     color: black;
 }
 .passwordLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .emergencyContactLink {
     text-decoration: none;
     color: black;
 }
 .emergencyContactLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .helpCentreLink {
     text-decoration: none;
     color: black;
 }
 .helpCentreLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .btnLogout {
     background-color: #FF8811;

@@ -129,7 +129,7 @@ const Home = () => {
         <h3 class="mb-4 text-center">Where do you want a ride to?</h3>
         <div className='row'>
           <div className='col-lg-4 p-5'>
-            <div className='row bg-light py-4 border border-secondary rounded-5'>
+            <div className='row bg-light shadow py-4  rounded-3'>
               <div className='col-md-5 pt-1 text-center'>
                 <h5>Manila</h5>
               </div>
@@ -142,7 +142,7 @@ const Home = () => {
             </div>
           </div>
           <div className='col-lg-4 p-5'>
-            <div className='row bg-light py-4 border border-secondary rounded-5'>
+            <div className='row bg-light shadow py-4 rounded-3'>
               <div className='col-md-5 pt-1 text-center'>
                 <h5>Manila</h5>
               </div>
@@ -155,7 +155,7 @@ const Home = () => {
             </div>
           </div>
           <div className='col-lg-4 p-5'>
-            <div className='row bg-light py-4 border border-secondary rounded-5'>
+            <div className='row bg-light py-4 shadow rounded-3'>
               <div className='col-md-5 pt-1 text-center'>
                 <h5>Manila</h5>
               </div>

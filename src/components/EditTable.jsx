@@ -7,6 +7,7 @@ const EditTable = ({
   handleEditFormChange,
   handleCancelClick,
 }) => {
+  console.log(editFormData)
   return (
     <>
       <Container>
@@ -52,6 +53,28 @@ const EditTable = ({
               placeholder="Enter a email..."
               name="email"
               value={editFormData.email}
+              onChange={handleEditFormChange}
+            />
+          </Row>
+          <Row>
+            <Input
+              className="inputEditTable"
+              type="text"
+              required="required"
+              placeholder="Enter a gender..."
+              name="gender"
+              value={editFormData.gender}
+              onChange={handleEditFormChange}
+            />
+          </Row>
+          <Row>
+            <Input
+              className="inputEditTable"
+              type="text"
+              required="required"
+              placeholder="Enter a birthday..."
+              name="birthday"
+              value={editFormData.birthday}
               onChange={handleEditFormChange}
             />
           </Row>

@@ -23,3 +23,10 @@
 .btn-form-publish:hover {
     background-color: #DF6900;
 }
+
+.form-origin-input {
+    z-index: 2;
+}
+.form-destination-input {
+    z-index: 2;    
+}

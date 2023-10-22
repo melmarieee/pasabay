@@ -153,7 +153,7 @@ const form = () => {
                             <div class="row mb-4">
                                 <div class="col-md-6">
                                         <label class="form-label" for="form6Example1">Origin</label>
-                                        <GooglePlacesAutocomplete 
+                                        <GooglePlacesAutocomplete
                                             autocompletionRequest={{
                                                 componentRestrictions: {
                                                 country: ['ph'],
@@ -163,12 +163,12 @@ const form = () => {
                                                 fromLocation,
                                                 onChange: handleFrom,
                                                 placeholder: 'Leaving from...',
-                                                className:"place-top-padding",
+                                                className:"place-top-padding form-origin-input",
                                             }}
                                         />
                                 </div>
                                 <div class="col-md-6">
-                                        <label class="form-label" for="form6Example2">Destination</label>
+                                        <label class="form-label " for="form6Example2">Destination</label>
                                         <GooglePlacesAutocomplete 
                                             autocompletionRequest={{
                                                 componentRestrictions: {
@@ -179,7 +179,7 @@ const form = () => {
                                                 toLocation,
                                                 onChange: handleTo,
                                                 placeholder: 'Going to...',
-                                                className:"place-top-padding"
+                                                className:"place-top-padding form-destination-input"
                                             }}
                                         />
                                 </div>

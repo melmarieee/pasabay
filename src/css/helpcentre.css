@@ -23,6 +23,9 @@
     padding: 10px;
     height: 100%;
 }
+.btnHelpCentre:hover {
+    background-color: #DF6900;
+}
 .commonProblems-container img {
     width: 50%;
     margin: 0 80px;

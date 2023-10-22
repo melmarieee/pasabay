@@ -42,6 +42,10 @@ const form = () => {
     const [distanceValue, setDistanceValue] = useState(0)
     const [duration, setDuration] = useState('')
 
+    if (user_session == null) {
+        window.location.href = "/login"
+    }
+
 
     const handleSubmit = (e) => {
         e.preventDefault();

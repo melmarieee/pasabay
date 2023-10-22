@@ -35,6 +35,10 @@ const Search = () => {
   const user_session = window.localStorage.getItem("userLogin");
   const [user, setUser] = React.useState(JSON.parse(user_session));
 
+  if (user_session == null) {
+    window.location.href = "/login"
+  }
+
   const toggleModalClose = () => {
     console.log(activeBook)
     setModal(!modal)

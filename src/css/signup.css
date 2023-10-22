@@ -49,10 +49,18 @@ float: left;
         min-height: 1.5rem;
         padding-left: 1px;
         margin-bottom: .125rem;
-    }    
+    }  
+@media screen and (max-width: 425px){
+  .btn-signup{
+    width: 30%;
+  }
+}      
 @media screen and (max-width: 320px){
   .form-select{
     width: 280px;
+  }
+  .btn-signup{
+    width: 40%;
   }
 }    
 }

@@ -29,6 +29,25 @@ const Signup = () => {
 
     const validateForm = () => {
       const errors = {};
+
+      if (!name) {
+        errors.name = "Name is required";
+      }
+      if (!birthday) {
+        errors.birthday = "Birthday is required"
+      }
+      if (!gender) {
+        errors.gender = "Gender is required"
+      }
+      if (!email) {
+        errors.email = "Email is Required"
+      }
+      if (!phone) {
+        errors.phone = "Phone number is Required"
+      }
+      if (!address) {
+        errors.address = "Address is Required"
+      }
   
       if (!password) {
         errors.password = "Password is required";
@@ -96,6 +115,7 @@ const Signup = () => {
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="text" id="name" placeholder="Your Name" onChange={(e) => setName(e.target.value)} value={name} />
+              {formErrors.name && <div className='text-danger'>{formErrors.name}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
@@ -112,6 +132,7 @@ const Signup = () => {
                             />
                         </DemoContainer>
                     </LocalizationProvider>
+                    {formErrors.birthday && <div className='text-danger'>{formErrors.birthday}</div>}
                 </Col>
                 <Col className='gender-signup'>
                   <Input required className="mt-2 " type="select" onChange={(e) => setGender(e.target.value)} value={gender}>
@@ -119,20 +140,24 @@ const Signup = () => {
                     <option value="male">Male</option>
                     <option value="female">Female</option>
                   </Input>
+                  {formErrors.gender && <div className='text-danger'>{formErrors.gender}</div>}
                 </Col>
               </Row>
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="email" id="email" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+              {formErrors.email && <div className='text-danger'>{formErrors.email}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="tel" id="mobile" placeholder="Phone number" onChange={(e) => setPhone(e.target.value)} value={phone} />
+              {formErrors.phone && <div className='text-danger'>{formErrors.phone}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Input required type="text" id="address" placeholder="Address" onChange={(e) => setAddress(e.target.value)} value={address} />
+              {formErrors.address && <div className='text-danger'>{formErrors.address}</div>}
             </FormGroup>
 
             <FormGroup style={{ marginBottom: '15px' }}>

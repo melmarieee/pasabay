@@ -83,8 +83,7 @@ const Home = () => {
                 <h4 class="mb-4">Maria Smantha</h4>
                 <hr class="width-100"/>
                 <p class="dark-grey-text mt-4">
-                  <i class="fas fa-quote-left pe-2"></i>Lorem ipsum dolor sit amet eos adipisci,
-                  consectetur adipisicing elit.
+                  <i class="fas fa-quote-left pe-2"></i> I've been carpooling with Psabay for a few months now, and it's been a fantastic experience. They are always punctual, and our daily commute is so much more enjoyable. Highly recommended!
                 </p>
               </div>
             </div>
@@ -100,7 +99,7 @@ const Home = () => {
                 <h4 class="mb-4">Lisa Cudrow</h4>
                 <hr class="width-100" />
                 <p class="dark-grey-text mt-4">
-                  <i class="fas fa-quote-left pe-2"></i>Neque cupiditate assumenda in maiores
+                  <i class="fas fa-quote-left pe-2"></i>I appreciate the safety measures in place with this carpool service. Pasabay maintains a clean and well-maintained vehicle, making every ride a comfortable and secure experience.
                   repudi mollitia architecto.
                 </p>
               </div>
@@ -117,8 +116,7 @@ const Home = () => {
                 <h4 class="mb-4">John Smith</h4>
                 <hr class="width-100"/>
                 <p class="dark-grey-text mt-4">
-                  <i class="fas fa-quote-left pe-2"></i>Delectus impedit saepe officiis ab
-                  aliquam repellat rem unde ducimus.
+                  <i class="fas fa-quote-left pe-2"></i>I've saved a lot on gas and reduced my carbon footprint by carpooling with Pasabay. The carpool service matched us perfectly, and I couldn't be happier with the arrangement.
                 </p>
               </div>
             </div>

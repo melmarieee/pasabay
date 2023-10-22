@@ -108,13 +108,14 @@ const form = () => {
 
   return (
     <div>
+        <div className='pt-4 mt-5 '>
+            <h1 className='text-center mt-5'>Create a Ride</h1>
+        </div>
         <NavBar/>
         {
             user.vehicle.length != 0 ?
             <div>
-                <div className='pt-4 mt-5 '>
-                <h1 className='text-center mt-5'>Create a Ride</h1>
-            </div>
+               
             <div>
                 <div className='row'>
                     <div className='col-lg-6 p-5'>
@@ -254,8 +255,8 @@ const form = () => {
             </div>
             </div>
             :
-            <div className='mt-5 text-center'>
-                <h1 class="pt-5" >Please Create a vehicle in <a href="/account">Account</a></h1>   
+            <div className='mt-5 text-center pt-5'>
+                <h1 class="pt-5 mt-5 text-secondary" >Please Create a vehicle in <a className="text-secondary" href="/account">Account</a> <i class="fas fa-car mx-2"></i></h1>   
             </div>
 
         }

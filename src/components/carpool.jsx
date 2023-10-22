@@ -141,7 +141,6 @@ const Search = () => {
                   :
                   ""
               }
-             
             </ModalBody>
             <ModalFooter>
                 <div className='row text-right'>

@@ -103,6 +103,30 @@
 .accountImg img {
     width: 600px;
 }
+.btn-addVehicle-modal{
+    background-color: #FF8811;
+    font-size: 20px;
+    color: #fFF;
+    border: none;
+    border-radius: 5px;
+    width: 180%;
+    padding: 10px;
+    position: relative;
+    right: 220px;
+}
+.btn-addVehicle {
+    background-color: #FF8811;
+    font-size: 20px;
+    color: #fFF;
+    border: none;
+    border-radius: 5px;
+    width: 17%;
+    height: 151%;
+}
+.btn-addVehicle:hover {
+    background-color: #DF6900;
+}
+
 @media screen and (max-width: 768px) {
     .accountImg img {
         max-width: 350px;
@@ -119,20 +143,44 @@
     .body {
         padding: 80px 0;
     }
-    .btn-account-container {
+    /* .btn-account-container {
         margin: 0 -50px;
         padding: 0;
         display: grid;
     }
     .btn-account-container {
         display: inline;
+    } */
+    .account-details-container {
+        width: 290%;
+        margin: 0 -160px;
     }
-    .about-btn-container {
+    .vehicle-type-container{
+        width: 250%;
+        margin: 0 -100px;
+    }
+    .btn-addVehicle {
+        width: 60%;
+        position: relative;
+        right: 80px;
+    }
+    .modal-addVehicle-container {
+        width: 80%;
+        position: absolute;
+        top: 300px;
+        left: 20px;
+    }
+    .btn-addVehicle-modal {
+        width: 110%;
+        position: relative;
+        right: 100px;
+    }
+    /* .about-btn-container {
         margin: 0 -90px;
     }
     .account-btn-container{
         margin: 0 -48%;
-    }
+    } */
     .account {
         width: 212%;
     }

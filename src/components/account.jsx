@@ -140,7 +140,7 @@ const Account = () => {
   return (
     <>
       <NavBar />
-      <Modal isOpen={modal} toggle={toggleModal}>
+      <Modal isOpen={modal} toggle={toggleModal} className="modal-addVehicle-container">
             <ModalHeader toggle={toggleModal}>Create Vehicle</ModalHeader>
             <ModalBody>
               <div class="input-group pt-2">
@@ -157,9 +157,9 @@ const Account = () => {
                 <input onChange={changeVehicleAdd.bind(this, "seats")} type="number" class="form-control" placeholder="seats" aria-label="Username" aria-describedby="basic-addon1"/>
               </div>
             </ModalBody>
-            <ModalFooter>
+            <ModalFooter className="btn-addVehicle-modal-container">
               <div className="text-right">
-                <button onClick={submitVehicle} className="btn btn-success">
+                <button onClick={submitVehicle} className="btn-addVehicle-modal">
                   Add vehicle +
                 </button>
               </div>
@@ -169,7 +169,7 @@ const Account = () => {
       <div className=''>
             <h1 className='text-center mt-5 pb-5'>Account</h1>
         </div>
-        <Row>
+        <Row className="account-details-container">
             <Col className="accountImg p-5 text-center">
               <img
                 src="../src/assets/carpoollogo.png"
@@ -206,7 +206,7 @@ const Account = () => {
           :
           ""
         }
-        <div className="row">
+        <div className="row vehicle-type-container">
         <div className="row">
           {user.vehicle.map((veh) => (
             <div className="col-md-4 mt-3">
@@ -220,7 +220,7 @@ const Account = () => {
         </div>
           <div className="row">
             <div className="col-md-12 text-right pt-5">
-              <button onClick={toggleModal} className="btn btn-success">
+              <button onClick={toggleModal} className="btn-addVehicle">
                 Add vehicle +
               </button>
             </div>

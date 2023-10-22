@@ -117,7 +117,7 @@ export default function LabTabs() {
                       expandIcon={<ExpandMoreIcon />}
                       aria-controls="panel1a-content"
                       id="panel1a-header">
-                    <Typography><span class="badge rounded-pill bg-warning text-dark p-2 mx-3">Upcoming</span> <i class="fas fa-calendar-check mx-3"></i>October 27, 2023 <i class="fas fa-arrow-right-long mx-3"></i> {drive.start_location} <i class="fas fa-arrow-right-long mx-3"></i> {drive.end_location} </Typography>
+                    <Typography><span class="badge rounded-pill bg-warning text-dark p-2 mx-3">Upcoming</span> <i class="fas fa-calendar-check mx-3"></i>{dayjs(drive.date).format('MMMM, DD, YYYY')} <i class="fas fa-arrow-right-long mx-3"></i> {drive.start_location} <i class="fas fa-arrow-right-long mx-3"></i> {drive.end_location} </Typography>
                   </AccordionSummary>
                   <AccordionDetails>
                     <Typography>
@@ -177,7 +177,7 @@ export default function LabTabs() {
                         expandIcon={<ExpandMoreIcon />}
                         aria-controls="panel1a-content"
                         id="panel1a-header">
-                      <Typography><span class="badge rounded-pill bg-secondary p-2 mx-3">Completed</span>  <i class="fas fa-calendar-check mx-3"></i>October 27, 2023 <i class="fas fa-arrow-right-long mx-3"></i> {drive.start_location} <i class="fas fa-arrow-right-long mx-3"></i> {drive.end_location} </Typography>
+                      <Typography><span class="badge rounded-pill bg-secondary p-2 mx-3">Completed</span>  <i class="fas fa-calendar-check mx-3"></i>{dayjs(drive.date).format('MMMM, DD, YYYY')} <i class="fas fa-arrow-right-long mx-3"></i> {drive.start_location} <i class="fas fa-arrow-right-long mx-3"></i> {drive.end_location} </Typography>
                     </AccordionSummary>
                     <AccordionDetails>
                       <Typography>

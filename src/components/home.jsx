@@ -17,7 +17,7 @@ const Home = () => {
             <p class="text-home">Pasabay is a carpooling website that connects drivers and passengers for convenient and cost-effective rides. With just a few taps on your website, you can easily join a carpool or offer a ride to others going your way.</p>
             <div class="row text-center">
               <div class="col-lg-6 px-4 py-3">
-                <button type="button" class="btn-lg rounded button-find-ride">Find Rides</button>
+              <a href="/carpool"><button type="button" class="btn-lg rounded button-find-ride">Find Rides</button></a>
               </div>
               <div class="col-lg-6 px-4 py-3">
                 <a href="/form"><button type="button" class="btn-lg rounded button-create-ride border-white">Create Ride</button></a>

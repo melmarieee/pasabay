@@ -26,6 +26,9 @@
     background-color: #00b4d8;
     border-radius: 10px;
 }
+.preferenceContainer p:hover {
+    color: #fff;
+}
 @media screen and (max-width: 768px) {
     .tp-container {
         width: 150%;

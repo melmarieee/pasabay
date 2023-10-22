@@ -63,7 +63,7 @@ const form = () => {
             status: "published",
             start_google_place_id: fromLocation.toLowerCase(),
             end_google_place_id: toLocation.toLowerCase(),
-            price: Math.round(distanceValue / 1000 * 8),
+            price: Math.round(distanceValue / 1000 * 2),
             distance: distance,
             pax: pax,
             estimated_travel: duration

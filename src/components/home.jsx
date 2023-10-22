@@ -12,9 +12,9 @@ const Home = () => {
       <NavBar/>
       <div className='container-fluid px-5'>
         <div className='row pt-5'>
-          <div className='col-lg-5 pt-5'>
-            <h1 className='h1-home mb-4 pt-5'><b>Travel Together, Save Together with Pasabay.</b></h1>
-            <p class="text-home">Pasabay is a carpooling website that connects drivers and passengers for convenient and cost-effective rides. With just a few taps on your website, you can easily join a carpool or offer a ride to others going your way.</p>
+          <div className='col-lg-5 pt-5 font-example'>
+            <h1 className='h1-home mb-4 pt-5'>Travel Together, Save Together with Pasabay.</h1>
+            <p class="text-home home-font-style">Pasabay is a carpooling website that connects drivers and passengers for convenient and cost-effective rides. With just a few taps on your website, you can easily join a carpool or offer a ride to others going your way.</p>
             <div class="row text-center">
               <div class="col-lg-6 px-4 py-3">
               <a href="/carpool"><button type="button" class="btn-lg rounded button-find-ride">Find Rides</button></a>

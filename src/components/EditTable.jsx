@@ -18,8 +18,8 @@ const EditTable = ({
               type="text"
               required="required"
               placeholder="Enter a name..."
-              name="Name"
-              value={editFormData.Name}
+              name="name"
+              value={editFormData.name}
               onChange={handleEditFormChange}
             />
           </Row>
@@ -29,8 +29,8 @@ const EditTable = ({
               type="text"
               required="required"
               placeholder="Enter a address..."
-              name="Address"
-              value={editFormData.Address}
+              name="address"
+              value={editFormData.address}
               onChange={handleEditFormChange}
             />
           </Row>
@@ -40,8 +40,8 @@ const EditTable = ({
               type="text"
               required="required"
               placeholder="Enter a phone number..."
-              name="PhoneNumber"
-              value={editFormData.PhoneNumber}
+              name="phone"
+              value={editFormData.phone}
               onChange={handleEditFormChange}
             />
           </Row>

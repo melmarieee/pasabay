@@ -12,6 +12,7 @@ import { Col, Row, Container, Label } from "reactstrap";
 import { Modal, ModalHeader, ModalFooter, ModalBody, Alert } from 'reactstrap';
 
 const createVehicleURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/create_vehicle";
+const updateUser = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/update_users";
 
 
 const Account = () => {
@@ -27,9 +28,9 @@ const Account = () => {
   });
 
   const [editFormData, setEditFormData] = useState({
-    Name: "",
-    Address: "",
-    PhoneNumber: "",
+    name: "",
+    address: "",
+    phone: "",
     email: "",
     gender: "",
     birthday: "",
@@ -54,9 +55,9 @@ const Account = () => {
 
     const editedContact = {
       id: editContactId,
-      Name: editFormData.name,
-      Address: editFormData.address,
-      PhoneNumber: editFormData.phone,
+      name: editFormData.name,
+      address: editFormData.address,
+      phone: editFormData.phone,
       email: editFormData.email,
       gender: editFormData.gender,
       birthday: dayjs(editFormData.birthday).format('YYYY/MM/DD/'),
@@ -66,6 +67,28 @@ const Account = () => {
     newContacts[index] = editedContact;
     setContancts(newContacts);
     setEditContactId(null);
+
+    let new_user_session = user;
+
+    const data = {
+      user_id: user.user.id,
+      email: editedContact.email,
+      name: editedContact.name,
+      birthday: editedContact.birthday,
+      gender: editedContact.gender,
+      phone: editedContact.phone,
+      address: editedContact.address,
+    }
+    axios.post(updateUser, data)
+    .then(function (response) {
+      new_user_session.user = response.data.data.results[0];
+      window.localStorage.setItem("userLogin", JSON.stringify(new_user_session));
+      // window.location.reload()
+    })
+    .catch(function (error) {
+      alert(error)
+    console.log(error);
+    });
   };
 
   const toggleModal = () => {
@@ -100,9 +123,9 @@ const Account = () => {
     setEditContactId(contact.id);
 
     const formValues = {
-      Name: contact.name,
-      Address: contact.address,
-      PhoneNumber: contact.phone,
+      name: contact.name,
+      address: contact.address,
+      phone: contact.phone,
       email: contact.email,
       gender: contact.gender,
       birthday: dayjs(contact.birthday).format('YYYY/MM/DD/'),

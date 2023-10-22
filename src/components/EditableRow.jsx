@@ -10,7 +10,7 @@ const EditableRow = ({editFormData, handleEditFormChange, handleCancelClick}) =>
             required="required"
             placeholder="Enter a name..."
             name="Name"
-            value={editFormData.Name}
+            value={editFormData.name}
             onChange={handleEditFormChange}
           />
         </td>
@@ -30,7 +30,7 @@ const EditableRow = ({editFormData, handleEditFormChange, handleCancelClick}) =>
             required="required"
             placeholder="Enter a phone number..."
             name="PhoneNumber"
-            value={editFormData.PhoneNumber}
+            value={editFormData.phone}
             onChange={handleEditFormChange}
           />
         </td>

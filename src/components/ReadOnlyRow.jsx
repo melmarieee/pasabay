@@ -4,9 +4,9 @@ const ReadOnlyRow = ({contact, handleEditClick}) => {
   return (
     <>
         <tr>
-            <td>{contact.Name}</td>
-            <td>{contact.Address}</td>
-            <td>{contact.PhoneNumber}</td>
+            <td>{contact.name}</td>
+            <td>{contact.address}</td>
+            <td>{contact.phone}</td>
             <td>{contact.email}</td>
             <td>
                 <button type='button' onClick={(e) => handleEditClick(e, contact)}>Edit</button>

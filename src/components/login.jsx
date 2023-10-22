@@ -89,7 +89,7 @@ function Login() {
             </FormGroup>
             {errorLogin}
             <div className="text-center" style={{ padding: '50px' }}>
-              <Button type="submit" className='btn-login-sbmt'>Log in</Button>
+              <button type="submit" className='btn-login-sbmt'>Log in</button>
               <br />
               <a href="/forgotpassword">
                 <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>

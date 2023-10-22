@@ -159,13 +159,13 @@ const Signup = () => {
             </div>
 
             <div className="text-center">
-              <Button style={{ backgroundColor: '#ff8811' }} onClick={handleFormSubmit} type='submit'>Sign Up</Button>
+              <button style={{ backgroundColor: '#ff8811' }} onClick={handleFormSubmit} type='submit' className='btn-signup'>Sign Up</button>
             </div>
             
           </Form>
         </Col>
       </Row>
-      <Modal className="centered-modal-signup" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
+      <Modal className="centered-modal-signup modal-signip-container" backdrop="static" isOpen={modalOpen} toggle={() => setModalOpen(false)} fade={true} >
         <ModalHeader className='modal-header-signup' >
         <i class="fa-regular fa-circle-check check"></i>
         </ModalHeader>
@@ -173,8 +173,8 @@ const Signup = () => {
         <h4 className='text-center'>Congratulations {name}  🎉 </h4>
         <p className='text-center'>Your account is successfully created.</p>
         </ModalBody>
-        <ModalFooter className='modal-footer-signup'>
-          <Button className="btn-success" onClick={() => (window.location.href = '/login')}>Log in</Button>
+        <ModalFooter className='modal-footer-signup modal-btn-container'>
+          <button className="btn-modal-signup" onClick={() => (window.location.href = '/login')}>Log in</button>
         </ModalFooter>
       </Modal>
     </div>

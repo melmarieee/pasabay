@@ -25,7 +25,7 @@ const ContactNum = () => {
       <Navbar />
       <body className="body">
         <section className="verify-contact">
-          <div className="container text center">
+          <div className="container-pnv text center ">
             <div className="row">
               <div className="col image-contact">
                 <img
@@ -43,6 +43,7 @@ const ContactNum = () => {
                     Phone Number:
                     <PhoneInput
                       className="inputNumber"
+                      id="numInput"
                       country={"ph"}
                       value={PhoneNumber}
                       onChange={handleChange}
@@ -55,7 +56,7 @@ const ContactNum = () => {
                         Please enter a valid phone number!
                       </p>
                     )}
-                    <Button type="submit" className="btnContact">Verify</Button>
+                    <button type="submit" className="btnContact">Verify</button>
                   </Label>
                 </FormGroup>
               </div>

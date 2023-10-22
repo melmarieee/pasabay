@@ -9,44 +9,28 @@
     color: black;
 }
 .contactLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .emailLink {
     text-decoration: none;
     color: black;
 }
 .emailLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .bioLink {
     text-decoration: none;
     color: black;
 }
 .bioLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .preferenceLink {
     text-decoration: none;
     color: black;
 }
 .preferenceLink:hover {
-    background-color: #00b4d8;
-    color: #fff;
-    border-radius: 5px;
-    width: 100%;
-    text-align: start;
+    color: black;
 }
 .btn-account-container {
     justify-content: center;

@@ -21,7 +21,7 @@ const Password = () => {
                 <Input type="text" placeholder="Current password" className="inputForm"/>
                 <Input type="text" placeholder="New password" className="inputForm"/>
                 <Input type="text" placeholder="Confirm new password"className="inputForm"/>
-                <button type="submit" className="formButton">Change Password</button>
+                <button type="submit" className="formButton btn-change-password">Change Password</button>
               </FormGroup>
             </Col>
           </Row>

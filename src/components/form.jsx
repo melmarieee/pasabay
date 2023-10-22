@@ -245,7 +245,7 @@ const form = () => {
                                 </div>
                             </div>
                             <div className='text-right'>
-                                <button type='submit' className='btn btn-success mt-4'>Publish Ride</button>
+                                <button type='submit' className='mt-4 btn-form-publish'>Publish Ride</button>
                             </div>
                         </form>
                         

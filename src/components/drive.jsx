@@ -156,7 +156,7 @@ export default function LabTabs() {
                          
                         </div>
                       <div className='text-right button1-inf-container'>
-                        <button onClick={completeRide.bind(this, drive.id)} type="button" class="btn btn-success button1-info">Complete Ride</button>
+                        <button onClick={completeRide.bind(this, drive.id)} type="button" class="button1-info btn-comride-drive">Complete Ride</button>
                       </div>
                       </div>
                     </Typography>

@@ -1,0 +1,116 @@
+.helpForm-container {
+    margin: 30px 0;
+    background-color: #00b4d8;
+    padding: 20px;
+    border-radius: 8px;
+    text-align: center;
+}
+.helpCetre-imgContainer {
+    margin: 20px 0;
+}
+.helpCentre-heading-container {
+    text-align: start;
+    margin: 10px 0;
+}
+.btnHelpCentre {
+    background-color: #FF8811;
+    border: none;
+    color: #FFF;
+    border-radius: 5px;
+    font-size: 20px;
+    margin: 0 20px;
+    width: 24%;
+    padding: 10px;
+    height: 100%;
+}
+.commonProblems-container img {
+    width: 50%;
+    margin: 0 80px;
+}
+.chat-container img {
+    width: 50%;
+    margin: 0 80px;
+}
+.search-helpCentre {
+    width: 80%;
+    padding: 10px;
+    border-radius: 5px;
+    margin: 10px 0;
+}
+.search-btn {
+    display: flex;
+    align-items: center;
+}
+.commonProblems-container:hover {
+    background-color: #00b4d8;
+    color: #fff;
+    border-radius: 10px;
+    /* width: 100%; */
+    text-align: start;
+}
+.commonProblems-container p:hover {
+    color: #fff;
+}
+.chat-container:hover {
+    background-color: #00b4d8;
+    color: #fff;
+    border-radius: 10px;
+    /* width: 100%; */
+    text-align: start;
+}
+.chat-container p:hover {
+    color: #fff;
+}
+.commonProblems-container{
+    padding: 10px;
+    align-items: center;
+}
+.chat-container {
+    padding: 10px;
+    align-items: center;
+}
+
+@media screen and (max-width: 768px) {
+    .helpCetre-imgContainer {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .helpCentre-heading {
+        width: 150%;
+        margin: 0 -20px;
+    }
+    .helpForm-container {
+        width: 280%;
+        margin: 0 -110px;
+    }
+    .btnHelpCentre {
+        width: 40%;
+    }
+    .commonProblems-container {
+        width: 280%;
+        margin: 0 -110px;
+    }
+    .cmnP-img {
+        width: 30% !important;
+        position: absolute;
+        top: 570px;
+        left: 150px;
+    }
+    .commonProblems-item {
+        width: 17%;
+    }
+    .chat-container {
+        width: 280%;
+        margin: 0 -110px;
+    }
+    .chat-items {
+        width: 25%
+    }
+    .chat-img {
+        width: 30% !important;
+        position: absolute;
+        top: 730px;
+        left: 150px;
+    }
+}

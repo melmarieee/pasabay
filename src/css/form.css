@@ -9,3 +9,17 @@
 .text-right{
     text-align: right;
 }
+
+.btn-form-publish {
+    background-color: #FF8811;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
+    font-size: 20px;
+    width: 30%;
+    padding: 10px;
+}
+
+.btn-form-publish:hover {
+    background-color: #DF6900;
+}

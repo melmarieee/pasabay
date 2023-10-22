@@ -10,8 +10,16 @@
 }
 .btnEmail {
     background-color: #FF8811;
+    border: none;
+    border-radius: 5px;
+    color: #FFF;
     margin: 1rem 18rem;
-    font: 15px;
+    font-size: 19px;
+    width: 19%;
+    padding: 10px;
+}
+.btnEmail:hover {
+    background-color: #DF6900 !important;
 }
 .labelHeading {
     padding: 20px 0;
@@ -22,8 +30,29 @@
 @media screen and (max-width: 768px) {
     .btnEmail {
         margin: 0;
+        width: 50%;
     }
     .img-container img {
         display: none;
+    }
+    .img-container {
+        display: none;
+    }
+    .email-img-container {
+        display: none;
+    }
+}
+@media screen and (max-width: 425px) {
+    .btnEmail {
+        width: 100%;
+        margin: 10px 0;
+    }
+    .labelHeading {
+        margin: 0 -50px;
+        text-align: center;
+    }
+    .formEmail .input{
+        width: 200%;
+        margin: 0 -60px;
     }
 }

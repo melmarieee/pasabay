@@ -18,7 +18,10 @@ import ShowRide from './components/show_ride';
 import Form from './components/form';
 import Password from "./components/Password";
 import Drive from "./components/drive"
-
+import MiniBio from "./components/MiniBio";
+import TravelPreference from "./components/TravelPreference";
+import EmergencyContact from "./components/EmergencyContact";
+import HelpCentre from "./components/HelpCentre";
 
 function App() {
   
@@ -86,6 +89,22 @@ function App() {
     {
       path: "/drive",
       element: <Drive/>
+    },
+    {
+      path: "/bio",
+      element: <MiniBio/>
+    },
+    {
+      path: "/travel-preference",
+      element: <TravelPreference/>
+    },
+    {
+      path: "/emergency-contact",
+      element: <EmergencyContact/>
+    },
+    {
+      path: "help-centre",
+      element: <HelpCentre/>
     }
   ]);
 

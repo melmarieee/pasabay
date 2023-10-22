@@ -53,19 +53,30 @@ img, svg {
 .li-email, .li-pass {
     width: 80%;
 }
+@media screen and (max-width: 657px) {
+    .btn-login-sbmt{
+        width: 20%;
+    }
 @media screen and (max-width: 425px){
     .btn-login-sbmt{
         width: 30%;
     }
 }
+@media screen and (max-width: 390px) {
+    .btn-login-sbmt{
+        width: 35%;
+    }
+    
+}
 @media screen and (max-width: 375px) {
     .btn-login-sbmt{
-        width: 36%;
+        width: 40%;
     }
 @media screen and (max-width: 320px) {
     .btn-login-sbmt{
         width: 50%;
-    }
-}    
+    }   
+}
+}
 }
 }

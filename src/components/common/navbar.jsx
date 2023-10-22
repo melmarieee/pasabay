@@ -2,6 +2,7 @@ import PasabayLogo from '../../assets/pasabay-orange-logo.png'
 import '../../css/navbar.css'
 import React, {useState} from 'react';
 import {  MDBIcon } from "mdb-react-ui-kit";
+import { NavLink } from 'react-router-dom'
 import {
     Collapse,
     Navbar,
@@ -9,7 +10,6 @@ import {
     NavbarBrand,
     Nav,
     NavItem,
-    NavLink,
     Dropdown,
     DropdownToggle,
     DropdownItem,
@@ -46,10 +46,10 @@ const Header = (props) => {
                         <img src={PasabayLogo} alt="purrfect-picks-logo" id="navbar-logo1"/>
                     </a>
                     <div className="header-navbar-links">  
-                    <NavLink href="/" id='home'className='nav-home' >Home</NavLink>
-                    <NavLink href="/carpool" id='carpool'>Carpool</NavLink>
+                    {/* <NavLink to="/" id='home'className='nav-home'>Home</NavLink> */}
+                    <NavLink to="/carpool" id='nav-carpool'>Carpool</NavLink>
                     {user ? 
-                    <NavLink className='margin-negative-nav'>
+                    <Nav className='margin-negative-nav'>
                         <Dropdown className="navbutton-dropdown" isOpen={dropdownOpen} toggle={toggleDropDown} direction={"down"}>
                             <DropdownToggle caret><b>{user.user.name}</b></DropdownToggle>
                             <DropdownMenu>
@@ -60,9 +60,9 @@ const Header = (props) => {
                             <DropdownItem onClick={toggleLogout.bind(this)}>Logout</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
-                    </NavLink>
+                    </Nav>
                     :
-                    <NavLink href="/login">Login</NavLink>
+                    <NavLink className="nav-login" to="/login">Login</NavLink>
                     }
                     </div>
                     
@@ -72,12 +72,12 @@ const Header = (props) => {
                     <Nav className="ms-auto burger-menu" navbar>
                         <div className="burger-menu-container">
                             <NavItem>
-                                <NavLink href="/home" id='home'>Home</NavLink>
+                                {/* <NavLink href="/home" id='home'>Home</NavLink> */}
                             </NavItem>
                             <NavItem>
                                 <NavLink  href="/rides" id='rides'>Rides</NavLink>
                             </NavItem>
-                            <NavLink href="/login">Login</NavLink>
+                            <Nav href="/login">Login</Nav>
                         </div>
                     </Nav>
                 

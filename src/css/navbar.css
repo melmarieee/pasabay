@@ -138,4 +138,40 @@ button.dropdown-toggle.btn.btn-secondary{
     justify-content:flex-end;
     align-items: flex-end;
   }
+  a#rides.active {
+    color: #000 !important;
+  }
+  a#home.active {
+    color: #000 !important;
+  }
 }
+
+/* NavLink */
+.active {
+  color: #ff8811 !important;
+  display: inline-block;
+  box-shadow: #FFF;
+  padding: 2px;
+}
+.nav-home {
+  text-decoration: none;
+  color: #000 ;
+}
+.nav-home:hover{
+  border: #fff;
+  box-shadow: none;
+}
+a#home.nav-home {
+  color: #000;
+}
+#nav-carpool {
+  color: #000;
+}
+#nav-carpool:hover{
+  border: 1px solid #fff;
+  box-shadow: transparent;
+}
+.nav-login {
+  color: #000 !important;
+}
+

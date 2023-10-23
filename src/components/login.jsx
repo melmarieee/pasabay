@@ -15,7 +15,7 @@ function Login() {
   };
 
   const formGroupStyle = {
-    marginBottom: '15px',
+    // marginBottom: '15px',
   };
 
   const [email, setEmail] = useState('');
@@ -76,36 +76,34 @@ function Login() {
             </Col>
             <div className='px-5 text-center'>
               <h1><b>Welcome Back!</b></h1>
-            </div>
-            
-            <FormGroup className='email-input-login' style={formGroupStyle}>
-            <div className='px-5 my-3 pt-3'>
-              <Label className='text-secondary'>Please enter your details</Label>
-            </div>
-            <div className='login-email-input'>
-              <Input required className="input-container mx-5 li-email" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
-            </div>
+              <div className='px-5 my-3 pt-3'>
+                <Label className='text-secondary'>Please enter your details</Label>
+              </div>
+            <FormGroup>
+              <div className='login-container'>
+                <Input required className="mx-5 li-email" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+              </div>
             </FormGroup>
 
-            <FormGroup className='password-input-login' style={formGroupStyle}>
-            <div className='login-password-input'>
-              <Input required className="input-container mx-5 my-4 li-pass" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
-            </div>  
+            <FormGroup >
+              <div className='login-container'>
+                <Input required className="mx-5 my-4 li-pass" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
+              </div>
             </FormGroup>
+            </div>
             {errorLogin}
 
-
-            <div className="text-center" style={{ padding: '50px' }}>
+            <div className="text-center p-5" >
               <Button type="submit" className='btn-login-sbmt'>Log in</Button>
-              <br />
-              <a href="/forgotpassword">
-                <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>
-              </a>
               <br />
             </div>
 
             <div className='text-center'>
               <Label>Don't have an account? <a href="/signup" style={{ textDecoration: 'none', color: '#ff8811' }}>Sign up</a></Label>
+              <br/>
+              <a href="/forgotpassword">
+                <Label style={{ color: 'darkgray', cursor: 'pointer', fontFamily: 'Manrope', fontWeight: '400' }}>Forgot password?</Label>
+              </a>
             </div>
           </Form>
         </Col>

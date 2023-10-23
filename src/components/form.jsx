@@ -88,6 +88,10 @@ const form = () => {
     };
 
     const handlesChange = (event) => {
+        if(!fromLocation || !toLocation) {
+            alert("Please select dates first");
+            return;
+        }
         calculateRoute()
         setVehicle(event.target.value);
     };

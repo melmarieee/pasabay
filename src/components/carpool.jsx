@@ -28,6 +28,7 @@ const Search = () => {
   const [date, setDate] = useState(null);
   const [pax, setPax] = useState(null);
   const [modal, setModal] = useState(false);
+  const [modalSearchResult, setModalSearchResult] = useState(false);
   const [searchResults, setSearchResults] = useState([]);
   const center = { lat: 14.5837893, lng: 121.1170287 }
   const [map, setMap] = useState(null)
@@ -40,8 +41,11 @@ const Search = () => {
   }
 
   const toggleModalClose = () => {
-    console.log(activeBook)
     setModal(!modal)
+  }
+
+  const toggleModaSearchResult = () => {
+    setModalSearchResult(!modalSearchResult)
   }
 
   const ConfirmBookRide = () => {
@@ -87,6 +91,9 @@ const Search = () => {
     })
     .then(function (response) {
         setSearchResults(response.data.data.results)
+        if (response.data.data.results.length == 0){
+          toggleModaSearchResult();
+        }
     })
     .catch(function (error) {
     alert(error)
@@ -158,6 +165,13 @@ const Search = () => {
                     <button onClick={ConfirmBookRide} type="button" class="rounded button-find-ride btn-book-modal">Book</button>
                   </div>
                 </div>
+            </ModalFooter>
+        </Modal>
+
+        <Modal toggle={toggleModaSearchResult} isOpen={modalSearchResult} >
+            <ModalHeader className='text-center p-4 text-muted'>Sorry there's no ride available for that day.</ModalHeader>
+            <ModalFooter>
+              <button onClick={toggleModaSearchResult} type="button" class="btn-lg rounded button-find-ride">Ok</button>
             </ModalFooter>
         </Modal>
         <div class="container-fluid pt-5 mt-5">

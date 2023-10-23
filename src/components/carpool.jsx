@@ -50,6 +50,7 @@ const Search = () => {
       ride_id: activeBook.ride_id,
       passenger_id: user.user.id,
       pax: parseInt(pax),
+      driver_id: parseInt(activeBook.driver_id),
     }
     axios.post(bookRideURL, data)
     .then(function (response) {

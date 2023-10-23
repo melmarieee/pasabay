@@ -150,7 +150,7 @@ const form = () => {
                             <span className='text-secondary'>Estimated Duration:</span> {duration}
                             </div>
                             <div className='col-md-4 p-5 bg-light'>
-                            <span className='text-secondary'>Income / Person:</span> <b className='text-success'>₱ {Math.round(distanceValue / 1000 * 8)}</b>
+                            <span className='text-secondary'>Income / Person:</span> <b className='text-success'>₱ {Math.round(distanceValue / 1000 * 2)}</b>
                             </div>
                         </div>
                     </div>

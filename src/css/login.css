@@ -6,8 +6,15 @@ img, svg {
     vertical-align: middle;
 }
 .input-container{
-    width: 90%;
+    width: 60%;
 }
+.email-input-login{
+    margin-left: 170px;
+}
+.password-input-login{
+    margin-left: 170px;
+}
+
 .button-info{
     border-color: #fae8d6 !important;
     background-color: #ff8811;
@@ -38,6 +45,12 @@ img, svg {
 }
 .image-left-pic-container {
     display: none;
+}
+.email-input-login{
+    margin-left: 0px;
+}
+.password-input-login{
+    margin-left: 0px;
 }
 .btn-close-login{
     display: block;

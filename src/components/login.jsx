@@ -77,17 +77,24 @@ function Login() {
             <div className='px-5 text-center'>
               <h1><b>Welcome Back!</b></h1>
             </div>
-            <FormGroup style={formGroupStyle}>
+            
+            <FormGroup className='email-input-login' style={formGroupStyle}>
             <div className='px-5 my-3 pt-3'>
               <Label className='text-secondary'>Please enter your details</Label>
             </div>
+            <div className='login-email-input'>
               <Input required className="input-container mx-5 li-email" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
+            </div>
             </FormGroup>
 
-            <FormGroup style={formGroupStyle}>
+            <FormGroup className='password-input-login' style={formGroupStyle}>
+            <div className='login-password-input'>
               <Input required className="input-container mx-5 my-4 li-pass" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
+            </div>  
             </FormGroup>
             {errorLogin}
+
+
             <div className="text-center" style={{ padding: '50px' }}>
               <Button type="submit" className='btn-login-sbmt'>Log in</Button>
               <br />

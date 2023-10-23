@@ -111,6 +111,14 @@ button.dropdown-toggle.btn.btn-secondary{
 }
 .navLogout {
   font-size: 16px !important;
+  z-index: 2;
+}
+.burgerMenu-dropDown {
+  display: none;
+}
+.burger-menu-NavLink {
+  text-decoration: none;
+  font-size: 16px;
 }
 
 @media screen and (max-width: 840px) {
@@ -119,6 +127,16 @@ button.dropdown-toggle.btn.btn-secondary{
   }
 }
 @media screen and (max-width: 768px) {
+
+  .burgerMenu-dropDown {
+    display: block;
+  }
+  .margin-negative-nav {
+    display: none;
+  }
+  #nav-carpool {
+    display: none;
+  }
   .navbar-toggler{
     border: none;
   }

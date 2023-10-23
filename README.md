@@ -9,7 +9,7 @@ This is the sitemap of the website:
 
 This are the color palettes:
 
-![color palette](D:\KodeGo\Web Dev Intro\Capstone\pasabay\src\assets\palette.png)
+![color palette](src/assets/palette.png)
 
 This are the wireframe:
 

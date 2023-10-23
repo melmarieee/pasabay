@@ -4,6 +4,7 @@ import { Link } from "react-router-dom";
 import data from "../json/mock-data.json";
 import dayjs from 'dayjs';
 import EditTable from "./EditTable";
+import CarPoolLogo from  "../../src/assets/carpoollogo.png";
 import axios from "axios"
 import ReadTable from "./ReadTable";
 import NavBar from "./common/navbar";
@@ -208,7 +209,7 @@ const Account = () => {
         <Row className="account-details-container">
             <Col className="accountImg p-5 text-center">
               <img
-                src="../src/assets/carpoollogo.png"
+                src={CarPoolLogo}
                 alt=""
                 className="img-fluid"
               />

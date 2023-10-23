@@ -4,6 +4,9 @@ import HomeCar from '../assets/carpoollogo.png'
 import NavBar from './common/navbar'
 import Footer from './common/footer'
 import { MDBIcon } from 'mdb-react-ui-kit';
+import ratingImportOne from '../../src/assets/PatHenson.jpg';
+import ratingImportTwo from '../../src/assets/PauloAvelino.jpeg';
+import ratingImportThree from '../../src/assets/JuanKarlos.jpg';
 
 
 const Home = () => {                            
@@ -76,7 +79,7 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-1"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="../src/assets/PatHenson.jpg"
+                <img src={ratingImportOne}
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">
@@ -93,7 +96,7 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-2"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="../src/assets/PauloAvelino.jpeg"
+                <img src={ratingImportTwo}
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">
@@ -111,7 +114,7 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-3"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="../src/assets/JuanKarlos.jpg"
+                <img src={ratingImportThree}
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">

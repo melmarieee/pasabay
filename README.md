@@ -7,7 +7,7 @@ These is the sitemap of the website:
 
 ![sitemap](src/assets/sitemap.png)
 
-This are the color palettes:
+These are the color palettes:
 
 ![color palette](src/assets/palette.png)
 

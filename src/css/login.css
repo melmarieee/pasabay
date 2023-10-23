@@ -5,15 +5,16 @@
 img, svg {
     vertical-align: middle;
 }
-.input-container{
-    width: 60%;
-}
+
 .email-input-login{
-    margin-left: 170px;
+    justify-content: center;
 }
-.password-input-login{
-    margin-left: 170px;
+
+.login-container {
+    display: flex;
+    justify-content: center;
 }
+
 
 .button-info{
     border-color: #fae8d6 !important;

@@ -57,7 +57,7 @@ const Header = (props) => {
                                 <DropdownItem href='/rides'>Rides</DropdownItem>
                                 <DropdownItem href='/drive'>Drives</DropdownItem>
                                 <DropdownItem href='/form'>Create Ride</DropdownItem>
-                            <DropdownItem onClick={toggleLogout.bind(this)}>Logout</DropdownItem>
+                            <DropdownItem className="navLogout" onClick={toggleLogout.bind(this)}>Logout</DropdownItem>
                             </DropdownMenu>
                         </Dropdown>
                     </Nav>

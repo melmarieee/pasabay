@@ -109,6 +109,10 @@ button.dropdown-toggle.btn.btn-secondary{
   border-bottom: 2px solid black !important;
   color: black !important;
 }
+.navLogout {
+  font-size: 16px !important;
+}
+
 @media screen and (max-width: 840px) {
   .header{
     padding:10px 30px 10px;

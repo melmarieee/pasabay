@@ -73,7 +73,17 @@ img#navbar-logo1{
 #navbar-logo1{
   width: 210px;
 }
-
+.signup-birthday{
+  width: 5%;
+}
+.gender-sign-up{
+  width: 20%;
+}
+}
+@media screen and (max-width: 320px){
+  .gender-sign-up{
+    width: 30%;
+  }
 }    
 }
 

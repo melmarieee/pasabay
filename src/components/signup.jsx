@@ -14,7 +14,7 @@ import axios from "axios"
 
 const Signup = () => {
   const [name, setName] = useState('');
-  const [birthday, setBirthday] = useState(dayjs('10/10/2023'));
+  const [birthday, setBirthday] = useState(dayjs('01/01/2005'));
   const [gender, setGender] = useState('');
   const [email, setEmail] = useState('');
   const [phone, setPhone] = useState('');
@@ -35,6 +35,14 @@ const Signup = () => {
       }
       if (!birthday) {
         errors.birthday = "Birthday is required"
+      } else {
+        const currentDate = dayjs();
+        const birthDate = dayjs(birthday);
+        const userAge = currentDate.diff(birthDate, 'year');
+
+        if (userAge < 18) {
+          errors.birthday = "You must be at least 18 years old.";
+        }
       }
       if (!gender) {
         errors.gender = "Gender is required"
@@ -95,11 +103,11 @@ const Signup = () => {
   return (
     <div>
       <Row>
-        <Col className="text-center image-left-pic-container">
-          <img id='picture' src={picture} alt="Your Picture" className="img-fluid p-5 mt-5" />
+        <Col className="text-center image-left-pic-container signup">
+          <img id='picture' src={picture} alt="Your Picture" className="img-fluid p-3 mt-3" />
         </Col>
         <Col className='padding-top-login-signup'>
-          <Form className='signup-form' style={{ padding: '20px' }} onSubmit={handleFormSubmit}>
+          <Form className='signup-form' onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
             <Button className='btn-close-signup' href='/login'><i class="fa-solid fa-chevron-left"></i></Button>
               <a href="/">
@@ -176,7 +184,7 @@ const Signup = () => {
                 I have read and agree to the <a href="#!" style={{textDecoration:'none'}}>Privacy Policy</a> and Tracking Policy. Our <a href="#" style={{ textDecoration: 'none' }}>Terms & Condition </a>apply.
               </Label>
               {formErrors.checkbox && <div className="text-danger">{formErrors.checkbox}</div>}
-              <br />
+
             </FormGroup>
 
             <div className='text-center'>

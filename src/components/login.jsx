@@ -90,8 +90,9 @@ function Login() {
                 <Input required className="mx-5 my-4 li-pass" type="password" id="password" placeholder="Password" onChange={(e) => setPassword(e.target.value)} value={password} />
               </div>
             </FormGroup>
-            </div>
             {errorLogin}
+
+            </div>
 
             <div className="text-center p-5" >
               <Button type="submit" className='btn-login-sbmt'>Log in</Button>

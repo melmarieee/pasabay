@@ -138,6 +138,21 @@
     .body {
         padding: 40px 0;
     }
+    .vehicle-type-container {
+        width: 300%;
+    }
+    .btn-addVehicle {
+        position: relative;
+        right: 1140px;
+        width: 15%;
+    }
+    .account-details-container {
+        width: 100%;
+        display: block;
+    }
+    .form-details-container {
+        width: 100%;
+    }
 }
 @media screen and (max-width: 425px) {
     .body {
@@ -157,7 +172,7 @@
     }
     .vehicle-type-container{
         width: 250%;
-        margin: 0 -100px;
+        margin: 0 -115px;
     }
     .btn-addVehicle {
         width: 60%;

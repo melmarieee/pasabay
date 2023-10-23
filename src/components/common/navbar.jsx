@@ -79,12 +79,15 @@ const Header = (props) => {
           )}
         </div>
 
-        <NavbarToggler onClick={toggle} />
+        <NavbarToggler onClick={toggle} className="burger-menu-box"/>
         <Collapse className="burgerMenu-dropDown" isOpen={isOpen} navbar>
           <Nav className="ms-auto burger-menu" navbar>
             <div className="burger-menu-container">
               <NavItem>
                 <NavLink className="burger-menu-NavLink" to='/account'>{user.user.name}</NavLink>
+              </NavItem>
+              <NavItem>
+                <NavLink className="burger-menu-NavLink" to='/carpool'>Carpool</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="burger-menu-NavLink" to='/rides'>Rides</NavLink>
@@ -93,8 +96,8 @@ const Header = (props) => {
                 <NavLink className="burger-menu-NavLink" to='/form'>Create Ride</NavLink>
               </NavItem>
               <NavItem>
-                <NavLink className="burger-menu-NavLink" to="/drives" id="carpool">
-                  Carpool
+                <NavLink className="burger-menu-NavLink" to="/drive">
+                  Drives
                 </NavLink>
               </NavItem>
               <Nav className="navLogout"

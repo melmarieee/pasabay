@@ -178,7 +178,7 @@ const Account = () => {
               />
             </Col>
             <Col className="p-5">
-              <form action="#" onSubmit={handleEditFormSubmit}>
+              <form action="#" className="form-details-container" onSubmit={handleEditFormSubmit}>
                 {contacts.map((contact) => (
                   <>
                     {editContactId === contact.id ? (

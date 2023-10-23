@@ -76,11 +76,12 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-1"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(1).webp"
+                <img src="../src/assets/PatHenson.jpg"
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">
-                <h4 class="mb-4">Maria Smantha</h4>
+                <h4 class="mb-4">Patricia Henson</h4>
+                <p>"⭐⭐⭐⭐⭐"</p>
                 <hr class="width-100"/>
                 <p class="dark-grey-text mt-4">
                   <i class="fas fa-quote-left pe-2"></i> I've been carpooling with Psabay for a few months now, and it's been a fantastic experience. They are always punctual, and our daily commute is so much more enjoyable. Highly recommended!
@@ -92,11 +93,12 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-2"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(2).webp"
+                <img src="../src/assets/PauloAvelino.jpeg"
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">
-                <h4 class="mb-4">Lisa Cudrow</h4>
+                <h4 class="mb-4">Paulo Avelino</h4>
+                <p>"⭐⭐⭐⭐⭐"</p>
                 <hr class="width-100" />
                 <p class="dark-grey-text mt-4">
                   <i class="fas fa-quote-left pe-2"></i>I appreciate the safety measures in place with this carpool service. Pasabay maintains a clean and well-maintained vehicle, making every ride a comfortable and secure experience.
@@ -109,11 +111,12 @@ const Home = () => {
             <div class="card testimonial-card">
               <div class="card-up card-color-3"></div>
               <div class="avatar mx-auto bg-white">
-                <img src="https://mdbcdn.b-cdn.net/img/Photos/Avatars/img%20(9).webp"
+                <img src="../src/assets/JuanKarlos.jpg"
                   class="rounded-circle img-fluid" />
               </div>
               <div class="card-body">
-                <h4 class="mb-4">John Smith</h4>
+                <h4 class="mb-4">Juan Karlos</h4>
+                <p>"⭐⭐⭐⭐⭐"</p>
                 <hr class="width-100"/>
                 <p class="dark-grey-text mt-4">
                   <i class="fas fa-quote-left pe-2"></i>I've saved a lot on gas and reduced my carbon footprint by carpooling with Pasabay. The carpool service matched us perfectly, and I couldn't be happier with the arrangement.

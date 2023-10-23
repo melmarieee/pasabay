@@ -13,6 +13,7 @@ import { Modal, ModalHeader, ModalFooter, ModalBody, Alert } from 'reactstrap';
 
 const createVehicleURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/create_vehicle";
 const updateUser = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/update_users";
+const deleteVehicle = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/delete_vehicle";
 
 
 const Account = () => {
@@ -20,6 +21,8 @@ const Account = () => {
   const [user, setUser] = useState(JSON.parse(user_session));
   const [contacts, setContancts] = useState([user.user]);
   const [modal, setModal] = useState(false);
+  const [modalDelete, setModalDelete] = useState(false);
+  const [activeVehicleId, setActiveVehicleId] = useState(false);
   const [vehicleAdd, setVehicleAdd] = useState({
     "name": "",
     "type": "",
@@ -91,8 +94,30 @@ const Account = () => {
     });
   };
 
+  const deleteVehicleHandler = () => {
+    let new_user_session = user;
+    axios.post(deleteVehicle, {
+      id: activeVehicleId,
+      driver_id: user.user.id
+    })
+    .then(function (response) {
+      new_user_session.vehicle = response.data.data.results;
+      window.localStorage.setItem("userLogin", JSON.stringify(new_user_session));
+      window.location.reload()
+    })
+    .catch(function (error) {
+      alert(error)
+    console.log(error);
+    });
+  }
+
   const toggleModal = () => {
     setModal(!modal)
+  }
+
+  const toggleModalDelete = (id) => {
+    setActiveVehicleId(id)
+    setModalDelete(!modalDelete)
   }
 
   const changeVehicleAdd = (key, event) => {
@@ -165,6 +190,17 @@ const Account = () => {
               </div>
             </ModalFooter>
         </Modal>
+
+        <Modal isOpen={modalDelete} toggle={toggleModalDelete} className="modal-addVehicle-container">
+            <ModalHeader toggle={toggleModalDelete}>Delete this vehicle? </ModalHeader>
+            <ModalFooter className="btn-addVehicle-modal-container">
+              <div className="text-right">
+                <button onClick={deleteVehicleHandler} className="btn btn-danger">
+                  Delete Vehicle
+                </button>
+              </div>
+            </ModalFooter>
+        </Modal>
       <body className="body">
       <div className=''>
             <h1 className='text-center mt-5 pb-5'>Account</h1>
@@ -211,6 +247,9 @@ const Account = () => {
           {user.vehicle.map((veh) => (
             <div className="col-md-4 mt-3">
               <div className="bg-light shadow p-5">
+                <div className="text-right">
+                  <button onClick={toggleModalDelete.bind(this, veh.id)} type="button" class="btn-close" aria-label="Close"></button>
+                </div>
                 <h3 className="pb-3">{veh.name}</h3>
                 <p>Vehicle Type: {veh.type}</p>
                 <p>Seats: {veh.seats}</p>

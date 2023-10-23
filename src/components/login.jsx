@@ -77,10 +77,10 @@ function Login() {
             <div className='px-5 text-center'>
               <h1><b>Welcome Back!</b></h1>
             </div>
-            <div className='px-5 mb-5'>
+            <FormGroup style={formGroupStyle}>
+            <div className='px-5 my-3 pt-3'>
               <Label className='text-secondary'>Please enter your details</Label>
             </div>
-            <FormGroup style={formGroupStyle}>
               <Input required className="input-container mx-5 li-email" type="text" id="name" placeholder="Email" onChange={(e) => setEmail(e.target.value)} value={email} />
             </FormGroup>
 

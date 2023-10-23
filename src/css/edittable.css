@@ -25,3 +25,9 @@
     border-radius: 8px;
     margin: 4px;
 }
+
+@media screen and (max-width: 768px) {
+    .btnEditTable {
+        width: 30% !important;
+    }
+}

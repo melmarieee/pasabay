@@ -30,41 +30,50 @@ float: left;
   margin: 0 180px;
 }
 @media screen and (max-width: 769px){
-    #picture{
-        display: none;
-    }
-    .btn-close-signup{
-      position: absolute;
-      left: 20px;
-      display: block;
-      background-color: transparent;
-      color: #ff8811;
-      border: 1px solid transparent;
-      transition: 0.3s;
-    }
-    .btn-close-signup:hover{
-      background-color: transparent !important;
-      border: 1px solid transparent !important;
-      color: #000;
-    }
-    .form-select{
-        display: block;
-        min-height: 1.5rem;
-        padding-left: 1px;
-        margin-bottom: .125rem;
-    }  
-@media screen and (max-width: 425px){
-  .btn-signup{
-    width: 30%;
+  #picture{
+      display: none;
   }
+  .btn-close-signup{
+    position: absolute;
+    left: 20px;
+    display: block;
+    background-color: transparent;
+    color: #ff8811;
+    border: 1px solid transparent;
+    transition: 0.3s;
+  }
+  .btn-close-signup:hover{
+    background-color: transparent !important;
+    border: 1px solid transparent !important;
+    color: #000;
+  }
+  .form-select{
+      display: block;
+      min-height: 1.5rem;
+      padding-left: 1px;
+      margin-bottom: .125rem;
+  }  
+@media screen and (max-width: 425px){
+.btn-signup{
+  width: 40%;
+}
 }      
 @media screen and (max-width: 320px){
-  .form-select{
-    width: 280px;
-  }
-  .btn-signup{
-    width: 40%;
-  }
+img#navbar-logo1{
+  width: 150px;
+}
+.form-select{
+  width: 280px;
+}
+.btn-signup{
+  width: 50%;
+}
+}
+@media screen and (max-width: 375px) {
+#navbar-logo1{
+  width: 210px;
+}
+
 }    
 }
 

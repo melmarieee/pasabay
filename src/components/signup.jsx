@@ -107,7 +107,7 @@ const Signup = () => {
           <img id='picture' src={picture} alt="Your Picture" className="img-fluid p-3 mt-3" />
         </Col>
         <Col className='padding-top-login-signup'>
-          <Form className='signup-form' onSubmit={handleFormSubmit}>
+          <Form className='signup-form p-5' onSubmit={handleFormSubmit}>
             <Col className="text-center" style={{ padding: '20px' }}>
             <Button className='btn-close-signup' href='/login'><i class="fa-solid fa-chevron-left"></i></Button>
               <a href="/">

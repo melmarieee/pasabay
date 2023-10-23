@@ -176,5 +176,6 @@ a#home.nav-home {
 }
 .nav-login {
   color: #000 !important;
+  text-decoration: none;
 }
 

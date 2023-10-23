@@ -128,7 +128,7 @@ const Signup = () => {
 
             <FormGroup style={{ marginBottom: '15px' }}>
               <Row>
-                <Col>
+                <Col className='signup-birthday'>
                   <LocalizationProvider dateAdapter={AdapterDayjs}>
                         <DemoContainer components={['DatePicker']}>
                             <DatePicker

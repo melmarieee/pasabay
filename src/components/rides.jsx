@@ -15,6 +15,7 @@ import axios from "axios"
 import dayjs from 'dayjs';
 
 const ridesURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/get_rides_status_passenger";
+const deleteBookingURL = "https://powerful-taiga-76725-654b259bda23.herokuapp.com/api/delete_booking";
 
 
 export default function Rides() {
@@ -40,6 +41,19 @@ export default function Rides() {
     .then(function (response) {
       console.log(response.data.data)
       setRides(response.data.data.results);
+    })
+    .catch(function (error) {
+      alert(error)
+      console.log(error);
+    });
+  };
+
+  const cancelRide = (id) => {
+    axios.post(deleteBookingURL, {
+      id: id
+    })
+    .then(function (response) {
+      window.location.reload()
     })
     .catch(function (error) {
       alert(error)
@@ -132,9 +146,12 @@ export default function Rides() {
                               <ul>
                                   <li><span className='text-secondary'>Driver Name:</span> {drive.driver_name}</li>
                                   <li><span className='text-secondary'>Contact:</span> {drive.phone}</li>
-                                  <li><span className='text-secondary'>Vehicle:</span> {drive.type}</li>
+                                  <li><span className='text-secondary'>Vehicle:</span> {drive.name}</li>
                               </ul>
-                          </div>                         
+                          </div>
+                          <div className='text-right'>
+                            <button onClick={cancelRide.bind(this, drive.booking_id)} type="button" class="btn btn-secondary cancel-button-ride">Cancel Ride</button>                      
+                          </div>
                         </div>
                       </div>
                     </Typography>
@@ -187,7 +204,7 @@ export default function Rides() {
                                     <li><span className='text-secondary'>Contact:</span> {drive.phone}</li>
                                     <li><span className='text-secondary'>Vehicle:</span> {drive.type}</li>
                                 </ul>
-                            </div>                         
+                            </div>                      
                           </div>
                         </div>
                       </Typography>

@@ -4,6 +4,10 @@
 .button1-info {
     width: 200px;
 }
+
+.cancel-button-ride {
+    width: 200px !important;
+}
 .change1-info .Mui-selected{
     color: #ff8811 !important;
 }

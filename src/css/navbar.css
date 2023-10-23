@@ -166,10 +166,12 @@ a#home.nav-home {
   color: #000;
 }
 #nav-carpool {
+  text-decoration: none;
   color: #000;
 }
 #nav-carpool:hover{
-  border: 1px solid #fff;
+  text-decoration: none;
+  border: #fff;
   box-shadow: transparent;
 }
 .nav-login {

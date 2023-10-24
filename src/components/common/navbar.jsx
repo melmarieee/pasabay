@@ -84,7 +84,7 @@ const Header = (props) => {
           <Nav className="ms-auto burger-menu" navbar>
             <div className="burger-menu-container">
               <NavItem>
-                <NavLink className="burger-menu-NavLink" to='/account'>{user.user.name}</NavLink>
+                <NavLink className="burger-menu-NavLink" to='/account'>{user ? user.user.name: ""}</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="burger-menu-NavLink" to='/carpool'>Carpool</NavLink>

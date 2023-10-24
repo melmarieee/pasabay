@@ -21,8 +21,9 @@ const Header = (props) => {
   const user_session = window.localStorage.getItem("userLogin");
 
   const [isOpen, setIsOpen] = useState(false);
-  const [user, setUser] = useState(JSON.parse(user_session));
+  const [user, setUser] = useState(JSON.parse(user_session) || {});
   const [dropdownOpen, setDropdownOpen] = useState(false);
+  
 
   const toggleDropDown = () => setDropdownOpen((prevState) => !prevState);
 
@@ -56,7 +57,7 @@ const Header = (props) => {
                 direction={"down"}
               >
                 <DropdownToggle caret>
-                  <b>{user.user.name}</b>
+                <b>{user && user.user ? user.user.name : ""}</b>
                 </DropdownToggle>
                 <DropdownMenu>
                   <DropdownItem href="/account">Account</DropdownItem>
@@ -84,7 +85,7 @@ const Header = (props) => {
           <Nav className="ms-auto burger-menu" navbar>
             <div className="burger-menu-container">
               <NavItem>
-                <NavLink className="burger-menu-NavLink" to='/account'>{user.user.name}</NavLink>
+                <NavLink className="burger-menu-NavLink" to='/account'>{user && user.user ? user.user.name : ''}</NavLink>
               </NavItem>
               <NavItem>
                 <NavLink className="burger-menu-NavLink" to='/carpool'>Carpool</NavLink>
